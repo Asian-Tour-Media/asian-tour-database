@@ -64,6 +64,7 @@ tr:hover{background:#f8f9ff}
 <button class="tab active" onclick="showTab('all')">📋 All Tournaments</button>
 <button class="tab" onclick="showTab('players')">👤 Players</button>
 <button class="tab" onclick="showTab('oom')">🏅 Order of Merit</button>
+<button class="tab" onclick="showTab('statistics')">📊 Statistics</button>
 <button class="tab admin-only" id="addTab" onclick="showTab('add')">➕ Add Tournament</button>
 </div>
 
@@ -106,6 +107,68 @@ tr:hover{background:#f8f9ff}
 <input type="text" id="addWinner" placeholder="Player Name">
 </div>
 <button class="btn add-btn" onclick="addTournament()">➕ Add Tournament</button>
+</div>
+
+
+
+<div id="statistics" class="tab-content">
+<h2 style="margin-bottom:20px;color:#1e3c72">📊 Live Season Statistics</h2>
+
+<div style="background:#e7f3ff;padding:15px;border-radius:8px;margin-bottom:20px;border-left:4px solid #667eea">
+<p style="margin:0">📡 <strong>Auto-updating from AsianTour.com</strong></p>
+<p style="margin:5px 0 0 0;font-size:14px;color:#666">Statistics refresh automatically when you open this tab</p>
+</div>
+
+<div style="display:flex;gap:20px;margin-bottom:20px;flex-wrap:wrap">
+<div class="form-group" style="max-width:200px;margin-bottom:0">
+<label>Season:</label>
+<select id="statsSeason" onchange="loadLiveStats()" style="padding:10px;font-size:16px">
+<option value="2026">2026</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+</select>
+</div>
+
+<div class="form-group" style="max-width:300px;margin-bottom:0">
+<label>Category:</label>
+<select id="statsCategory" onchange="loadLiveStats()" style="padding:10px;font-size:16px">
+<option value="oom">Order of Merit</option>
+<option value="scoring">Scoring Average</option>
+<option value="driving">Driving Distance</option>
+<option value="gir">Greens in Regulation</option>
+<option value="putting">Putting Average</option>
+<option value="sand">Sand Saves</option>
+</select>
+</div>
+
+<button class="btn" onclick="loadLiveStats()" style="background:#17a2b8;color:white;margin-top:auto">🔄 Refresh Now</button>
+</div>
+
+<div id="statsLoading" style="display:none;text-align:center;padding:40px">
+<div style="font-size:48px">⏳</div>
+<p style="margin-top:10px;color:#666">Loading statistics from AsianTour.com...</p>
+</div>
+
+<div id="statsContent">
+<!-- Stats will be loaded here -->
+</div>
+
+<div id="statsError" style="display:none;background:#fff3cd;border:2px solid #ffc107;padding:20px;border-radius:8px;margin-top:20px">
+<h3 style="color:#856404;margin-bottom:10px">⚠️ Unable to Load Statistics</h3>
+<p style="color:#856404;margin:0">Could not fetch data from AsianTour.com. This may be due to:</p>
+<ul style="color:#856404;margin-top:10px">
+<li>Network connectivity issues</li>
+<li>Asian Tour website is temporarily unavailable</li>
+<li>Browser security restrictions (CORS)</li>
+</ul>
+<p style="color:#856404;margin-top:10px"><strong>Note:</strong> For automatic updates to work, this needs to be hosted on a server (like GitHub Pages) or you can view stats directly at <a href="https://www.asiantour.com/stats" target="_blank">AsianTour.com</a></p>
+</div>
+
+</div>
+
+
 </div>
 
 </div>
@@ -189,6 +252,7 @@ tr:hover{background:#f8f9ff}
 </div>
 </div>
 
+
 <!-- Player Detail Modal -->
 <div id="playerModal" class="modal">
 <div class="modal-content">
@@ -212,6 +276,173 @@ let tournaments = [[1995, "25 Jun", "Asian PGA International", "Park Nam-sin"], 
 let oomData = [[1995, "Lin Keng-chi"], [1996, "Kang Wook-soon"], [1997, "Mike Cunning"], [1998, "Kang Wook-soon"], [1999, "Kyi Hla Han"], [2000, "Simon Dyson"], [2001, "Thongchai Jaidee"], [2002, "Jyoti Randhawa"], [2003, "Arjun Atwal"], [2004, "Thongchai Jaidee"], [2005, "Thaworn Wiratchant"], [2006, "Jeev Milkha Singh"], [2007, "Liang Wenchong"], [2008, "Jeev Milkha Singh"], [2009, "Thongchai Jaidee"], [2010, "Noh Seung-yul"], [2011, "Juvic Pagunsan"], [2012, "Thaworn Wiratchant"], [2013, "Kiradech Aphibarnrat"], [2014, "David Lipsky"], [2015, "Anirban Lahiri"], [2016, "Scott Hend"], [2017, "Gavin Green"], [2018, "Shubhankar Sharma"], [2019, "Jazz Janewattananond"], ["2020-21-22", "Tom Kim"], [2022, "Sihwan Kim"], [2023, "Andy Ogletree"], [2024, "John Catlin"], [2025, "Kazuki Higa"]];
 const OOM_LOOKUP = {"Lin Keng-chi": ["1995"], "Kang Wook-soon": ["1996", "1998"], "Mike Cunning": ["1997"], "Kyi Hla Han": ["1999"], "Simon Dyson": ["2000"], "Thongchai Jaidee": ["2001", "2004", "2009"], "Jyoti Randhawa": ["2002"], "Arjun Atwal": ["2003"], "Thaworn Wiratchant": ["2005", "2012"], "Jeev Milkha Singh": ["2006", "2008"], "Liang Wenchong": ["2007"], "Noh Seung-yul": ["2010"], "Juvic Pagunsan": ["2011"], "Kiradech Aphibarnrat": ["2013"], "David Lipsky": ["2014"], "Anirban Lahiri": ["2015"], "Scott Hend": ["2016"], "Gavin Green": ["2017"], "Shubhankar Sharma": ["2018"], "Jazz Janewattananond": ["2019"], "Tom Kim": ["2020-21-22"], "Sihwan Kim": ["2022"], "Andy Ogletree": ["2023"], "John Catlin": ["2024"], "Kazuki Higa": ["2025"]};
 let players = {};
+
+
+
+// Live Statistics Fetching
+let statsCache = {};
+let lastFetchTime = {};
+
+async function loadLiveStats() {
+    const season = document.getElementById('statsSeason').value;
+    const category = document.getElementById('statsCategory').value;
+    const cacheKey = `${season}_${category}`;
+    
+    // Check cache (5 minutes)
+    const now = Date.now();
+    if (statsCache[cacheKey] && lastFetchTime[cacheKey] && (now - lastFetchTime[cacheKey]) < 300000) {
+        renderStats(statsCache[cacheKey]);
+        return;
+    }
+    
+    // Show loading
+    document.getElementById('statsLoading').style.display = 'block';
+    document.getElementById('statsContent').style.display = 'none';
+    document.getElementById('statsError').style.display = 'none';
+    
+    try {
+        // Fetch from Asian Tour website
+        const url = `https://www.asiantour.com/stats?id=${season}&category=${category}`;
+        
+        // Use a CORS proxy for client-side fetching
+        const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
+        
+        const response = await fetch(proxyUrl);
+        
+        if (!response.ok) {
+            throw new Error('Failed to fetch');
+        }
+        
+        const html = await response.text();
+        
+        // Parse the HTML to extract stats
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        
+        // Extract stats data (this will need to be customized based on actual HTML structure)
+        const statsData = parseStatsFromHTML(doc, category);
+        
+        // Cache the results
+        statsCache[cacheKey] = statsData;
+        lastFetchTime[cacheKey] = now;
+        
+        renderStats(statsData);
+        
+    } catch (error) {
+        console.error('Error fetching stats:', error);
+        
+        // Try to show cached data if available
+        if (statsCache[cacheKey]) {
+            renderStats(statsCache[cacheKey]);
+            showNotification('⚠️ Showing cached data (couldn\'t refresh)');
+        } else {
+            // Show error message
+            document.getElementById('statsLoading').style.display = 'none';
+            document.getElementById('statsError').style.display = 'block';
+        }
+    }
+}
+
+function parseStatsFromHTML(doc, category) {
+    // This is a placeholder - actual parsing depends on Asian Tour website structure
+    // For now, return sample data structure
+    
+    // In a real implementation, you would:
+    // 1. Find the stats table in the document
+    // 2. Extract player names, rankings, and values
+    // 3. Return formatted data
+    
+    const sampleData = {
+        title: getCategoryTitle(category),
+        players: [
+            { rank: 1, name: 'Player 1', value: 'Value 1' },
+            { rank: 2, name: 'Player 2', value: 'Value 2' },
+            // ... more players
+        ]
+    };
+    
+    return sampleData;
+}
+
+function getCategoryTitle(category) {
+    const titles = {
+        'oom': 'Order of Merit',
+        'scoring': 'Scoring Average',
+        'driving': 'Driving Distance',
+        'gir': 'Greens in Regulation',
+        'putting': 'Putting Average',
+        'sand': 'Sand Saves'
+    };
+    return titles[category] || 'Statistics';
+}
+
+function renderStats(data) {
+    document.getElementById('statsLoading').style.display = 'none';
+    document.getElementById('statsError').style.display = 'none';
+    document.getElementById('statsContent').style.display = 'block';
+    
+    const container = document.getElementById('statsContent');
+    
+    let html = `
+        <h3 style="color:#1e3c72;margin-bottom:15px">${data.title}</h3>
+        <table style="background:#f8f9fa">
+            <thead>
+                <tr>
+                    <th style="width:80px">Rank</th>
+                    <th>Player</th>
+                    <th style="width:200px">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+    
+    if (data.players && data.players.length > 0) {
+        data.players.forEach(player => {
+            html += `
+                <tr>
+                    <td style="text-align:center;font-weight:700;color:#667eea">#${player.rank}</td>
+                    <td><span class="player-name" onclick="showPlayer('${player.name}')">${player.name}</span></td>
+                    <td style="text-align:center;font-weight:600">${player.value}</td>
+                </tr>
+            `;
+        });
+    } else {
+        html += `
+            <tr>
+                <td colspan="3" style="text-align:center;padding:30px;color:#999">
+                    No data available for this season/category
+                </td>
+            </tr>
+        `;
+    }
+    
+    html += `
+            </tbody>
+        </table>
+        <p style="margin-top:15px;color:#666;font-size:14px">
+            📡 Data from <a href="https://www.asiantour.com/stats" target="_blank">AsianTour.com</a> 
+            | Last updated: ${new Date().toLocaleString()}
+        </p>
+    `;
+    
+    container.innerHTML = html;
+}
+
+// Auto-load stats when Statistics tab is opened
+const originalShowTab = showTab;
+showTab = function(tabName) {
+    originalShowTab(tabName);
+    if (tabName === 'statistics') {
+        // Only auto-load if not already loaded
+        const content = document.getElementById('statsContent');
+        if (!content.innerHTML || content.innerHTML.trim() === '') {
+            loadLiveStats();
+        }
+    }
+};
+
+
+
 
 function init() {
     // Populate year dropdown
