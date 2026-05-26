@@ -73,6 +73,7 @@ tr:hover {background:#f8f9ff}
 
 <div id="all" class="tab-content active">
 <input type="text" id="searchAll" class="search-box" placeholder="🔍 Search tournaments..." onkeyup="searchTournaments()">
+<button class="btn add-btn admin-only" onclick="showAddTournamentModal()" style="margin-bottom:15px">➕ Add Tournament</button>
 <table><thead><tr><th>Year</th><th>Date</th><th>Tournament</th><th>Winner</th></tr></thead>
 <tbody id="tbody"></tbody></table>
 </div>
@@ -85,6 +86,7 @@ tr:hover {background:#f8f9ff}
 
 <div id="oom" class="tab-content">
 <h2 style="margin-bottom:20px;color:#1e3c72">Order of Merit Winners (1995-2025)</h2>
+<button class="btn add-btn admin-only" onclick="showAddOOMModal()" style="margin-bottom:15px">➕ Add OOM Winner</button>
 <table style="background:#fff9e6"><thead><tr><th style="background:#f4c430;color:#333">Year</th><th style="background:#f4c430;color:#333">Winner</th></tr></thead>
 <tbody id="oomBody"></tbody></table>
 </div>
@@ -444,6 +446,97 @@ Last updated: May 2026
 </div>
 </div>
 
+
+<!-- Add Tournament Modal -->
+<div id="addTournamentModal" class="modal">
+<div class="modal-content">
+<button class="close-btn" onclick="closeAddTournamentModal()">×</button>
+<h2>Add Tournament</h2>
+<div class="form-group">
+<label>Year:</label>
+<select id="addYear"></select>
+</div>
+<div class="form-group">
+<label>Date (YYYY-MM-DD):</label>
+<input type="text" id="addDate" placeholder="2026-05-15">
+</div>
+<div class="form-group">
+<label>Tournament:</label>
+<input type="text" id="addTournament" placeholder="Tournament Name">
+</div>
+<div class="form-group">
+<label>Winner:</label>
+<input type="text" id="addWinner" placeholder="Player Name">
+</div>
+<button class="btn save-btn" onclick="saveTournament()">💾 Save</button>
+<button class="btn cancel-btn" onclick="closeAddTournamentModal()">❌ Cancel</button>
+</div>
+</div>
+
+<!-- Edit Tournament Modal -->
+<div id="editTournamentModal" class="modal">
+<div class="modal-content">
+<button class="close-btn" onclick="closeEditTournamentModal()">×</button>
+<h2>Edit Tournament</h2>
+<input type="hidden" id="editIndex">
+<div class="form-group">
+<label>Year:</label>
+<input type="text" id="editYear">
+</div>
+<div class="form-group">
+<label>Date:</label>
+<input type="text" id="editDate">
+</div>
+<div class="form-group">
+<label>Tournament:</label>
+<input type="text" id="editTournamentName">
+</div>
+<div class="form-group">
+<label>Winner:</label>
+<input type="text" id="editWinner">
+</div>
+<button class="btn save-btn" onclick="saveEditTournament()">💾 Save</button>
+<button class="btn cancel-btn" onclick="closeEditTournamentModal()">❌ Cancel</button>
+</div>
+</div>
+
+<!-- Add OOM Modal -->
+<div id="addOOMModal" class="modal">
+<div class="modal-content">
+<button class="close-btn" onclick="closeAddOOMModal()">×</button>
+<h2>Add Order of Merit Winner</h2>
+<div class="form-group">
+<label>Year:</label>
+<input type="text" id="newOOMYear" placeholder="e.g., 2026 or 2026-27">
+</div>
+<div class="form-group">
+<label>Winner:</label>
+<input type="text" id="newOOMWinner" placeholder="Player Name">
+</div>
+<button class="btn save-btn" onclick="saveOOM()">💾 Save</button>
+<button class="btn cancel-btn" onclick="closeAddOOMModal()">❌ Cancel</button>
+</div>
+</div>
+
+<!-- Edit OOM Modal -->
+<div id="editOOMModal" class="modal">
+<div class="modal-content">
+<button class="close-btn" onclick="closeEditOOMModal()">×</button>
+<h2>Edit Order of Merit Winner</h2>
+<input type="hidden" id="editOOMIndex">
+<div class="form-group">
+<label>Year:</label>
+<input type="text" id="editOOMYear">
+</div>
+<div class="form-group">
+<label>Winner:</label>
+<input type="text" id="editOOMWinner">
+</div>
+<button class="btn save-btn" onclick="saveEditOOM()">💾 Save</button>
+<button class="btn cancel-btn" onclick="closeEditOOMModal()">❌ Cancel</button>
+</div>
+</div>
+
 <!-- Player Modal -->
 <div id="playerModal" class="modal">
 <div class="modal-content">
@@ -471,6 +564,151 @@ let data = DATA;
 let oomData = OOM;
 let players = {};
 let seasonStats = JSON.parse(localStorage.getItem('asianTourStats')) || {};
+
+
+let tournaments = DATA.slice();
+
+// Add Tournament
+function showAddTournamentModal() {
+    const select = document.getElementById('addYear');
+    select.innerHTML = '';
+    for (let y = 2050; y >= 1995; y--) {
+        const opt = document.createElement('option');
+        opt.value = y;
+        opt.textContent = y;
+        select.appendChild(opt);
+    }
+    select.value = new Date().getFullYear();
+    document.getElementById('addTournamentModal').classList.add('active');
+}
+
+function closeAddTournamentModal() {
+    document.getElementById('addTournamentModal').classList.remove('active');
+}
+
+function saveTournament() {
+    const year = parseInt(document.getElementById('addYear').value);
+    const date = document.getElementById('addDate').value.trim();
+    const tournament = document.getElementById('addTournament').value.trim();
+    const winner = document.getElementById('addWinner').value.trim();
+    
+    if (!date || !tournament || !winner) {
+        alert('Please fill all fields');
+        return;
+    }
+    
+    data.push([year, date, tournament, winner]);
+    data.sort((a,b) => {
+        if (a[0] !== b[0]) return a[0] - b[0];
+        return a[1].localeCompare(b[1]);
+    });
+    
+    calcPlayers();
+    render();
+    closeAddTournamentModal();
+    showNotification('✅ Tournament added');
+}
+
+// Edit Tournament
+function editTournament(i) {
+    document.getElementById('editIndex').value = i;
+    document.getElementById('editYear').value = data[i][0];
+    document.getElementById('editDate').value = data[i][1];
+    document.getElementById('editTournamentName').value = data[i][2];
+    document.getElementById('editWinner').value = data[i][3];
+    document.getElementById('editTournamentModal').classList.add('active');
+}
+
+function closeEditTournamentModal() {
+    document.getElementById('editTournamentModal').classList.remove('active');
+}
+
+function saveEditTournament() {
+    const i = parseInt(document.getElementById('editIndex').value);
+    data[i] = [
+        document.getElementById('editYear').value,
+        document.getElementById('editDate').value.trim(),
+        document.getElementById('editTournamentName').value.trim(),
+        document.getElementById('editWinner').value.trim()
+    ];
+    calcPlayers();
+    render();
+    closeEditTournamentModal();
+    showNotification('✅ Tournament updated');
+}
+
+// Delete Tournament
+function deleteTournament(i) {
+    if (confirm('Delete this tournament?')) {
+        data.splice(i, 1);
+        calcPlayers();
+        render();
+        showNotification('✅ Tournament deleted');
+    }
+}
+
+// Add OOM
+function showAddOOMModal() {
+    document.getElementById('addOOMModal').classList.add('active');
+}
+
+function closeAddOOMModal() {
+    document.getElementById('addOOMModal').classList.remove('active');
+}
+
+function saveOOM() {
+    const year = document.getElementById('newOOMYear').value.trim();
+    const winner = document.getElementById('newOOMWinner').value.trim();
+    
+    if (!year || !winner) {
+        alert('Please fill both fields');
+        return;
+    }
+    
+    oomData.push([year, winner]);
+    oomData.sort((a,b) => {
+        const yearA = typeof a[0] === 'string' ? parseInt(a[0].split('-')[0]) : a[0];
+        const yearB = typeof b[0] === 'string' ? parseInt(b[0].split('-')[0]) : b[0];
+        return yearA - yearB;
+    });
+    
+    render();
+    closeAddOOMModal();
+    showNotification('✅ OOM winner added');
+}
+
+// Edit OOM
+function editOOM(i) {
+    document.getElementById('editOOMIndex').value = i;
+    document.getElementById('editOOMYear').value = oomData[i][0];
+    document.getElementById('editOOMWinner').value = oomData[i][1];
+    document.getElementById('editOOMModal').classList.add('active');
+}
+
+function closeEditOOMModal() {
+    document.getElementById('editOOMModal').classList.remove('active');
+}
+
+function saveEditOOM() {
+    const i = parseInt(document.getElementById('editOOMIndex').value);
+    oomData[i] = [
+        document.getElementById('editOOMYear').value.trim(),
+        document.getElementById('editOOMWinner').value.trim()
+    ];
+    render();
+    closeEditOOMModal();
+    showNotification('✅ OOM winner updated');
+}
+
+// Delete OOM
+function deleteOOM(i) {
+    if (confirm('Delete this OOM winner?')) {
+        oomData.splice(i, 1);
+        render();
+        showNotification('✅ OOM winner deleted');
+    }
+}
+
 
 function init() {
     calcPlayers();
