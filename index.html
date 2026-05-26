@@ -1,58 +1,60 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Asian Tour Champions 1995-2026</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:system-ui,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;padding:20px}
-.container{max-width:1600px;margin:0 auto;background:white;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative}
-.admin-btn{position:absolute;top:20px;right:20px;padding:10px 20px;background:#dc3545;color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;z-index:100}
-.admin-btn:hover{background:#c82333}
-.header{background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%);color:white;padding:50px 40px;text-align:center;border-radius:20px 20px 0 0}
-.header h1{font-size:2.5em;margin-bottom:10px}
-.header p{font-size:1.2em;opacity:0.9}
-.tabs{display:flex;background:#f8f9fa;border-bottom:2px solid #dee2e6;overflow-x:auto}
-.tab{padding:20px 30px;cursor:pointer;border:none;background:none;font-size:1.1em;font-weight:600;color:#495057;border-bottom:3px solid transparent}
-.tab:hover{background:#e9ecef}
-.tab.active{background:white;color:#1e3c72;border-bottom:3px solid #1e3c72}
-.content{padding:30px}
-.tab-content{display:none}
-.tab-content.active{display:block}
-.search-box{width:100%;padding:15px;font-size:1.1em;border:2px solid #dee2e6;border-radius:10px;margin-bottom:20px}
-table{width:100%;border-collapse:collapse}
-th{background:#1e3c72;color:white;padding:15px;text-align:left;position:sticky;top:0}
-td{padding:12px 15px;border-bottom:1px solid #dee2e6}
-tr:hover{background:#f8f9ff}
-.player-name{color:#1e3c72;font-weight:700;cursor:pointer}
-.player-name:hover{color:#667eea;text-decoration:underline}
-.btn{padding:8px 16px;border:none;border-radius:5px;cursor:pointer;font-weight:600;margin:0 5px}
-.add-btn{background:#28a745;color:white}
-.edit-btn{background:#ffc107;color:#333}
-.delete-btn{background:#dc3545;color:white}
-.save-btn{background:#007bff;color:white}
-.cancel-btn{background:#6c757d;color:white}
-.form-group{margin-bottom:15px}
-.form-group label{display:block;margin-bottom:5px;font-weight:600}
-.form-group input,.form-group select{width:100%;padding:10px;border:1px solid #ccc;border-radius:5px}
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:1000;align-items:center;justify-content:center}
-.modal.active{display:flex}
-.modal-content{background:white;border-radius:20px;max-width:600px;width:90%;max-height:90vh;overflow-y:auto;padding:30px;position:relative}
-.close-btn{position:absolute;top:15px;right:15px;background:none;border:none;font-size:24px;cursor:pointer;color:#999}
-.close-btn:hover{color:#333}
-.modal h2{margin-bottom:20px;color:#1e3c72}
-.oom-section{background:#fff9e6;padding:20px;border-radius:10px;margin-bottom:20px;border:2px solid #f4c430}
-.oom-section h3{color:#d4a017;margin-bottom:15px}
-.oom-badge{display:inline-block;padding:6px 15px;background:#f4c430;color:#333;border-radius:20px;font-weight:700;margin:5px 5px 0 0}
-.win-item{padding:15px;margin:10px 0;background:#f8f9fa;border-radius:10px;border-left:4px solid #667eea}
-.win-year{color:#667eea;font-weight:700;margin-right:10px}
-.notification{position:fixed;top:20px;right:20px;background:#28a745;color:white;padding:15px 25px;border-radius:8px;box-shadow:0 4px 6px rgba(0,0,0,0.2);display:none;z-index:2000}
-.admin-only{display:none}
-.login-modal .modal-content{max-width:400px}
-.logout-btn{position:absolute;top:20px;right:150px;padding:10px 20px;background:#6c757d;color:white;border:none;border-radius:8px;cursor:pointer;font-weight:600;z-index:100;display:none}
+* {margin:0; padding:0; box-sizing:border-box}
+body {font-family:system-ui,sans-serif; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); min-height:100vh; padding:20px}
+.container {max-width:1600px; margin:0 auto; background:white; border-radius:20px; box-shadow:0 20px 60px rgba(0,0,0,0.3); position:relative}
+.admin-btn {position:absolute; top:20px; right:20px; padding:10px 20px; background:#dc3545; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:600; z-index:100}
+.admin-btn:hover {background:#c82333}
+.logout-btn {position:absolute; top:20px; right:150px; padding:10px 20px; background:#6c757d; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:600; z-index:100; display:none}
+.admin-only {display:none}
+.header {background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%); color:white; padding:50px 40px; text-align:center; border-radius:20px 20px 0 0}
+.header h1 {font-size:2.5em; margin-bottom:10px}
+.header p {font-size:1.2em; opacity:0.9}
+.tabs {display:flex; background:#f8f9fa; border-bottom:2px solid #dee2e6; overflow-x:auto}
+.tab {padding:20px 30px; cursor:pointer; border:none; background:none; font-size:1.1em; font-weight:600; color:#495057; border-bottom:3px solid transparent}
+.tab:hover {background:#e9ecef}
+.tab.active {background:white; color:#1e3c72; border-bottom:3px solid #1e3c72}
+.content {padding:30px}
+.tab-content {display:none}
+.tab-content.active {display:block}
+.search-box {width:100%; padding:15px; font-size:1.1em; border:2px solid #dee2e6; border-radius:10px; margin-bottom:20px}
+table {width:100%; border-collapse:collapse}
+th {background:#1e3c72; color:white; padding:15px; text-align:left; position:sticky; top:0}
+td {padding:12px 15px; border-bottom:1px solid #dee2e6}
+tr:hover {background:#f8f9ff}
+.player-name {color:#1e3c72; font-weight:700; cursor:pointer}
+.player-name:hover {color:#667eea; text-decoration:underline}
+.modal {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center}
+.modal.active {display:flex}
+.modal-content {background:white; border-radius:20px; max-width:800px; width:90%; max-height:90vh; overflow-y:auto; padding:30px; position:relative}
+.close-btn {position:absolute; top:15px; right:15px; background:none; border:none; font-size:24px; cursor:pointer; color:#999}
+.close-btn:hover {color:#333}
+.modal h2 {margin-bottom:20px; color:#1e3c72}
+.oom-section {background:#fff9e6; padding:20px; border-radius:10px; margin-bottom:20px; border:2px solid #f4c430}
+.oom-section h3 {color:#d4a017; margin-bottom:15px}
+.oom-badge {display:inline-block; padding:6px 15px; background:#f4c430; color:#333; border-radius:20px; font-weight:700; margin:5px 5px 0 0}
+.win-item {padding:15px; margin:10px 0; background:#f8f9fa; border-radius:10px; border-left:4px solid #667eea}
+.win-year {color:#667eea; font-weight:700; margin-right:10px}
+.notification {position:fixed; top:20px; right:20px; background:#28a745; color:white; padding:15px 25px; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.2); display:none; z-index:2000}
+.btn {padding:10px 20px; border:none; border-radius:5px; cursor:pointer; font-weight:600; margin:5px}
+.save-btn {background:#007bff; color:white}
+.cancel-btn {background:#6c757d; color:white}
+.add-btn {background:#28a745; color:white}
+.edit-btn {background:#ffc107; color:#333}
+.delete-btn {background:#dc3545; color:white}
+.form-group {margin-bottom:15px}
+.form-group label {display:block; margin-bottom:5px; font-weight:600}
+.form-group input, .form-group select, .form-group textarea {width:100%; padding:10px; border:1px solid #ccc; border-radius:5px}
 </style>
-</head><body>
+</head>
+<body>
 
 <div class="container">
-<button class="admin-btn" id="adminBtn" onclick="showLogin()">🔐 Admin Login</button>
+<button class="admin-btn" onclick="showLogin()">🔐 Admin Login</button>
 <button class="logout-btn" id="logoutBtn" onclick="logout()">🚪 Logout</button>
 
 <div class="header">
@@ -65,13 +67,13 @@ tr:hover{background:#f8f9ff}
 <button class="tab" onclick="showTab('players')">👤 Players</button>
 <button class="tab" onclick="showTab('oom')">🏅 Order of Merit</button>
 <button class="tab" onclick="showTab('statistics')">📊 Statistics</button>
-<button class="tab admin-only" id="addTab" onclick="showTab('add')">➕ Add Tournament</button>
 </div>
 
 <div class="content">
+
 <div id="all" class="tab-content active">
 <input type="text" id="searchAll" class="search-box" placeholder="🔍 Search tournaments..." onkeyup="searchTournaments()">
-<table><thead><tr><th>Year</th><th>Date</th><th>Tournament</th><th>Winner</th><th class="admin-only">Actions</th></tr></thead>
+<table><thead><tr><th>Year</th><th>Date</th><th>Tournament</th><th>Winner</th></tr></thead>
 <tbody id="tbody"></tbody></table>
 </div>
 
@@ -83,177 +85,366 @@ tr:hover{background:#f8f9ff}
 
 <div id="oom" class="tab-content">
 <h2 style="margin-bottom:20px;color:#1e3c72">Order of Merit Winners (1995-2025)</h2>
-<button class="btn add-btn admin-only" onclick="showAddOOMModal()">➕ Add OOM Winner</button>
-<table style="background:#fff9e6;margin-top:15px"><thead><tr><th style="background:#f4c430;color:#333">Year</th><th style="background:#f4c430;color:#333">Winner</th><th class="admin-only" style="background:#f4c430;color:#333">Actions</th></tr></thead>
+<table style="background:#fff9e6"><thead><tr><th style="background:#f4c430;color:#333">Year</th><th style="background:#f4c430;color:#333">Winner</th></tr></thead>
 <tbody id="oomBody"></tbody></table>
 </div>
 
-<div id="add" class="tab-content">
-<h2>Add New Tournament</h2>
-<div class="form-group">
-<label>Year:</label>
-<select id="addYear"></select>
-</div>
-<div class="form-group">
-<label>Date (YYYY-MM-DD):</label>
-<input type="text" id="addDate" placeholder="2026-05-15">
-</div>
-<div class="form-group">
-<label>Tournament Name:</label>
-<input type="text" id="addTournament" placeholder="Tournament Name">
-</div>
-<div class="form-group">
-<label>Winner:</label>
-<input type="text" id="addWinner" placeholder="Player Name">
-</div>
-<button class="btn add-btn" onclick="addTournament()">➕ Add Tournament</button>
-</div>
-
-
-
 <div id="statistics" class="tab-content">
-<h2 style="margin-bottom:20px;color:#1e3c72">📊 Live Season Statistics</h2>
+<h2 style="margin-bottom:30px;color:#1e3c72">📊 Asian Tour Statistics (1995-2026)</h2>
 
-<div style="background:#e7f3ff;padding:15px;border-radius:8px;margin-bottom:20px;border-left:4px solid #667eea">
-<p style="margin:0">📡 <strong>Auto-updating from AsianTour.com</strong></p>
-<p style="margin:5px 0 0 0;font-size:14px;color:#666">Statistics refresh automatically when you open this tab</p>
+<!-- Top Winners -->
+<div style="margin-bottom:40px">
+<h3 style="color:#1e3c72;margin-bottom:15px;border-left:4px solid #667eea;padding-left:15px">🏆 All-Time Top 20 Winners</h3>
+<table style="background:#f8f9fa">
+<thead><tr><th style="width:60px">Rank</th><th>Player</th><th style="width:120px">Wins</th></tr></thead>
+<tbody><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#1</td>
+<td><span class="player-name" onclick="showPlayer('Thaworn Wiratchant')">Thaworn Wiratchant</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">18</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#2</td>
+<td><span class="player-name" onclick="showPlayer('Thongchai Jaidee')">Thongchai Jaidee</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">13</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#3</td>
+<td><span class="player-name" onclick="showPlayer('Gaganjeet Bhullar')">Gaganjeet Bhullar</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">11</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#4</td>
+<td><span class="player-name" onclick="showPlayer('Prayad Marksaeng')">Prayad Marksaeng</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">10</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#5</td>
+<td><span class="player-name" onclick="showPlayer('Scott Hend')">Scott Hend</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">10</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#6</td>
+<td><span class="player-name" onclick="showPlayer('Jyoti Randhawa')">Jyoti Randhawa</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">8</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#7</td>
+<td><span class="player-name" onclick="showPlayer('Arjun Atwal')">Arjun Atwal</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">8</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#8</td>
+<td><span class="player-name" onclick="showPlayer('Lee Westwood')">Lee Westwood</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">8</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#9</td>
+<td><span class="player-name" onclick="showPlayer('Kang Wook-soon')">Kang Wook-soon</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">7</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#10</td>
+<td><span class="player-name" onclick="showPlayer('Charlie Wi')">Charlie Wi</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">7</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#11</td>
+<td><span class="player-name" onclick="showPlayer('Miguel Angel Jimenez')">Miguel Angel Jimenez</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">7</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#12</td>
+<td><span class="player-name" onclick="showPlayer('Anirban Lahiri')">Anirban Lahiri</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">7</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#13</td>
+<td><span class="player-name" onclick="showPlayer('Jazz Janewattananond')">Jazz Janewattananond</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">7</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#14</td>
+<td><span class="player-name" onclick="showPlayer('Zhang Lianwei')">Zhang Lianwei</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">6</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#15</td>
+<td><span class="player-name" onclick="showPlayer('Jeev Milkha Singh')">Jeev Milkha Singh</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">6</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#16</td>
+<td><span class="player-name" onclick="showPlayer('K.J. Choi')">K.J. Choi</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">6</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#17</td>
+<td><span class="player-name" onclick="showPlayer('Lin Wen-tang')">Lin Wen-tang</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">6</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#18</td>
+<td><span class="player-name" onclick="showPlayer('John Catlin')">John Catlin</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">6</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#19</td>
+<td><span class="player-name" onclick="showPlayer('Lin Keng-chi')">Lin Keng-chi</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">5</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#20</td>
+<td><span class="player-name" onclick="showPlayer('Vijay Singh')">Vijay Singh</span></td>
+<td style="text-align:center;font-weight:700;color:#28a745">5</td>
+</tr></tbody></table>
 </div>
 
-<div style="display:flex;gap:20px;margin-bottom:20px;flex-wrap:wrap">
-<div class="form-group" style="max-width:200px;margin-bottom:0">
-<label>Season:</label>
-<select id="statsSeason" onchange="loadLiveStats()" style="padding:10px;font-size:16px">
-<option value="2026">2026</option>
-<option value="2025">2025</option>
-<option value="2024">2024</option>
-<option value="2023">2023</option>
-<option value="2022">2022</option>
-</select>
+<!-- Best Decades -->
+<div style="margin-bottom:40px">
+<h3 style="color:#1e3c72;margin-bottom:15px;border-left:4px solid #667eea;padding-left:15px">📅 Most Wins by Decade</h3>
+<table style="background:#f8f9fa">
+<thead><tr><th>Decade</th><th>Player</th><th style="width:120px">Wins</th></tr></thead>
+<tbody><tr>
+<td style="font-weight:700;color:#667eea">1990s</td>
+<td><span class="player-name" onclick="showPlayer('Gerry Norquist')">Gerry Norquist</span></td>
+<td style="text-align:center;font-weight:700">5</td>
+</tr><tr>
+<td style="font-weight:700;color:#667eea">2000s</td>
+<td><span class="player-name" onclick="showPlayer('Thongchai Jaidee')">Thongchai Jaidee</span></td>
+<td style="text-align:center;font-weight:700">12</td>
+</tr><tr>
+<td style="font-weight:700;color:#667eea">2010s</td>
+<td><span class="player-name" onclick="showPlayer('Scott Hend')">Scott Hend</span></td>
+<td style="text-align:center;font-weight:700">9</td>
+</tr><tr>
+<td style="font-weight:700;color:#667eea">2020s</td>
+<td><span class="player-name" onclick="showPlayer('Suteepat Prateeptienchai')">Suteepat Prateeptienchai</span></td>
+<td style="text-align:center;font-weight:700">4</td>
+</tr></tbody></table>
 </div>
 
-<div class="form-group" style="max-width:300px;margin-bottom:0">
-<label>Category:</label>
-<select id="statsCategory" onchange="loadLiveStats()" style="padding:10px;font-size:16px">
-<option value="oom">Order of Merit</option>
-<option value="scoring">Scoring Average</option>
-<option value="driving">Driving Distance</option>
-<option value="gir">Greens in Regulation</option>
-<option value="putting">Putting Average</option>
-<option value="sand">Sand Saves</option>
-</select>
+<!-- Multi-Decade Winners -->
+<div style="margin-bottom:40px">
+<h3 style="color:#1e3c72;margin-bottom:15px;border-left:4px solid #667eea;padding-left:15px">🕰️ Winners Across Multiple Decades</h3>
+<table style="background:#f8f9fa">
+<thead><tr><th>Player</th><th style="width:150px">Decades</th><th style="width:120px">Span</th></tr></thead>
+<tbody><tr>
+<td><span class="player-name" onclick="showPlayer('Gaganjeet Bhullar')">Gaganjeet Bhullar</span></td>
+<td style="text-align:center;color:#667eea">2000s, 2010s, 2020s</td>
+<td style="text-align:center;font-weight:700">3 decades</td>
+</tr><tr>
+<td><span class="player-name" onclick="showPlayer('Thaworn Wiratchant')">Thaworn Wiratchant</span></td>
+<td style="text-align:center;color:#667eea">1990s, 2000s, 2010s</td>
+<td style="text-align:center;font-weight:700">3 decades</td>
+</tr><tr>
+<td><span class="player-name" onclick="showPlayer('Prayad Marksaeng')">Prayad Marksaeng</span></td>
+<td style="text-align:center;color:#667eea">1990s, 2000s, 2010s</td>
+<td style="text-align:center;font-weight:700">3 decades</td>
+</tr><tr>
+<td><span class="player-name" onclick="showPlayer('Chawalit Plaphol')">Chawalit Plaphol</span></td>
+<td style="text-align:center;color:#667eea">1990s, 2000s, 2010s</td>
+<td style="text-align:center;font-weight:700">3 decades</td>
+</tr><tr>
+<td><span class="player-name" onclick="showPlayer('Arjun Atwal')">Arjun Atwal</span></td>
+<td style="text-align:center;color:#667eea">1990s, 2000s, 2010s</td>
+<td style="text-align:center;font-weight:700">3 decades</td>
+</tr><tr>
+<td><span class="player-name" onclick="showPlayer('K.J. Choi')">K.J. Choi</span></td>
+<td style="text-align:center;color:#667eea">1990s, 2000s, 2010s</td>
+<td style="text-align:center;font-weight:700">3 decades</td>
+</tr><tr>
+<td><span class="player-name" onclick="showPlayer('Brendan Jones')">Brendan Jones</span></td>
+<td style="text-align:center;color:#667eea">2010s, 2020s</td>
+<td style="text-align:center;font-weight:700">2 decades</td>
+</tr><tr>
+<td><span class="player-name" onclick="showPlayer('Wade Ormsby')">Wade Ormsby</span></td>
+<td style="text-align:center;color:#667eea">2010s, 2020s</td>
+<td style="text-align:center;font-weight:700">2 decades</td>
+</tr><tr>
+<td><span class="player-name" onclick="showPlayer('Richard T. Lee')">Richard T. Lee</span></td>
+<td style="text-align:center;color:#667eea">2010s, 2020s</td>
+<td style="text-align:center;font-weight:700">2 decades</td>
+</tr><tr>
+<td><span class="player-name" onclick="showPlayer('Steve Lewton')">Steve Lewton</span></td>
+<td style="text-align:center;color:#667eea">2010s, 2020s</td>
+<td style="text-align:center;font-weight:700">2 decades</td>
+</tr></tbody></table>
 </div>
 
-<button class="btn" onclick="loadLiveStats()" style="background:#17a2b8;color:white;margin-top:auto">🔄 Refresh Now</button>
+<!-- Recent Dominance -->
+<div style="margin-bottom:40px">
+<h3 style="color:#1e3c72;margin-bottom:15px;border-left:4px solid #667eea;padding-left:15px">🔥 Most Wins (2020-2026)</h3>
+<table style="background:#f8f9fa">
+<thead><tr><th style="width:60px">Rank</th><th>Player</th><th style="width:120px">Wins</th></tr></thead>
+<tbody><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#1</td>
+<td><span class="player-name" onclick="showPlayer('Suteepat Prateeptienchai')">Suteepat Prateeptienchai</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">4</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#2</td>
+<td><span class="player-name" onclick="showPlayer('Wade Ormsby')">Wade Ormsby</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#3</td>
+<td><span class="player-name" onclick="showPlayer('Chan Shih-chang')">Chan Shih-chang</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#4</td>
+<td><span class="player-name" onclick="showPlayer('Nitithorn Thippong')">Nitithorn Thippong</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#5</td>
+<td><span class="player-name" onclick="showPlayer('Kazuki Higa')">Kazuki Higa</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#6</td>
+<td><span class="player-name" onclick="showPlayer('Andy Ogletree')">Andy Ogletree</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#7</td>
+<td><span class="player-name" onclick="showPlayer('Sadom Kaewkanjana')">Sadom Kaewkanjana</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">2</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#8</td>
+<td><span class="player-name" onclick="showPlayer('Sihwan Kim')">Sihwan Kim</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">2</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#9</td>
+<td><span class="player-name" onclick="showPlayer('Scott Vincent')">Scott Vincent</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">2</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#10</td>
+<td><span class="player-name" onclick="showPlayer('Minkyu Kim')">Minkyu Kim</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">2</td>
+</tr></tbody></table>
 </div>
 
-<div id="statsLoading" style="display:none;text-align:center;padding:40px">
-<div style="font-size:48px">⏳</div>
-<p style="margin-top:10px;color:#666">Loading statistics from AsianTour.com...</p>
+<!-- Best Single Seasons -->
+<div style="margin-bottom:40px">
+<h3 style="color:#1e3c72;margin-bottom:15px;border-left:4px solid #667eea;padding-left:15px">💥 Best Single Seasons (3+ Wins)</h3>
+<table style="background:#f8f9fa">
+<thead><tr><th style="width:100px">Season</th><th>Player</th><th style="width:120px">Wins</th></tr></thead>
+<tbody><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">2019</td>
+<td><span class="player-name" onclick="showPlayer('Jazz Janewattananond')">Jazz Janewattananond</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">4</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">2005</td>
+<td><span class="player-name" onclick="showPlayer('Thaworn Wiratchant')">Thaworn Wiratchant</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">4</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">2018</td>
+<td><span class="player-name" onclick="showPlayer('John Catlin')">John Catlin</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">2017</td>
+<td><span class="player-name" onclick="showPlayer('Shiv Kapur')">Shiv Kapur</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">2013</td>
+<td><span class="player-name" onclick="showPlayer('Scott Hend')">Scott Hend</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">2012</td>
+<td><span class="player-name" onclick="showPlayer('Thaworn Wiratchant')">Thaworn Wiratchant</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">2011</td>
+<td><span class="player-name" onclick="showPlayer('Lee Westwood')">Lee Westwood</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">2004</td>
+<td><span class="player-name" onclick="showPlayer('Miguel Angel Jimenez')">Miguel Angel Jimenez</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">2001</td>
+<td><span class="player-name" onclick="showPlayer('Charlie Wi')">Charlie Wi</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">2000</td>
+<td><span class="player-name" onclick="showPlayer('Simon Dyson')">Simon Dyson</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">1995</td>
+<td><span class="player-name" onclick="showPlayer('Lin Keng-chi')">Lin Keng-chi</span></td>
+<td style="text-align:center;font-weight:700;color:#dc3545">3</td>
+</tr></tbody></table>
 </div>
 
-<div id="statsContent">
-<!-- Stats will be loaded here -->
+<!-- Multiple OOM -->
+<div style="margin-bottom:40px">
+<h3 style="color:#1e3c72;margin-bottom:15px;border-left:4px solid #667eea;padding-left:15px">🏅 Multiple Order of Merit Champions</h3>
+<table style="background:#fff9e6">
+<thead><tr><th>Player</th><th style="width:100px">OOM Wins</th><th>Years</th></tr></thead>
+<tbody><tr>
+<td><span class="player-name" onclick="showPlayer('Thongchai Jaidee')">Thongchai Jaidee</span></td>
+<td style="text-align:center;font-weight:700;color:#f4c430">3x</td>
+<td style="color:#666">2001, 2004, 2009</td>
+</tr><tr>
+<td><span class="player-name" onclick="showPlayer('Kang Wook-soon')">Kang Wook-soon</span></td>
+<td style="text-align:center;font-weight:700;color:#f4c430">2x</td>
+<td style="color:#666">1996, 1998</td>
+</tr><tr>
+<td><span class="player-name" onclick="showPlayer('Thaworn Wiratchant')">Thaworn Wiratchant</span></td>
+<td style="text-align:center;font-weight:700;color:#f4c430">2x</td>
+<td style="color:#666">2005, 2012</td>
+</tr><tr>
+<td><span class="player-name" onclick="showPlayer('Jeev Milkha Singh')">Jeev Milkha Singh</span></td>
+<td style="text-align:center;font-weight:700;color:#f4c430">2x</td>
+<td style="color:#666">2006, 2008</td>
+</tr></tbody></table>
 </div>
 
-<div id="statsError" style="display:none;background:#fff3cd;border:2px solid #ffc107;padding:20px;border-radius:8px;margin-top:20px">
-<h3 style="color:#856404;margin-bottom:10px">⚠️ Unable to Load Statistics</h3>
-<p style="color:#856404;margin:0">Could not fetch data from AsianTour.com. This may be due to:</p>
-<ul style="color:#856404;margin-top:10px">
-<li>Network connectivity issues</li>
-<li>Asian Tour website is temporarily unavailable</li>
-<li>Browser security restrictions (CORS)</li>
-</ul>
-<p style="color:#856404;margin-top:10px"><strong>Note:</strong> For automatic updates to work, this needs to be hosted on a server (like GitHub Pages) or you can view stats directly at <a href="https://www.asiantour.com/stats" target="_blank">AsianTour.com</a></p>
+<!-- Most Wins Without OOM -->
+<div style="margin-bottom:40px">
+<h3 style="color:#1e3c72;margin-bottom:15px;border-left:4px solid #667eea;padding-left:15px">🎯 Most Wins Without OOM Title</h3>
+<table style="background:#f8f9fa">
+<thead><tr><th style="width:60px">Rank</th><th>Player</th><th style="width:120px">Wins</th></tr></thead>
+<tbody><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#1</td>
+<td><span class="player-name" onclick="showPlayer('Gaganjeet Bhullar')">Gaganjeet Bhullar</span></td>
+<td style="text-align:center;font-weight:700;color:#6c757d">11</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#2</td>
+<td><span class="player-name" onclick="showPlayer('Prayad Marksaeng')">Prayad Marksaeng</span></td>
+<td style="text-align:center;font-weight:700;color:#6c757d">10</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#3</td>
+<td><span class="player-name" onclick="showPlayer('Lee Westwood')">Lee Westwood</span></td>
+<td style="text-align:center;font-weight:700;color:#6c757d">8</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#4</td>
+<td><span class="player-name" onclick="showPlayer('Charlie Wi')">Charlie Wi</span></td>
+<td style="text-align:center;font-weight:700;color:#6c757d">7</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#5</td>
+<td><span class="player-name" onclick="showPlayer('Miguel Angel Jimenez')">Miguel Angel Jimenez</span></td>
+<td style="text-align:center;font-weight:700;color:#6c757d">7</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#6</td>
+<td><span class="player-name" onclick="showPlayer('Zhang Lianwei')">Zhang Lianwei</span></td>
+<td style="text-align:center;font-weight:700;color:#6c757d">6</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#7</td>
+<td><span class="player-name" onclick="showPlayer('K.J. Choi')">K.J. Choi</span></td>
+<td style="text-align:center;font-weight:700;color:#6c757d">6</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#8</td>
+<td><span class="player-name" onclick="showPlayer('Lin Wen-tang')">Lin Wen-tang</span></td>
+<td style="text-align:center;font-weight:700;color:#6c757d">6</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#9</td>
+<td><span class="player-name" onclick="showPlayer('Vijay Singh')">Vijay Singh</span></td>
+<td style="text-align:center;font-weight:700;color:#6c757d">5</td>
+</tr><tr>
+<td style="text-align:center;font-weight:700;color:#667eea">#10</td>
+<td><span class="player-name" onclick="showPlayer('Boonchu Ruangkit')">Boonchu Ruangkit</span></td>
+<td style="text-align:center;font-weight:700;color:#6c757d">5</td>
+</tr></tbody></table>
 </div>
 
+<p style="text-align:center;color:#666;margin-top:30px">
+📊 All statistics computed from 694 tournaments (1995-2026)<br>
+Last updated: May 2026
+</p>
+
 </div>
-
-
-</div>
-
 </div>
 </div>
 
 <!-- Login Modal -->
-<div id="loginModal" class="modal login-modal">
-<div class="modal-content">
+<div id="loginModal" class="modal">
+<div class="modal-content" style="max-width:400px">
 <h2>🔐 Admin Login</h2>
-<div class="form-group">
-<label>Password:</label>
-<input type="password" id="password" placeholder="Enter password" onkeypress="if(event.key==='Enter')login()">
-</div>
+<input type="password" id="password" placeholder="Password" onkeypress="if(event.key==='Enter')login()">
 <button class="btn save-btn" onclick="login()">Login</button>
 <button class="btn cancel-btn" onclick="closeLogin()">Cancel</button>
 <p id="loginError" style="color:#dc3545;margin-top:10px;display:none">Incorrect password</p>
 </div>
 </div>
 
-<!-- Edit Tournament Modal -->
-<div id="editModal" class="modal">
-<div class="modal-content">
-<button class="close-btn" onclick="closeEditModal()">×</button>
-<h2>Edit Tournament</h2>
-<input type="hidden" id="editIndex">
-<div class="form-group">
-<label>Year:</label>
-<input type="text" id="editYear">
-</div>
-<div class="form-group">
-<label>Date:</label>
-<input type="text" id="editDate">
-</div>
-<div class="form-group">
-<label>Tournament:</label>
-<input type="text" id="editTournament">
-</div>
-<div class="form-group">
-<label>Winner:</label>
-<input type="text" id="editWinner">
-</div>
-<button class="btn save-btn" onclick="saveEdit()">💾 Save</button>
-<button class="btn cancel-btn" onclick="closeEditModal()">❌ Cancel</button>
-</div>
-</div>
-
-<!-- Add OOM Modal -->
-<div id="addOOMModal" class="modal">
-<div class="modal-content">
-<button class="close-btn" onclick="closeAddOOMModal()">×</button>
-<h2>Add Order of Merit Winner</h2>
-<div class="form-group">
-<label>Year:</label>
-<input type="text" id="newOOMYear" placeholder="e.g., 2026 or 2026-27">
-</div>
-<div class="form-group">
-<label>Winner:</label>
-<input type="text" id="newOOMWinner" placeholder="Player Name">
-</div>
-<button class="btn save-btn" onclick="saveNewOOM()">💾 Add</button>
-<button class="btn cancel-btn" onclick="closeAddOOMModal()">❌ Cancel</button>
-</div>
-</div>
-
-<!-- Edit OOM Modal -->
-<div id="editOOMModal" class="modal">
-<div class="modal-content">
-<button class="close-btn" onclick="closeEditOOMModal()">×</button>
-<h2>Edit Order of Merit Winner</h2>
-<input type="hidden" id="editOOMIndex">
-<div class="form-group">
-<label>Year:</label>
-<input type="text" id="editOOMYear">
-</div>
-<div class="form-group">
-<label>Winner:</label>
-<input type="text" id="editOOMWinner">
-</div>
-<button class="btn save-btn" onclick="saveOOMEdit()">💾 Save</button>
-<button class="btn cancel-btn" onclick="closeEditOOMModal()">❌ Cancel</button>
-</div>
-</div>
-
-
-<!-- Player Detail Modal -->
+<!-- Player Modal -->
 <div id="playerModal" class="modal">
 <div class="modal-content">
 <button class="close-btn" onclick="closePlayerModal()">×</button>
@@ -270,198 +461,25 @@ tr:hover{background:#f8f9ff}
 <div id="notification" class="notification"></div>
 
 <script>
+const DATA = [[1995, "25 Jun", "Asian PGA International", "Park Nam-sin"], [1995, "2 Jul", "Canlubang Classic", "Carlos Espinosa"], [1995, "30 Jul", "Tournament Players Championship", "Lin Keng-chi"], [1995, "13 Aug", "Volvo Masters of Thailand", "Zhang Lianwei"], [1995, "27 Aug", "Yokohama Singapore PGA Championship", "Lin Keng-chi"], [1995, "3 Sep", "Passport Open", "Vijay Singh"], [1995, "1 Oct", "Langkawi Open", "Boonchu Ruangkit"], [1995, "8 Oct", "Gadgil Western Dubai Creek Open", "Robert Willis"], [1995, "15 Oct", "Merlion Masters", "Nico van Rensburg"], [1995, "22 Oct", "Samsung Masters", "Lin Keng-chi"], [1995, "29 Oct", "Royal Perak Classic", "Gerry Norquist"], [1995, "20 Nov", "Kenmore Pakistan Masters", "Kwon Young-suk"], [1995, "27 Nov", "Gadgil Western Masters", "Gaurav Ghei"], [1995, "10 Dec", "Gadgil Western Vietnam Open", "Clay Devers"], [1995, "17 Dec", "Philippine Classic", "Jeev Milkha Singh"], [1995, "7 Jan 1996", "Myanmar Open", "Boonchu Ruangkit"], [1995, "14 Jan 1996", "Omega PGA Championship", "Yeh Chang-ting"], [1995, "21 Jan 1996", "Asian Matchplay Championship", "Jeev Milkha Singh"], [1996, "17-Mar", "Sabah Masters", "Thaworn Wiratchant"], [1996, "1-Apr", "Singha Thai Prasit Bangkok Open", "Thammanoon Sriroj"], [1996, "21-Apr", "Canlubang Classic", "Craig Kamps"], [1996, "28-Apr", "Tournament Players Championship", "Kang Wook-soon"], [1996, "5-May", "Honda Invitational", "Steve Elkington"], [1996, "12-May", "Guam Open", "Mo Joong-kyung"], [1996, "2-Jun", "Volvo China Open", "Prayad Marksaeng"], [1996, "11-Aug", "Canon Singapore Open", "John Kernohan"], [1996, "18-Aug", "Kuala Lumpur Open", "Kang Wook-soon"], [1996, "25-Aug", "Fila Open", "Kwon Oh-chul"], [1996, "1-Sep", "Philip Morris Asian Cup", "Jeev Milkha Singh"], [1996, "29-Sep", "Lexus International", "Boonchu Ruangkit"], [1996, "6-Oct", "Yokohama Singapore PGA Championship", "Yeh Chang-ting"], [1996, "18-Oct", "Dubai Creek Open", "Paul Friedlander"], [1996, "27-Oct", "Australian Players Championship", "Bradley Hughes"], [1996, "3-Nov", "Alfred Dunhill Masters", "Bernhard Langer"], [1996, "10-Nov", "Merlion Masters", "Peter Teravainen"], [1996, "17-Nov", "Pakistan Steel Masters", "Eric Rustand"], [1996, "1-Dec", "Tug Pratama Indonesian PGA Championship", "Thammanoon Sriroj"], [1996, "8-Dec", "Royal Thai Classic", "Richard Kaplan"], [1996, "15-Dec", "Omega PGA Championship", "Gerry Norquist"], [1996, "22-Dec", "Asian Matchplay Championship", "Zhang Lianwei"], [1997, "9-Feb", "Asian Honda Classic", "Tiger Woods"], [1997, "30-Mar", "Vietnam Open", "Andrew Bonhomme"], [1997, "13-Apr", "London Myanmar Open", "Boonchu Ruangkit"], [1997, "20-Apr", "DFS Galleria Guam Open", "Gerry Norquist"], [1997, "27-Apr", "Satelindo Indonesia Open", "Craig Parry"], [1997, "18-May", "Volvo China Open", "Cheng Jun"], [1997, "7-Sep", "Philip Morris Asian Cup", "Park No-seok"], [1997, "14-Sep", "Ericsson Asia-Pacific Masters", "Darren Cole"], [1997, "21-Sep", "Mild Seven Kuala Lumpur Open", "Charlie Wi"], [1997, "12-Oct", "Yokohama Singapore PGA Championship", "Prayad Marksaeng"], [1997, "19-Oct", "ABN-AMRO Pakistan Masters", "Thammanoon Sriroj"], [1997, "26-Oct", "Dubai Creek Open", "Adrian Percey"], [1997, "2-Nov", "Hero Honda Masters", "Ted Purdy"], [1997, "9-Nov", "Ta-Shee Open", "Wang Ter-chang"], [1997, "16-Nov", "Volvo Masters of Malaysia", "Christian Pena"], [1997, "23-Nov", "Lexus Thai International", "Prayad Marksaeng"], [1997, "30-Nov", "Tugu Pratama Indonesian PGA Championship", "Clay Devers"], [1997, "7-Dec", "Andersen Consulting Hong Kong Open", "Frank Nobilo"], [1997, "14-Dec", "Omega PGA Championship", "Rodrigo Cuello"], [1997, "20-Dec", "Volvo Asian Matchplay", "Des Terblanche"], [1997, "10-AUG", "Sabah Masters", "Des Terblanche"], [1997, "17-AUG", "SingTel Ericsson Singapore Open", "Zaw Moe"], [1998, "8-Mar", "London Myanmar Open", "Taimur Hussain"], [1998, "15-Mar", "Classic Indian Open", "Firoz Ali"], [1998, "5-Apr", "China Orient Masters", "Chawalit Plaphol"], [1998, "19-Apr", "Volvo China open", "Ed Fryatt"], [1998, "3-May", "Macau Open", "Satoshi Oide"], [1998, "17-May", "Guam open", "Jerry Smith"], [1998, "24-May", "Fila Open", "Robert Huxtable"], [1998, "9-AUG", "Sabah Masters", "Simon Yates"], [1998, "16-AUG", "Volvo Masters of Malaysia", "Chris Williams"], [1998, "23-Aug", "Ericsson Singapore Obon", "Shaun Micheel"], [1998, "20-Sep", "Kolon Sports Korea Open", "Kim Dae-sub"], [1998, "18-Oct", "Kuala Lumpur Open", "Nico van Rensburg"], [1998, "25-Oct", "FedEX PGA Championship", "Chris Willams"], [1998, "1-Nov", "Ericsson Classic", "Lu Wen-teh"], [1998, "8-Nov", "Hero Honda Masters", "Jyoti Randhawa"], [1998, "15 Nov", "Thailand Open", "James Kingston"], [1998, "29-Nov", "Perrier Hong Kong Open", "Kang Wook-soon"], [1998, "6-Dec", "Omega PGA Championship", "Kang Wook-soon"], [1998, "13-Dec", "Volvo Asian Matchplay", "Gerry Norquist"], [1999, "31-Jan", "London Myanmar Open", "Wang Ter-chang"], [1999, "7-Feb", "Benson & Hedges Malaysian Open", "Gerry Norquist"], [1999, "14-Mar", "Wills Indian Open", "Arjun Atwal"], [1999, "18-Apr", "Macau Open", "Lee Westwood"], [1999, "2-May", "Maekyung Daks Open", "James Kingston"], [1999, "23-May", "Volvo China Open", "Kyi Hla Han"], [1999, "30-May", "Casino Filipino Philippine Open", "Anthony Kang"], [1999, "22-Aug", "Tianjin TEDA Open", "Thammanoon Sriroj"], [1999, "29-Aug", "Volvo Masters of Malaysia", "Nico van Rensburg"], [1999, "5-Sep", "ERA Taiwan Open", "Kang Wook-soon"], [1999, "19-Sep", "Kolon Korea Open", "K.J. Choi"], [1999, "17-Oct", "Lexus International", "Jeev Milkha Singh"], [1999, "24-Oct", "Nokia Singapore Open", "Kenny Druce"], [1999, "31-Oct", "Hero Honda Masters", "Jyoti Randhawa"], [1999, "7-Nov", "Sabah Masters", "Robert Huxtable"], [1999, "14-Nov", "Johnnie Walker Classic", "Michael Campbell"], [1999, "28-Nov", "Perrier Hong Kong Open", "Patrik Sjoland"], [1999, "4-Dec", "Mittweida Thailand Open", "Fran Quinn"], [1999, "12-Dec", "Omega PGA Championship", "Fran Quinn"], [2000, "13-Feb", "Benson & Hedges Malaysian Open", "Yeh Wei-tze"], [2000, "20-Feb", "Casino Filipino Open", "Prayad Marksaeng"], [2000, "27-Feb", "London Myanmar Open", "James Kingston"], [2000, "19-Mar", "Wills Indian Open", "Jyoti Randhawa"], [2000, "30-Apr", "Maekyung LG Fashion Open", "Kang Wook-soon"], [2000, "14-May", "Macau Open", "Simon Dyson"], [2000, "21-May", "Volvo China Open", "Simon Dyson"], [2000, "28-May", "Ericsson Classic", "James Kingston"], [2000, "4-Jun", "Hyundai Motors Masters", "Choi Gwang-soc"], [2000, "13-Aug", "Volvo Masters of Malaysia", "Stephen Lindskog"], [2000, "27-Aug", "ROC PGA Championship", "Daisuke Maruyama"], [2000, "3-Sep", "Mercuries Taiwan Masters", "Lin Keng-chi"], [2000, "10-Sep", "Johnnie Walker Taiwan Open", "Vijay Singh"], [2000, "8-Oct", "Kolon Cup Korea Open", "Thongchai Jaidee"], [2000, "29-Oct", "Lexus International", "Craig Kamps"], [2000, "5-Nov", "Hero Honda Masters", "Arjun Atwal"], [2000, "12-Nov", "Star Alliance Open", "Arjun Atwal"], [2000, "19-Nov", "Johnnie Walker Classic", "Tiger Woods"], [2000, "3-Dec", "Thailand Open", "Des Terblanche"], [2000, "10-Dec", "Singapore Open", "Jyoti Randhawa"], [2000, "17-Dec", "Omega Hong Kong Open", "Simon Dyson"], [2001, "4-Feb", "Thailand Masters", "Kang Wook-soon"], [2001, "11-Feb", "London Myanmar Open", "Anthony Kang"], [2001, "18-Feb", "Carlsberg Malaysian Open", "Vijay Singh"], [2001, "25-Feb", "Caltex Singapore Masters", "Vijay Singh"], [2001, "18-Mar", "Wills Indian Open", "Thongchai Jaidee"], [2001, "29-Apr", "Maekyung LG Fashion Open", "Choi Gwang-Soo"], [2001, "6-May", "Macau Open", "Zhang Lianwei"], [2001, "20-May", "SK Telecom Open", "Charlie Wi"], [2001, "24 Jun", "Alcatel Singapore Open", "Thaworn Wiratchant"], [2001, "12-Aug", "Volvo Masters of Malaysia", "Thaworn Wiratchant"], [2001, "2-Sep", "Acer Taiwan Open", "Andrew Pitts"], [2001, "9-Sep", "Mercuries Taiwan Masters", "Daniel Chopra"], [2001, "16-Sep", "Kolon Cup Korea Open", "Kim Dae-sub"], [2001, "23-Sep", "Shinhan Donghae Open", "Charlie Wi"], [2001, "21-Oct", "Volvo China Open", "Charlie Wi"], [2001, "25-Nov", "BMW Asian Open", "Jarmo Sandelin"], [2001, "2-Dec", "Omega Hong Kong Open", "Jose Maria Olazabal"], [2002, "27-Jan", "Johnnie Walker Classic", "Retief Goosen"], [2002, "10-Feb", "London Myanmar Open", "Thongchai Jaidee"], [2002, "17-Feb", "Hero Honda Masters", "Harmeet Kahlon"], [2002, "24-Feb", "Caltex Singapore Masters", "Arjun Atwal"], [2002, "3-Mar", "Carlsberg Malaysian Open", "Alastair Forsyth"], [2002, "10-Mar", "Casino Filipino Philippine Open", "Rick Gibson"], [2002, "17-Mar", "Royal Challenge Indian Open", "Vijay Kumar"], [2002, "28-Apr", "SK Telecom Open", "Charlie Wi"], [2002, "4-May", "Maekyung LG Fashion Open", "Eddie Lee"], [2002, "25-Aug", "Mercuries Taiwan Masters", "Tsai Chi-huang"], [2002, "1-Sep", "Shinhan Donghae Open", "Hur Suk-ho"], [2002, "8-Sep", "Kolon Cup Korea Open", "Sergio Garcia"], [2002, "15-Sep", "Volvo China Open", "David Gleeson"], [2002, "22-Sep", "Acer Taiwan Open", "Danny Chia"], [2002, "20-Oct", "Macau Open", "Zhang Lianwei"], [2002, "17-Nov", "TCL Classic", "Colin Montgomerie"], [2002, "24-Nov", "BMW Asian Open", "Padraig Harrington"], [2002, "1-Dec", "Omega Hong Kong Open", "Freddie Jacobson"], [2002, "8-Dec", "Volvo Masters Of Asia", "Kevin Na"], [2003, "22 Dec 2002", "Asia Japan Okinawa Open", "Hiroyuki Fujita"], [2003, "26-Jan", "Caltex Masters", "Zhang Lianwei"], [2003, "16-Feb", "Johnnie Walker Classic", "Ernie Els"], [2003, "23-Feb", "Carlsberg Malaysian Open", "Arjun Atwal"], [2003, "2-Mar", "Myanmar Open", "Lin Keng-chi"], [2003, "30-Mar", "Royal Challenge Indian Open", "Mike Cunning"], [2003, "6-Apr", "Thailand Open", "Edward Loar"], [2003, "4-May", "Maekyung Open", "Chung Joon"], [2003, "29-Jun", "SK Telecom Open", "K.J. Choi"], [2003, "14-Sep", "Mercuries Taiwan Masters", "Lin Wen-ko"], [2003, "12-Oct", "Kolon Korea Open", "John Daly"], [2003, "19-Oct", "Macau Open", "Colin Montgomerie"], [2003, "26-Oct", "Sanya Open", "Marcus Both"], [2003, "9-Nov", "Hero Honda Masters", "Arjun Atwal"], [2003, "16-Nov", "Volvo China Open", "Zhang Lianwei"], [2003, "23-Nov", "Acer Taiwan Open", "Jason Dawes"], [2003, "7-Dec", "Omega Hong Kong Open", "Padraig Harrington"], [2003, "14-Dec", "Volvo Masters of Asia", "Thongchai Jaidee"], [2004, "21 Dec 2003", "Asia Japan Okinawa Open", "Hideto Tanihara"], [2004, "25-Jan", "Thailand Open", "Boonchu Ruangkit"], [2004, "1-Feb", "Johnnie Walker Classic", "Miguel Angel Jimenez"], [2004, "15-Feb", "London Myanmar Open", "Thongchai Jaidee"], [2004, "22-Feb", "Carlsberg Malaysian Open", "Thongchai Jaidee"], [2004, "29-Feb", "DHL Philippine Open", "Edward Michaels"], [2004, "21-Mar", "Caltex Masters", "Colin Montgomerie"], [2004, "28-Mar", "Royal Challenge Indian Open", "Mardan Mamat"], [2004, "2-May", "Volkswagen Masters-China", "Rahil Gangjee"], [2004, "9-May", "Macau Open", "Jason Knutzon"], [2004, "16-May", "BMW Asian Open", "Miguel Angel Jimenez"], [2004, "23-May", "SK Telecom Open", "Simon Yates"], [2004, "22-Aug", "Tianjin TEDA Open", "Thammanoon Sriroj"], [2004, "12-Sep", "Kolon Korea Open", "Edward Loar"], [2004, "19-Sep", "Mercuries Taiwan Masters", "Thaworn Wiratchant"], [2004, "26-Sep", "Taiwan Open", "Charlie Wi"], [2004, "24-Oct", "Crowne Plaza Open", "Terry Pilkadaris"], [2004, "31-Oct", "Sanya Open", "Terry Pilkadaris"], [2004, "7-Nov", "Carlsberg Masters Vietnam", "Angelo Que"], [2004, "28-Nov", "Volvo China Open", "Stephen Dodd"], [2004, "5-Dec", "Omega Hong Kong Open", "Miguel Angel Jimenez"], [2004, "12-Dec", "Volvo Masters of Asia", "Jyoti Randhawa"], [2005, "19 Dec 2004", "Asia Japan Okinawa Open", "Kiyoshi Miyazato"], [2005, "30-Jan", "Caltex Masters", "Nick Dougherty"], [2005, "20-Feb", "Carlsberg Malaysian Open", "Thongchai Jaidee"], [2005, "27-Feb", "Myanmar Open", "Scott Strange"], [2005, "6-Mar", "Thai Airways International Thailand Open", "Richard Lee"], [2005, "13-Mar", "Qatar masters", "Ernie Els"], [2005, "20-Mar", "TCL Classic", "Paul Casey"], [2005, "27-Mar", "Enjoy Jakarta Standard Chartered Indonesia Open", "Thaworn Wiratchant"], [2005, "24-Apr", "Johnnie Walker Classic", "Adam Scott"], [2005, "1-May", "BMW Asian Open", "Ernie Els"], [2005, "8-May", "SK Telecom Open", "K.J. Choi"], [2005, "15-May", "Macau Open", "Wang Ter-chang"], [2005, "22-May", "Philippine Open", "Adam Le Vesconte"], [2005, "29-May", "KT&G Maekyung Open", "Choi Sang-ho"], [2005, "26-Jun", "Brunei Open", "Terry Pilkadaris"], [2005, "4-Sep", "Volkswagen Masters-China", "Retief Goosen"], [2005, "11-Sep", "Singapore Open", "Adam Scott"], [2005, "18-Sep", "Taiwan Open", "Thaworn Wiratchant"], [2005, "25-Sep", "Mercuries Taiwan Masters", "Lu Wei-chih"], [2005, "2-Oct", "Crowne Plaza Open", "Prayad Marksaeng"], [2005, "16-Oct", "Bangkok Airways Open", "Lu Wen-teh"], [2005, "30-Oct", "Hero Honda Indian Open", "Thaworn Wiratchant"], [2005, "6-Nov", "Double A International Open", "Chinnarat Phadungsil"], [2005, "20-Nov", "Carlsberg Masters Vietnam", "Thaworn Wiratchant"], [2005, "27-Nov", "Volvo China Open", "Paul Casey"], [2005, "4-Dec", "UBS Hong Kong Open", "Colin Montgomerie"], [2005, "11-Dec", "Volvo Masters of Asia", "Shiv Kapur"], [2006, "18 Dec 2005", "Asia Japan Okinawa Open", "Tadahiro Takayama"], [2006, "22-Jan", "Pakistan Open", "Chris Rodgers"], [2006, "29-Jan", "Commercialbank Qatar Masters", "Henrik Stenson"], [2006, "12-Feb", "Johnnie Walker Classic", "Kevin Stadler"], [2006, "19-Feb", "Maybank Malaysian Open", "Charlie Wi"], [2006, "5-Mar", "Enjoy Jakarta HSBC Indonesia Open", "Simon Dyson"], [2006, "12-Mar", "OSIM Singapore Masters", "Mardan Mamat"], [2006, "19-Mar", "TCL Classic", "Johan Edfors"], [2006, "16-Apr", "Volvo China Open", "Jeev Milkha Singh"], [2006, "23-Apr", "BMW Asian Open", "Gonzalo Fernandez-Castano"], [2006, "30-Apr", "GS Caltex Maekyung Open", "Suk Jong-yul"], [2006, "7-May", "SK Telecom Open", "Prom Meesawat"], [2006, "14-May", "Aamby Valley Asian Masters", "Hendrik Buhrmann"], [2006, "21-May", "Macau Open", "Kane Webber"], [2006, "28-May", "Philippine Open", "Scott Strange"], [2006, "4-Jun", "Bangkok Airways Open", "Chawalit Plaphol"], [2006, "20-Aug", "Crowne Plaza Open", "Chinnarat Phadungsil"], [2006, "27-Aug", "Brunei Open", "Wang Ter-chang"], [2006, "3-Sep", "Pulai Springs Malaysian Masters", "Anton Haig"], [2006, "10-Sep", "Barclays Singapore Open", "Adam Scott"], [2006, "24-Sep", "Kolon-Hana Bank Korea Open", "Yang Yong-eun"], [2006, "1-Oct", "Mercuries Taiwan Masters", "Gaurav Ghei"], [2006, "8-Oct", "Taiwan Open", "Lin Wen-tang"], [2006, "15-Oct", "Volkswagen Masters-China", "Retief Goosen"], [2006, "22-Oct", "Hero Honda Indian Open", "Jyoti Randhawa"], [2006, "19-Nov", "UBS Hong Kong Open", "Jose Manuel Lara"], [2006, "10-Dec", "Volvo Masters of Asia", "Thongchai Jaidee"], [2007, "21-Jan", "Pakistan Open", "Airil Rizman"], [2007, "28-Jan", "Commercialbank Qatar Masters", "Retief Goosen"], [2007, "4-Feb", "Philippine Open", "Frankie Minoza"], [2007, "11-Feb", "Maybank Malaysian Open", "Peter Hedblom"], [2007, "18-Feb", "Enjoy Jakarta Astro Indonesia Open", "Mikko llonen"], [2007, "4-Mar", "Johnnie Walker Classic", "Anton Haig"], [2007, "11-Mar", "Clariden Leu Singapore Masters", "Liang Wenchong"], [2007, "18-Mar", "TCL Classic", "Chapchai Nirat"], [2007, "25-Mar", "Motorola International Bintan", "Jason Knutzon"], [2007, "15-Apr", "Volvo China Open", "Markus Brier"], [2007, "19-Apr", "Pine Valley Beijing Open", "Gaurav Ghei"], [2007, "22-Apr", "BMW Asian Open", "Raphael Jacquelin"], [2007, "6-May", "GS Caltex Maekyung Open", "Kim Kyung-tae"], [2007, "20-May", "Macau Open", "Lu Wen-teh"], [2007, "27-May", "SK Telecom Open", "Bae Sang-moon"], [2007, "10-Jun", "Bangkok Airways Open", "Lee Sung"], [2007, "26-Aug", "Iskandar Johor Open", "Artemio Murakami"], [2007, "2-Sep", "Brunei Open", "Lin Wen-tang"], [2007, "16-Sep", "Midea China Classic", "Thaworn Wiratchant"], [2007, "23-Sep", "Mercuries Taiwan Masters", "Lu Wen-teh"], [2007, "7-Oct", "Kolon-Hana Bank Korea Open", "Vijay Singh"], [2007, "14-Oct", "Hero Honda Indian Open", "Jyoti Randhawa"], [2007, "28-Oct", "Pertamina Indonesia President Invitational", "Juvic Pagunsan"], [2007, "4-Nov", "Barclays Singapore Open", "Angel Cabrera"], [2007, "18-Nov", "UBS Hong Kong Open", "Miguel Angel Jimenez"], [2007, "25-Nov", "Hana Bank Vietnam Masters", "Chapchai Nirat"], [2007, "2-Dec", "Johnnie Walker Cambodian Open", "Bryan Saltus"], [2007, "9-Dec", "Volvo Masters of Asia", "Prayad Marksaeng"], [2008, "2008-02-10", "EMAAR-MGF INDIAN MASTERS 2008", "S.S.P. Chowrasia"], [2008, "2008-02-17", "ASTRO INDONESIA OPEN", "Felipe Aguilar"], [2008, "2008-02-23", "SAIL OPEN GOLF CHAMPIONSHIP", "Mark Brown"], [2008, "2008-03-02", "JOHNNIE WALKER CLASSIC 2008", "Mark Brown"], [2008, "2008-03-09", "MAYBANK MALAYSIAN OPEN 2008", "Arjun Atwal"], [2008, "2008-03-16", "BALLANTINE'S CHAMPIONSHIP 2008", "Graeme McDowell"], [2008, "2008-03-23", "ASIAN TOUR INTERNATIONAL", "Lin Wen-tang"], [2008, "2008-04-06", "PHILIPPINE OPEN 2008", "Angelo Que"], [2008, "2008-04-20", "VOLVO CHINA OPEN 2008", "Damien McGrane"], [2008, "2008-04-27", "BMW ASIAN OPEN 2008", "Darren Clarke"], [2008, "2008-05-04", "27th GS CALTEX MAEKYUNG OPEN", "Hwang Inn-Choon"], [2008, "2008-05-11", "PINE VALLEY BEIJING OPEN 2008", "Hiroyuki Fujita"], [2008, "2008-06-08", "BANGKOK AIRWAYS OPEN", "Thaworn Wiratchant"], [2008, "2008-06-29", "SINGHA THAILAND PGA C'SHIP 08", "Mo Joong Kyung"], [2008, "2008-07-20", "137th OPEN CHAMPIONSHIP", "Padraig Harrington"], [2008, "2008-08-09", "WORLDWIDE SELANGOR MASTERS 08", "Ben Leong"], [2008, "2008-08-24", "BRUNEI OPEN 08", "Rick Kulacz"], [2008, "2008-08-31", "PERTAMINA INDONESIA PRESIDENT", "Scott Hend"], [2008, "2008-09-21", "MERCURIES TAIWAN MASTERS", "Lu Wen Teh"], [2008, "2008-09-28", "ASIA-PACIFIC PANASONIC OPEN", "Hideto Tanihara"], [2008, "2008-10-05", "KOLON-HANA BANK 51st KOREA OPN", "Bae Sang-Moon"], [2008, "2008-10-12", "HERO HONDA INDIAN OPEN", "Liang Wen-chong"], [2008, "2008-10-19", "MIDEA CHINA CLASSIC 2008", "Noh Seung-yul"], [2008, "2008-10-26", "MACAU OPEN 2008", "David Gleeson"], [2008, "2008-11-02", "ISKANDAR JOHOR OPEN", "Retief Goosen"], [2008, "2008-11-16", "2008 BARCLAYS SINGAPORE OPEN", "Jeev Milkha Singh"], [2008, "2008-11-23", "UBS HONG KONG OPEN 2008", "Lin Wen-tang"], [2008, "2008-12-07", "HANA BANK VIETNAM MASTERS 2008", "Thongchai Jaidee"], [2008, "2008-12-14", "JOHNNIE WALKER CAMBODIAN OPEN", "Thongchai Jaidee"], [2008, "2008-12-21", "VOLVO MASTERS ASIA", "Lam Chih-Bing"], [2009, "2009-02-15", "Maybank Malaysian Open", "Anthony Kang"], [2009, "2009-02-22", "2009 JOHNNIE WALKER CLASSIC", "Danny Lee"], [2009, "2009-03-01", "ENJOY JAKARTA INDONESIA OPEN", "Thongchai Jaidee"], [2009, "2009-03-08", "2009 SINGHA THAILAND OPEN", "Jyoti Randhawa"], [2009, "2009-03-21", "2009 SAIL OPEN", "Chapchai Nirat"], [2009, "2009-03-29", "BLACK MOUNTAIN MASTERS 2009", "Johan Edfors"], [2009, "2009-04-26", "BALLANTINE'S CHAMPIONSHIP 2009", "Thongchai Jaidee"], [2009, "2009-05-17", "28th GS CALTEX MAEKYUNG OPEN", "Bae Sang-Moon"], [2009, "2009-06-29", "US OPEN CHAMPIONSHIP 2009", "Lucas Glover"], [2009, "2009-07-26", "INDONESIA PRESIDENT INVITATION", "Gaganjeet Bhullar"], [2009, "2009-07-27", "138th OPEN CHAMPIONSHIP 2009", "Stewart Cink"], [2009, "2009-08-02", "BRUNEI OPEN 2009", "Darren Beck"], [2009, "2009-08-08", "Worldwide Holdings Selangor Masters", "Rick Kulacz"], [2009, "2009-08-16", "QUEEN'S CUP 2009", "Chinnarat Phadungsil"], [2009, "2009-09-06", "OMEGA EUROPEAN MASTERS 2009", "Alexander Noren"], [2009, "2009-09-13", "MACAU OPEN 2009", "Thaworn Wiratchant"], [2009, "2009-09-27", "ASIA-PACIFIC PANASONIC OPEN 09", "Daisuke Maruyama"], [2009, "2009-10-04", "MERCURIES TAIWAN MASTERS 2009", "Lin Wen-tang"], [2009, "2009-10-11", "HERO HONDA INDIAN OPEN 2009", "C. Muniyappa"], [2009, "2009-10-25", "ISKANDAR JOHOR OPEN 2009", "K.J. Choi"], [2009, "2009-11-01", "BARCLAYS SINGAPORE OPEN 2009", "Ian Poulter"], [2009, "2009-11-15", "UBS HONG KONG OPEN 2009", "Gregory Bourdy"], [2009, "2009-11-22", "JOHNNIE WALKER CAMBODIAN OPEN", "Marcus Both"], [2009, "2009-12-06", "KING'S CUP 2009", "Chan Yih-shin"], [2010, "2010-02-07", "ASIAN TOUR INTERNATIONAL 2010", "Gaganjeet Bhullar"], [2010, "2010-02-14", "AVANTHA MASTERS 2010", "Andrew Dodt"], [2010, "2010-03-10", "MAYBANK MALAYSIAN OPEN 2010", "Noh Seung-yul"], [2010, "2010-04-02", "SAIL OPEN 2010", "Rikard Karlberg"], [2010, "2010-04-11", "AIR BAGAN MYANMAR OPEN 2010", "Tetsuji Hiratsuka"], [2010, "2010-04-25", "BALLANTINE'S CHAMPIONSHIP", "Marcus Fraser"], [2010, "2010-07-17", "US OPEN CHAMPIONSHIP 2010", "Graeme McDowell"], [2010, "2010-07-18", "THE OPEN CHAMPIONSHIP 2010", "Louis Oosthuizen"], [2010, "2010-08-01", "BRUNEI OPEN 2010", "Siddikur Rahman"], [2010, "2010-08-07", "WORLDWIDE HOLDINGS S'GOR MSTRS", "Angelo Que"], [2010, "2010-09-05", "OMEGA EUROPEAN MASTERS 2010", "Miguel Angel Jimenez"], [2010, "2010-09-12", "HANDA SINGAPORE CLASSIC 2010", "Peter Karmis"], [2010, "2010-09-19", "YEANDGER TPC 2010", "Thaworn Wiratchant"], [2010, "2010-09-26", "2010 ASIA-PACIFIC PANASONIC", "Brendan Jones"], [2010, "2010-10-03", "MERCURIES TAIWAN MASTERS 2010", "Pariya Junhasavasdikul"], [2010, "2010-10-11", "2010 ISKANDAR JOHOR OPEN", "Padraig Harrington"], [2010, "2010-11-14", "2010 BARCLAYS SINGAPORE OPEN", "Adam Scott"], [2010, "2010-11-21", "2010 UBS HONG KONG OPEN", "Ian Poulter"], [2010, "2010-11-28", "2010 KING'S CUP", "Udorn Duangdecha"], [2010, "2010-12-05", "2010 HERO HONDA INDIAN OPEN", "Rikard Karlberg"], [2010, "2010-12-12", "2010 JW CAMBODIAN OPEN", "Thongchai Jaidee"], [2010, "2010-12-19", "2010 BLACK MOUNTAIN MASTERS", "Tetsuji Hiratsuka"], [2011, "2011-02-20", "AVANTHA MASTERS", "S.S.P. Chowrasia"], [2011, "2011-03-25", "SAIL OPEN", "Kiradech Aphibarnrat"], [2011, "2011-04-09", "PANASONIC OPEN (INDIA)", "Anirban Lahiri"], [2011, "2011-04-17", "MAYBANK MALAYSIAN OPEN", "Matteo Manassero"], [2011, "2011-04-24", "INDONESIAN MASTERS", "Lee Westwood"], [2011, "2011-05-01", "BALLANTINE'S CHAMPIONSHIP", "Lee Westwood"], [2011, "2011-05-15", "ICTSI PHILIPPINE OPEN", "Berry Henson"], [2011, "2011-06-19", "QUEEN'S CUP", "Chawalit Plaphol"], [2011, "2011-06-19", "2011 U.S. Open Championship", "Rory McIlroy"], [2011, "2011-07-17", "2011 The Open Championship", "Darren Clarke"], [2011, "2011-07-23", "WORLDWIDE SELANGOR MSTRS 2011", "Joonas Granberg"], [2011, "2011-09-04", "OMEGA EUROPEAN MASTERS", "Thomas Bjorn"], [2011, "2011-09-11", "ISPS HANDA SINGAPORE CLASSIC", "Himmat Rai"], [2011, "2011-09-18", "MACAU OPEN", "Chan Yih-shin"], [2011, "2011-09-25", "ASIA PACIFIC PANASONIC OPEN", "Tetsuji Hiratsuka"], [2011, "2011-10-09", "YEANGDER TPC", "Lu Wei-Chih"], [2011, "2011-10-16", "HERO INDIAN OPEN", "David Gleeson"], [2011, "2011-10-23", "CJ INVITATIONAL", "K.J. Choi"], [2011, "2011-10-30", "CIMB ASIA PACIFIC CLASSIC", "Bo Van Pelt"], [2011, "2011-11-06", "MERCURIES TAIWAN MASTERS", "Lu Wei-Chih"], [2011, "2011-11-13", "BARCLAYS SINGAPORE OPEN", "Gonzalo Fdez-Castano"], [2011, "2011-11-20", "ISKANDAR JOHOR OPEN", "Joost Luiten"], [2011, "2011-11-27", "WORLD CUP", "Matt Kuchar & Gary Woodland"], [2011, "2011-12-04", "UBS HONG KONG OPEN", "Rory McIlroy"], [2011, "2011-12-18", "THAILAND GOLF CHAMPIONSHIP", "Lee Westwood"], [2012, "2012-02-05", "Zaykabar Myanmar Open Presented by Air Bagan", "Kieran Pratt"], [2012, "2012-02-12", "ICTSI PHILIPPINE OPEN 2012", "Mardan Mamat"], [2012, "2012-02-25", "Sail-SBI Open", "Anirban Lahiri"], [2012, "2012-03-17", "HANDA FALDO CAMBODIAN CLASSIC", "David Lipsky"], [2012, "2012-04-01", "Panasonic Open India", "Digvijay Singh"], [2012, "2012-04-08", "ISPS Handa Singapore Classic", "Scott Hend"], [2012, "2012-04-15", "Maybank Malaysian Open", "Louis Oosthuizen"], [2012, "2012-04-22", "Indonesian Masters Presented by PNTS", "Lee Westwood"], [2012, "2012-06-17", "Queen's Cup", "Thaworn Wiratchant"], [2012, "2012-06-24", "Volvik Hildesheim Open", "Lee In-woo"], [2012, "2012-07-22", "The Open Championship", "Ernie Els"], [2012, "2012-09-08", "Worldwide Holdings Selangor Masters", "Thaworn Wiratchant"], [2012, "2012-09-15", "Yeangder Tournament Players Championship", "Gaganjeet Bhullar"], [2012, "2012-09-23", "Asia-Pacific Panasonic Open", "Masanori Kobayashi"], [2012, "2012-09-30", "Mercuries Taiwan Masters", "Tsai Chi-huang"], [2012, "2012-10-07", "CJ Invitational Hosted by K.J. Choi", "K.J. Choi"], [2012, "2012-10-14", "Venetian Macau Open 2012", "Gaganjeet Bhullar"], [2012, "2012-10-21", "Hero Indian Open 2012", "Thaworn Wiratchant"], [2012, "2012-11-11", "Barclays Singapore Open", "Matteo Manassero"], [2012, "2012-11-18", "UBS Hong Kong Open", "Miguel Angel Jimenez"], [2012, "2012-12-02", "King's Cup", "Arnond Vongvanij"], [2012, "2012-12-09", "Thailand Golf Championship", "Charl Schwartzel"], [2012, "2012-12-16", "Iskandar Johor Open", "Sergio Garcia"], [2013, "2013-02-24", "Zaykabar Myanmar Open presented by Alpine", "Chawalit Plaphol"], [2013, "2013-03-09", "SAIL-SBI Open Presented by Incredible India", "Anirban Lahiri"], [2013, "2013-03-17", "Avantha Masters", "Thomas Aiken"], [2013, "2013-03-24", "MAYBANK MALAYSIAN OPEN", "Kiradech Aphibarnrat"], [2013, "2013-03-31", "Chiangmai Golf Classic presented by PTT", "Scott Hend"], [2013, "2013-04-07", "PANASONIC OPEN INDIA", "Wade Ormsby"], [2013, "2013-04-14", "Solaire Open", "Lin Wen-tang"], [2013, "2013-04-28", "BALLANTINE'S CHAMPIONSHIP", "Brett Rumford"], [2013, "2013-05-05", "CIMB Niaga Indonesian Masters", "Bernd Wiesberger"], [2013, "2013-06-16", "Queen's Cup", "Prayad Marksaeng"], [2013, "2013-06-16", "U.S. Open Championship", "Justin Rose"], [2013, "2013-06-23", "Worldwide Holdings Selangor Masters", "Pariya Junhasavasdikul"], [2013, "2013-07-21", "The Open Championship", "Phil Mickelson"], [2013, "2013-09-08", "Omega European Masters", "Thomas Bjorn"], [2013, "2013-09-15", "Yeangder Tournament Players Championship", "Thaworn Wiratchant"], [2013, "2013-09-29", "Asia-Pacific Panasonic Open", "Masahiro Kawamura"], [2013, "2013-10-06", "Mercuries Taiwan Masters", "Scott Hend"], [2013, "2013-10-13", "CJ Invitational Hosted by K.J. Choi", "Kang Sung-hoon"], [2013, "2013-10-20", "Venetian Macau Open", "Scott Hend"], [2013, "2013-10-27", "CIMB Classic", "Ryan Moore"], [2013, "2013-11-10", "Hero Indian Open", "Siddikur Rahman"], [2013, "2013-11-17", "Resorts World Manila Masters", "Liang Wen-chong"], [2013, "2013-11-24", "World Cup of Golf", "Jason Day"], [2013, "2013-12-01", "Indonesia Open", "Gaganjeet Bhullar"], [2013, "2013-12-08", "Hong Kong Open", "Miguel Angel Jimenez"], [2013, "2013-12-15", "Thailand Golf Championship", "Sergio Garcia"], [2013, "2014-01-19", "King's Cup Golf Hua Hin", "Prayad Marksaeng"], [2014, "2014-03-01", "SAIL-SBI Open", "Rashid Khan"], [2014, "2014-03-16", "Solaire Open", "Richard T. Lee"], [2014, "2014-04-20", "Maybank Malaysian Open", "Lee Westwood"], [2014, "2014-04-27", "CIMB Niaga Indonesian Masters", "Anirban Lahiri"], [2014, "2014-05-04", "The Championship", "Felipe Aguilar"], [2014, "2014-05-18", "ICTSI Philippine Open 2014", "Marcus Both"], [2014, "2014-06-08", "Queen's Cup", "Thaworn Wiratchant"], [2014, "2014-06-15", "U.S. Open", "Martin Kaymer"], [2014, "2014-07-20", "The Open Championship", "Rory McIlroy"], [2014, "2014-09-07", "Omega European Masters", "David Lipsky"], [2014, "2014-09-14", "Yeangder Tournament Players Championship", "Prom Meesawat"], [2014, "2014-09-21", "Worldwide Holdings Selangor Masters", "Chapchai Nirat"], [2014, "2014-10-05", "Mercuries Taiwan Masters", "Steve Lewton"], [2014, "2014-10-19", "Hong Kong Open", "Scott Hend"], [2014, "2014-10-26", "Venetian Macau Open", "Anirban Lahiri"], [2014, "2014-11-02", "CIMB Classic", "Ryan Moore"], [2014, "2014-11-09", "Panasonic Open India", "S.S.P Chowrasia"], [2014, "2014-11-16", "Chiangmai Golf Classic presented by PTT", "Rashid Khan"], [2014, "2014-11-23", "Resorts World Manila Masters", "Mardan Mamat"], [2014, "2014-11-30", "King's Cup", "Thaworn Wiratchant"], [2014, "2014-12-07", "Bank BRI Indonesia Open", "Padraig Harrington"], [2014, "2014-12-14", "Thailand Golf Championship", "Lee Westwood"], [2014, "2014-12-21", "Dubai Open", "Arjun Atwal"], [2015, "2015-02-08", "Maybank Malaysian Open", "Anirban Lahiri"], [2015, "2015-02-15", "Thailand Classic", "Andrew Dodt"], [2015, "2015-02-22", "Hero Indian Open", "Anirban Lahiri"], [2015, "2015-04-26", "CIMB Niaga Indonesian Masters", "Lee Westwood"], [2015, "2015-05-10", "AfrAsia Bank Mauritius Open", "George Coetzee"], [2015, "2015-05-30", "Bashundhara Bangladesh Open", "Mardan Mamat"], [2015, "2015-06-21", "U.S. Open", "Jordan Spieth"], [2015, "2015-06-21", "Queen's Cup", "Prayad Marksaeng"], [2015, "2015-07-19", "The Open", "Zach Johnson"], [2015, "2015-07-26", "Omega European Masters", "Danny Willett"], [2015, "2015-09-27", "Asia Pacific Open Mitsubishi Diamond Cup", "K. T. Kim"], [2015, "2015-10-04", "Mercuries Taiwan Masters", "Danny Chia"], [2015, "2015-10-11", "Yeangder Tournament Players Championship", "Shaun Norris"], [2015, "2015-10-18", "Venetian Macau Open", "Scott Hend"], [2015, "2015-10-25", "Hong Kong Open", "Justin Rose"], [2015, "2015-11-01", "CIMB Classic", "Justin Thomas"], [2015, "2015-11-08", "Panasonic Open India", "Chiragh Kumar"], [2015, "2015-11-15", "The World Classic Championship at Laguna National", "Danthai Boonma"], [2015, "2015-11-22", "Resorts World Manila Masters", "Natipong Srithong"], [2015, "2015-12-06", "Ho Tram Open", "Sergio Garcia"], [2015, "2015-12-13", "Thailand Golf Championship", "Jamie Donaldson"], [2015, "2015-12-20", "Philippine Open presented by ICTSI", "Miguel Tabuena"], [2016, "2016-01-31", "SMBC Singapore Open", "Younghan Song"], [2016, "2016-02-07", "Leopalace21 Myanmar Open", "Shaun Norris"], [2016, "2016-02-13", "Bashundhara Bangladesh Open", "Thitiphun Chuayprakong"], [2016, "2016-02-21", "Maybank Championship Malaysia", "Marcus Fraser"], [2016, "2016-02-28", "Perth International", "Louis Oosthuizen"], [2016, "2016-03-13", "True Thailand Classic presented by Chang", "Scott Hend"], [2016, "2016-03-20", "Hero Indian Open", "S.S.P Chawrasia"], [2016, "2016-04-24", "Panasonic Open Golf Championship", "Yuta Ikeda"], [2016, "2016-05-15", "AfrAsia Bank Mauritius Open", "Jeunghun Wang"], [2016, "2016-06-19", "U.S. Open", "Dustin Johnson"], [2016, "2016-06-19", "Queen's Cup", "Scott Hend"], [2016, "2016-07-03", "Yeangder TPC", "Carlos Pigem"], [2016, "2016-07-17", "The Open", "Henrik Stenson"], [2016, "2016-07-31", "King's Cup", "Chan Shih-chang"], [2016, "2016-09-04", "Omega European Masters", "Alex Noren"], [2016, "2016-09-25", "Asia-Pacific Diamond Cup", "Chan Shih-chang"], [2016, "2016-10-02", "Mercuries Taiwan Masters", "Lu Wei-chih"], [2016, "2016-10-02", "Shinhan Donghae Open", "Gaganjeet Bhullar"], [2016, "2016-10-09", "BNI Indonesian Masters", "Poom Saksansin"], [2016, "2016-10-16", "Venetian Macao Open", "Pavit Tangkamolprasert"], [2016, "2016-10-23", "CIMB Classic", "Justin Thomas"], [2016, "2016-11-13", "Resorts World Manila Masters", "S.S.P Chawrasia"], [2016, "2016-11-20", "BANK BRI-JCB Indonesia Open", "Gaganjeet Bhullar"], [2016, "2016-12-04", "Panasonic Open India", "Mukesh Kumar"], [2016, "2016-12-11", "UBS Hong Kong Open", "Sam Brazel"], [2017, "2017-01-22", "SMBC Singapore Open", "Prayad Marksaeng"], [2017, "2017-01-29", "Leopalace21 Myanmar Open", "Todd Sinnott"], [2017, "2017-02-04", "Bashundhara Bangladesh Open", "Jazz Janewattananond"], [2017, "2017-02-12", "Maybank Championship", "Fabrizio Zanotti"], [2017, "2017-02-19", "ISPS HANDA World Super 6 Perth", "Brett Rumford"], [2017, "2017-03-12", "Hero Indian Open", "S.S.P Chawrasia"], [2017, "2017-04-23", "Panasonic Open Golf Championship", "Kenichi Kuboya"], [2017, "2017-04-30", "Yeangder Heritage", "Shiv Kapur"], [2017, "2017-05-21", "Thailand Open", "Rattanon Wannasrichan"], [2017, "2017-06-18", "U.S. Open", "Brooks Koepka"], [2017, "2017-06-18", "Queen's Cup", "Nicholas Fung"], [2017, "2017-07-23", "The Open", "Jordan Spieth"], [2017, "2017-08-06", "TAKE Solutions Masters", "Poom Saksansin"], [2017, "2017-08-20", "Fiji International", "Jason Norris"], [2017, "2017-09-10", "Omega European Masters", "Matthew Fitzpatrick"], [2017, "2017-09-17", "The 33rd Shinhan Donghae Open", "Richard T. Lee"], [2017, "2017-09-24", "Asia-Pacific Open Diamond Cup", "Daisuke Kataoka"], [2017, "2017-10-01", "Mercuries Taiwan Masters", "Gavin Green"], [2017, "2017-10-08", "Yeangder TPC", "Ajeetesh Sandhu"], [2017, "2017-10-15", "CIMB Classic", "Pat Perez"], [2017, "2017-10-22", "Macao Open", "Gaganjeet Bhullar"], [2017, "2017-10-29", "Indonesia Open", "Panuphol Pittayarat"], [2017, "2017-11-05", "Panasonic Open India", "Shiv Kapur"], [2017, "2017-11-12", "Resorts World Manila Masters", "Micah Lauren Shin"], [2017, "2017-11-26", "UBS Hong Kong Open", "Wade Ormsby"], [2017, "2017-12-03", "AfrAsia Bank Mauritius Open", "Dylan Frittelli"], [2017, "2017-12-03", "Asian Golf Championship", "Bowen Xiao"], [2017, "2017-12-10", "Joburg Open", "Shubhankar Sharma"], [2017, "2017-12-17", "Indonesian Masters", "Justin Rose"], [2017, "2017-12-31", "Royal Cup", "Shiv Kapur"], [2018, "2018-01-21", "SMBC Singapore Open", "Sergio Garcia"], [2018, "2018-01-28", "Leopalace21 Myanmar Open", "Paul Peterson"], [2018, "2018-02-04", "Maybank Championship", "Shubhankar Sharma"], [2018, "2018-02-11", "ISPS HANDA World Super 6 Perth", "Kiradech Aphibarnrat"], [2018, "2018-03-04", "ISPS HANDA New Zealand Open", "Daniel Nisbet"], [2018, "2018-03-11", "Hero Indian Open", "Matt Wallace"], [2018, "2018-04-22", "Panasonic Open Golf Championship", "Rahil Gangjee"], [2018, "2018-04-29", "Volvo China Open", "Alexander Bjork"], [2018, "2018-05-06", "GS Caltex Maekyung Open", "Sanghyun Park"], [2018, "2018-05-12", "AB Bank Bangladesh Open", "Malcolm Kokocinski"], [2018, "2018-05-20", "Asia-Pacific Classic", "John Catlin"], [2018, "2018-06-10", "Thailand Open", "Panuphol Pittayarat"], [2018, "2018-06-17", "U.S. Open", "Brooks Koepka"], [2018, "2018-06-24", "Kolon Korea Open Golf Championship", "Minchel Choi"], [2018, "2018-07-01", "Queen's Cup", "Jazz Janewattananond"], [2018, "2018-07-07", "Sarawak Championship", "John Catlin"], [2018, "2018-07-15", "Bank BRI Indonesia Open", "Justin Harding"], [2018, "2018-07-22", "The 147th Open Championship", "Francesco Molinari"], [2018, "2018-07-29", "Royal Cup", "Justin Harding"], [2018, "2018-08-05", "Fiji International", "Gaganjeet Bhullar"], [2018, "2018-08-12", "TAKE Solutions Masters", "Viraj Madappa"], [2018, "2018-09-16", "The 34th Shinhan Donghae Open", "Sanghyun Park"], [2018, "2018-09-23", "Asia-Pacific Open Golf Championship Diamond Cup", "Yuta Ikeda"], [2018, "2018-09-30", "Mercuries Taiwan Masters", "Adilson Da Silva"], [2018, "2018-10-07", "Yeangder TPC", "John Catlin"], [2018, "2018-10-14", "CIMB Classic", "Marc Leishman"], [2018, "2018-10-14", "UMA CNS Open Golf Championship", "Tirawat Kaewsiribandit"], [2018, "2018-10-28", "Panasonic Open India", "Khalin Joshi"], [2018, "2018-11-25", "Honma Hong Kong Open", "Aaron Rai"], [2018, "2018-12-02", "AfrAsia Bank Mauritius Open", "Kurt Kitayama"], [2018, "2018-12-02", "Queen's Cup 2018 Hosted by Jaidee Foundation", "Miguel Tabuena"], [2018, "2018-12-09", "South African Open hosted by the City of Johannesburg", "Louis Oosthuizen"], [2018, "2018-12-16", "BNI Indonesian Masters", "Poom Saksansin"], [2019, "2019-01-20", "SMBC Singapore Open", "Jazz Janewattananond"], [2019, "2019-02-17", "ISPS HANDA World Super 6 Perth (Match Play)", "Ryan Fox"], [2019, "2019-03-03", "New Zealand Open", "Zach Murray"], [2019, "2019-03-24", "Maybank Championship", "Scott Hend"], [2019, "2019-03-31", "Hero Indian Open", "Stephen Gallacher"], [2019, "2019-04-06", "Bangabandhu Cup Golf Open 2019", "Sadom Kaewkanjana"], [2019, "2019-05-05", "The 38th GS Caltex Maekyung Open Golf Championship", "Taehee Lee"], [2019, "2019-05-05", "Volvo China Open", "Mikko Korhonen"], [2019, "2019-05-12", "Asia-Pacific Open Golf Championship Diamond Cup Golf", "Yosuke Asaji"], [2019, "2019-06-16", "U.S. Open", "Gary Woodland"], [2019, "2019-06-23", "Kolon The 62nd KOREA Open Golf Championship", "Jazz Janewattananond"], [2019, "2019-07-21", "The 148th Open", "Shane Lowry"], [2019, "2019-08-18", "Sarawak Championship", "Andrew Dodt"], [2019, "2019-09-01", "Bank BRI Indonesia Open", "Miguel Carballo"], [2019, "2019-09-08", "Yeangder Tournament Players Championship", "Yikeun Chang"], [2019, "2019-09-15", "Classic Golf and Country Club International Championship", "Rory Hie"], [2019, "2019-09-22", "Shinhan Donghae Open", "Jbe Kruger"], [2019, "2019-09-29", "Panasonic Open Golf Championship", "Toshinori Muto"], [2019, "2019-10-06", "Mercuries Taiwan Masters", "Suradit Yongcharoenchai"], [2019, "2019-11-10", "Thailand Open", "John Catlin"], [2019, "2019-11-17", "Panasonic Open India", "Tom Kim"], [2019, "2019-11-24", "Sabah Masters", "Pavit Tangkamolprasert"], [2019, "2019-12-08", "AfrAsia Bank Mauritius Open", "Rasmus Hojgaard"], [2019, "2019-12-15", "BNI Indonesian Masters", "Jazz Janewattananond"], [2019, "2019-12-22", "Thailand Masters", "Jazz Janewattananond"], ["2020-21-22", "2020-01-12", "Hong Kong Open", "Wade Ormsby"], ["2020-21-22", "2020-01-19", "SMBC Singapore Open", "Matt Kuchar"], ["2020-21-22", "2020-03-01", "New Zealand Open presented by Sky Sport", "Brad Kennedy"], ["2020-21-22", "2020-03-07", "Bandar Malaysia Open", "Trevor Simsby"], ["2020-21-22", "2021-11-28", "Blue Canyon Phuket Championship 2021", "Chan Shih-chang"], ["2020-21-22", "2021-12-05", "Laguna Phuket Championship 2021", "Phachara Khongwatmai"], ["2020-21-22", "2022-01-16", "The Singapore International", "Tom Kim"], ["2020-21-22", "2022-01-23", "SMBC Singapore Open", "Sadom Kaewkanjana"], [2022, "2022-02-06", "PIF Saudi International powered by SoftBank Investment Advisers", "Harold Varner III"], [2022, "2022-02-27", "Royal's Cup 2022", "Chan Shih-chang"], [2022, "2022-03-06", "International Series Thailand", "Sihwan Kim"], [2022, "2022-03-27", "The DGC Open presented by Mastercard", "Nitithorn Thippong"], [2022, "2022-04-10", "Trust Golf Asian Mixed Cup", "Ratchanon Chantananuwat"], [2022, "2022-04-16", "Trust Golf Asian Mixed Stableford Challenge", "Sihwan Kim"], [2022, "2022-05-08", "The 41st GS Caltex Maekyung Open", "Bio Kim"], [2022, "2022-05-15", "Asia Pacific Open Golf Championship Diamond Cup", "Shugo Imahira"], [2022, "2022-06-05", "International Series England", "Scott Vincent"], [2022, "2022-06-19", "122nd United States Open Championship", "Matthew Fitzpatrick"], [2022, "2022-06-26", "Kolon The 64th Korea Open Golf Championship", "Minkyu Kim"], [2022, "2022-07-17", "The 150th Open", "Cameron Smith"], [2022, "2022-08-07", "Mandiri Indonesia Open 2022", "Gaganjeet Bhullar"], [2022, "2022-08-14", "International Series Singapore", "Nitithorn Thippong"], [2022, "2022-08-21", "International Series Korea", "Taehoon Ok"], [2022, "2022-09-11", "The 38th Shinhan Donghae Open", "Kazuki Higa"], [2022, "2022-09-25", "Yeangder TPC", "Travis Smyth"], [2022, "2022-10-02", "Mercuries Taiwan Masters", "Chan Shih-chang"], [2022, "2022-11-06", "International Series Morocco", "Jazz Janewattananond"], [2022, "2022-11-13", "International Series Egypt", "Andy Ogletree"], [2022, "2022-11-27", "Bangabandhu Cup Golf Bangladesh Open", "Danthai Boonma"], [2022, "2022-12-04", "BNI Indonesian Masters presented by Tunas Niaga Energi", "Sarit Suwannarut"], [2023, "2023-02-05", "PIF Saudi International powered by Softbank Investment Advisers", "Abraham Ancer"], [2023, "2023-02-12", "International Series Oman", "Takumi Kanaya"], [2023, "2023-02-19", "International Series Qatar", "Andy Ogletree"], [2023, "2023-03-05", "New Zealand Open presented by SKY SPORT", "Brendan Jones"], [2023, "2023-03-12", "International Series Thailand", "Wade Ormsby"], [2023, "2023-03-19", "The DGC Open presented by Mastercard", "Miguel Tabuena"], [2023, "2023-03-26", "World City Championship presented by Hong Kong Golf Club", "Taichi Kho"], [2023, "2023-04-16", "International Series Vietnam", "Kieran Vincent"], [2023, "2023-05-07", "The 42nd GS Caltex Maekyung Open Golf Championship", "Chanmin Jung"], [2023, "2023-06-18", "123rd U.S. Open Championship", "Wyndham Clark"], [2023, "2023-06-25", "Kolon The 65th Korea Open Golf Championship", "Seungsu Han"], [2023, "2023-07-23", "The 151st Open", "Brian Harman"], [2023, "2023-08-06", "Mandiri Indonesia Open", "Nitithorn Thippong"], [2023, "2023-08-20", "International Series England", "Andy Ogletree"], [2023, "2023-08-27", "St Andrews Bay Championship", "Eugenio Chacarra"], [2023, "2023-09-10", "Shinhan Donghae Open", "Guntaek Koh"], [2023, "2023-09-24", "Yeangder TPC", "Poom Saksansin"], [2023, "2023-10-01", "Mercuries Taiwan Masters", "Jaco Ahlers"], [2023, "2023-10-08", "International Series Singapore", "David Puig"], [2023, "2023-10-15", "SJM Macao Open", "Min Woo Lee"], [2023, "2023-11-05", "Volvo China Open", "Sarit Suwannarut"], [2023, "2023-11-12", "Hong Kong Open", "Ben Campbell"], [2023, "2023-11-19", "BNI Indonesian Masters presented by Tunas Niaga Energi", "Gaganjeet Bhullar"], [2023, "2023-12-03", "Taiwan Glass Taifong Open", "Suteepat Prateeptienchai"], [2023, "2023-12-17", "Saudi Open presented by Public Investment Fund", "Denwit Booribonsub"], [2024, "2024-02-18", "IRS Prima Malaysian Open", "David Puig"], [2024, "2024-02-25", "International Series Oman", "Carlos Ortiz"], [2024, "2024-03-03", "103rd New Zealand Open presented by Sky Sport", "Takahiro Hataji"], [2024, "2024-03-17", "International Series Macau presented by Wynn", "John Catlin"], [2024, "2024-04-20", "Saudi Open presented by PIF", "John Catlin"], [2024, "2024-05-05", "GS Caltex Maekyung Open Golf Championship", "Hongtaek Kim"], [2024, "2024-06-16", "124th U.S Open Championship", "Bryson DeChambeau"], [2024, "2024-06-23", "Kolon Korea Open presented by ELORD", "Minkyu Kim"], [2024, "2024-07-07", "International Series Morocco", "Ben Campbell"], [2024, "2024-07-21", "The 152nd Open", "Xander Schauffele"], [2024, "2024-08-11", "International Series England", "Peter Uihlein"], [2024, "2024-09-01", "Mandiri Indonesia Open", "Steve Lewton"], [2024, "2024-09-08", "40th Shinhan Donghae Open", "Kensei Hirata"], [2024, "2024-09-29", "Yeangder TPC", "Suteepat Prateeptienchai"], [2024, "2024-10-06", "Mercuries Taiwan Masters", "Jbe Kruger"], [2024, "2024-10-13", "SJM Macao Open", "Rattanon Wannasrichan"], [2024, "2024-10-20", "Black Mountain Championship", "M.J. Maguire"], [2024, "2024-10-27", "International Series Thailand", "Lee, Chieh-po"], [2024, "2024-11-03", "BNI Indonesian Masters", "Richard T. Lee"], [2024, "2024-11-17", "Taiwan Glass Taifong Open", "Suteepat Prateeptienchai"], [2024, "2024-11-24", "Link Hong Kong Open", "Patrick Reed"], [2024, "2024-11-30", "International Series Qatar", "Peter Uihlein"], [2024, "2024-12-07", "PIF Saudi International powered by SoftBank Investment Advisers", "Joaquin Niemann"], [2025, "2025-01-26", "Smart Infinity Philippine Open", "Julien Sale"], [2025, "2025-02-02", "International Series India presented by DLF", "Ollie Schniederjans"], [2025, "2025-03-02", "104th New Zealand Open presented by Sky Sport", "Ryan Peake"], [2025, "2025-03-23", "International Series Macau presented by Wynn", "Carlos Ortiz"], [2025, "2025-05-04", "The 44th GS Caltex Maekyung Open Golf Championship", "Doyeob Mun"], [2025, "2025-05-11", "International Series Japan presented by Moutai", "Lucas Herbert"], [2025, "2025-05-25", "Kolon The 67th KOREA Open Golf Championship", "Sadom Kaewkanjana"], [2025, "2025-06-15", "125th U.S Open", "J.J. Spaun"], [2025, "2025-07-06", "International Series Morocco", "Scott Vincent"], [2025, "2025-07-20", "The 153rd Open", "Scottie Scheffler"], [2025, "2025-08-31", "Mandiri Indonesia Open", "Suteepat Prateeptienchai"], [2025, "2025-09-14", "The 41st Shinhan Donghae Open", "Kazuki Higa"], [2025, "2025-09-21", "Yeangder Tournament Players Championship", "Kazuki Higa"], [2025, "2025-09-28", "Mercuries Taiwan Masters", "Rattanon Wannasrichan"], [2025, "2025-10-05", "Jakarta International Championship", "Wade Ormsby"], [2025, "2025-10-19", "SJM Macao Open", "Dominic Foos"], [2025, "2025-10-26", "International Series Philippines", "Miguel Tabuena"], [2025, "2025-11-02", "Link Hong Kong Open", "Tom McKibbin"], [2025, "2025-11-09", "Moutai Singapore Open", "Yosuke Asaji"], [2025, "2025-11-16", "Taiwan Glass Taifong Open", "Ekpharit Wu"], [2025, "2025-11-22", "PIF Saudi International powered by Softbank Investment Advisers", "Josele Ballester"], [2025, "2025-11-30", "Bharath Classic 2025 Gujarat", "Poosit Supupramai"], [2025, "2025-12-13", "Saudi Open presented by PIF", "Bjorn Hellgren"], [2026, "2026-02-08", "Philippine Golf Championship presented by Philippine Sports Commission", "Wooyoung Cho"], [2026, "2026-03-01", "105th New Zealand Open presented by Millbrook Resort", "Daniel Hillier"], [2026, "2026-04-05", "International Series Japan", "Travis Smyth"], [2026, "2026-04-26", "Singapore Open presented by The Business Times", "Jeongwoo Ham"], [2026, "2026-05-03", "The 45th GS Caltex Maekyung Open Golf Championship", "Minhyuk Song"]];
+const OOM = [[1995, "Lin Keng-chi"], [1996, "Kang Wook-soon"], [1997, "Mike Cunning"], [1998, "Kang Wook-soon"], [1999, "Kyi Hla Han"], [2000, "Simon Dyson"], [2001, "Thongchai Jaidee"], [2002, "Jyoti Randhawa"], [2003, "Arjun Atwal"], [2004, "Thongchai Jaidee"], [2005, "Thaworn Wiratchant"], [2006, "Jeev Milkha Singh"], [2007, "Liang Wenchong"], [2008, "Jeev Milkha Singh"], [2009, "Thongchai Jaidee"], [2010, "Noh Seung-yul"], [2011, "Juvic Pagunsan"], [2012, "Thaworn Wiratchant"], [2013, "Kiradech Aphibarnrat"], [2014, "David Lipsky"], [2015, "Anirban Lahiri"], [2016, "Scott Hend"], [2017, "Gavin Green"], [2018, "Shubhankar Sharma"], [2019, "Jazz Janewattananond"], ["2020-21-22", "Tom Kim"], [2022, "Sihwan Kim"], [2023, "Andy Ogletree"], [2024, "John Catlin"], [2025, "Kazuki Higa"]];
+const OOM_LOOKUP = {"Lin Keng-chi": ["1995"], "Kang Wook-soon": ["1996", "1998"], "Mike Cunning": ["1997"], "Kyi Hla Han": ["1999"], "Simon Dyson": ["2000"], "Thongchai Jaidee": ["2001", "2004", "2009"], "Jyoti Randhawa": ["2002"], "Arjun Atwal": ["2003"], "Thaworn Wiratchant": ["2005", "2012"], "Jeev Milkha Singh": ["2006", "2008"], "Liang Wenchong": ["2007"], "Noh Seung-yul": ["2010"], "Juvic Pagunsan": ["2011"], "Kiradech Aphibarnrat": ["2013"], "David Lipsky": ["2014"], "Anirban Lahiri": ["2015"], "Scott Hend": ["2016"], "Gavin Green": ["2017"], "Shubhankar Sharma": ["2018"], "Jazz Janewattananond": ["2019"], "Tom Kim": ["2020-21-22"], "Sihwan Kim": ["2022"], "Andy Ogletree": ["2023"], "John Catlin": ["2024"], "Kazuki Higa": ["2025"]};
+
 const ADMIN_PASSWORD = 'asiantour2024';
 let isAdmin = false;
-let tournaments = [[1995, "25 Jun", "Asian PGA International", "Park Nam-sin"], [1995, "2 Jul", "Canlubang Classic", "Carlos Espinosa"], [1995, "30 Jul", "Tournament Players Championship", "Lin Keng-chi"], [1995, "13 Aug", "Volvo Masters of Thailand", "Zhang Lianwei"], [1995, "27 Aug", "Yokohama Singapore PGA Championship", "Lin Keng-chi"], [1995, "3 Sep", "Passport Open", "Vijay Singh"], [1995, "1 Oct", "Langkawi Open", "Boonchu Ruangkit"], [1995, "8 Oct", "Gadgil Western Dubai Creek Open", "Robert Willis"], [1995, "15 Oct", "Merlion Masters", "Nico van Rensburg"], [1995, "22 Oct", "Samsung Masters", "Lin Keng-chi"], [1995, "29 Oct", "Royal Perak Classic", "Gerry Norquist"], [1995, "20 Nov", "Kenmore Pakistan Masters", "Kwon Young-suk"], [1995, "27 Nov", "Gadgil Western Masters", "Gaurav Ghei"], [1995, "10 Dec", "Gadgil Western Vietnam Open", "Clay Devers"], [1995, "17 Dec", "Philippine Classic", "Jeev Milkha Singh"], [1995, "7 Jan 1996", "Myanmar Open", "Boonchu Ruangkit"], [1995, "14 Jan 1996", "Omega PGA Championship", "Yeh Chang-ting"], [1995, "21 Jan 1996", "Asian Matchplay Championship", "Jeev Milkha Singh"], [1996, "17-Mar", "Sabah Masters", "Thaworn Wiratchant"], [1996, "1-Apr", "Singha Thai Prasit Bangkok Open", "Thammanoon Sriroj"], [1996, "21-Apr", "Canlubang Classic", "Craig Kamps"], [1996, "28-Apr", "Tournament Players Championship", "Kang Wook-soon"], [1996, "5-May", "Honda Invitational", "Steve Elkington"], [1996, "12-May", "Guam Open", "Mo Joong-kyung"], [1996, "2-Jun", "Volvo China Open", "Prayad Marksaeng"], [1996, "11-Aug", "Canon Singapore Open", "John Kernohan"], [1996, "18-Aug", "Kuala Lumpur Open", "Kang Wook-soon"], [1996, "25-Aug", "Fila Open", "Kwon Oh-chul"], [1996, "1-Sep", "Philip Morris Asian Cup", "Jeev Milkha Singh"], [1996, "29-Sep", "Lexus International", "Boonchu Ruangkit"], [1996, "6-Oct", "Yokohama Singapore PGA Championship", "Yeh Chang-ting"], [1996, "18-Oct", "Dubai Creek Open", "Paul Friedlander"], [1996, "27-Oct", "Australian Players Championship", "Bradley Hughes"], [1996, "3-Nov", "Alfred Dunhill Masters", "Bernhard Langer"], [1996, "10-Nov", "Merlion Masters", "Peter Teravainen"], [1996, "17-Nov", "Pakistan Steel Masters", "Eric Rustand"], [1996, "1-Dec", "Tug Pratama Indonesian PGA Championship", "Thammanoon Sriroj"], [1996, "8-Dec", "Royal Thai Classic", "Richard Kaplan"], [1996, "15-Dec", "Omega PGA Championship", "Gerry Norquist"], [1996, "22-Dec", "Asian Matchplay Championship", "Zhang Lianwei"], [1997, "9-Feb", "Asian Honda Classic", "Tiger Woods"], [1997, "30-Mar", "Vietnam Open", "Andrew Bonhomme"], [1997, "13-Apr", "London Myanmar Open", "Boonchu Ruangkit"], [1997, "20-Apr", "DFS Galleria Guam Open", "Gerry Norquist"], [1997, "27-Apr", "Satelindo Indonesia Open", "Craig Parry"], [1997, "18-May", "Volvo China Open", "Cheng Jun"], [1997, "7-Sep", "Philip Morris Asian Cup", "Park No-seok"], [1997, "14-Sep", "Ericsson Asia-Pacific Masters", "Darren Cole"], [1997, "21-Sep", "Mild Seven Kuala Lumpur Open", "Charlie Wi"], [1997, "12-Oct", "Yokohama Singapore PGA Championship", "Prayad Marksaeng"], [1997, "19-Oct", "ABN-AMRO Pakistan Masters", "Thammanoon Sriroj"], [1997, "26-Oct", "Dubai Creek Open", "Adrian Percey"], [1997, "2-Nov", "Hero Honda Masters", "Ted Purdy"], [1997, "9-Nov", "Ta-Shee Open", "Wang Ter-chang"], [1997, "16-Nov", "Volvo Masters of Malaysia", "Christian Pena"], [1997, "23-Nov", "Lexus Thai International", "Prayad Marksaeng"], [1997, "30-Nov", "Tugu Pratama Indonesian PGA Championship", "Clay Devers"], [1997, "7-Dec", "Andersen Consulting Hong Kong Open", "Frank Nobilo"], [1997, "14-Dec", "Omega PGA Championship", "Rodrigo Cuello"], [1997, "20-Dec", "Volvo Asian Matchplay", "Des Terblanche"], [1997, "10-AUG", "Sabah Masters", "Des Terblanche"], [1997, "17-AUG", "SingTel Ericsson Singapore Open", "Zaw Moe"], [1998, "8-Mar", "London Myanmar Open", "Taimur Hussain"], [1998, "15-Mar", "Classic Indian Open", "Firoz Ali"], [1998, "5-Apr", "China Orient Masters", "Chawalit Plaphol"], [1998, "19-Apr", "Volvo China open", "Ed Fryatt"], [1998, "3-May", "Macau Open", "Satoshi Oide"], [1998, "17-May", "Guam open", "Jerry Smith"], [1998, "24-May", "Fila Open", "Robert Huxtable"], [1998, "9-AUG", "Sabah Masters", "Simon Yates"], [1998, "16-AUG", "Volvo Masters of Malaysia", "Chris Williams"], [1998, "23-Aug", "Ericsson Singapore Obon", "Shaun Micheel"], [1998, "20-Sep", "Kolon Sports Korea Open", "Kim Dae-sub"], [1998, "18-Oct", "Kuala Lumpur Open", "Nico van Rensburg"], [1998, "25-Oct", "FedEX PGA Championship", "Chris Willams"], [1998, "1-Nov", "Ericsson Classic", "Lu Wen-teh"], [1998, "8-Nov", "Hero Honda Masters", "Jyoti Randhawa"], [1998, "15 Nov", "Thailand Open", "James Kingston"], [1998, "29-Nov", "Perrier Hong Kong Open", "Kang Wook-soon"], [1998, "6-Dec", "Omega PGA Championship", "Kang Wook-soon"], [1998, "13-Dec", "Volvo Asian Matchplay", "Gerry Norquist"], [1999, "31-Jan", "London Myanmar Open", "Wang Ter-chang"], [1999, "7-Feb", "Benson & Hedges Malaysian Open", "Gerry Norquist"], [1999, "14-Mar", "Wills Indian Open", "Arjun Atwal"], [1999, "18-Apr", "Macau Open", "Lee Westwood"], [1999, "2-May", "Maekyung Daks Open", "James Kingston"], [1999, "23-May", "Volvo China Open", "Kyi Hla Han"], [1999, "30-May", "Casino Filipino Philippine Open", "Anthony Kang"], [1999, "22-Aug", "Tianjin TEDA Open", "Thammanoon Sriroj"], [1999, "29-Aug", "Volvo Masters of Malaysia", "Nico van Rensburg"], [1999, "5-Sep", "ERA Taiwan Open", "Kang Wook-soon"], [1999, "19-Sep", "Kolon Korea Open", "K.J. Choi"], [1999, "17-Oct", "Lexus International", "Jeev Milkha Singh"], [1999, "24-Oct", "Nokia Singapore Open", "Kenny Druce"], [1999, "31-Oct", "Hero Honda Masters", "Jyoti Randhawa"], [1999, "7-Nov", "Sabah Masters", "Robert Huxtable"], [1999, "14-Nov", "Johnnie Walker Classic", "Michael Campbell"], [1999, "28-Nov", "Perrier Hong Kong Open", "Patrik Sjoland"], [1999, "4-Dec", "Mittweida Thailand Open", "Fran Quinn"], [1999, "12-Dec", "Omega PGA Championship", "Fran Quinn"], [2000, "13-Feb", "Benson & Hedges Malaysian Open", "Yeh Wei-tze"], [2000, "20-Feb", "Casino Filipino Open", "Prayad Marksaeng"], [2000, "27-Feb", "London Myanmar Open", "James Kingston"], [2000, "19-Mar", "Wills Indian Open", "Jyoti Randhawa"], [2000, "30-Apr", "Maekyung LG Fashion Open", "Kang Wook-soon"], [2000, "14-May", "Macau Open", "Simon Dyson"], [2000, "21-May", "Volvo China Open", "Simon Dyson"], [2000, "28-May", "Ericsson Classic", "James Kingston"], [2000, "4-Jun", "Hyundai Motors Masters", "Choi Gwang-soc"], [2000, "13-Aug", "Volvo Masters of Malaysia", "Stephen Lindskog"], [2000, "27-Aug", "ROC PGA Championship", "Daisuke Maruyama"], [2000, "3-Sep", "Mercuries Taiwan Masters", "Lin Keng-chi"], [2000, "10-Sep", "Johnnie Walker Taiwan Open", "Vijay Singh"], [2000, "8-Oct", "Kolon Cup Korea Open", "Thongchai Jaidee"], [2000, "29-Oct", "Lexus International", "Craig Kamps"], [2000, "5-Nov", "Hero Honda Masters", "Arjun Atwal"], [2000, "12-Nov", "Star Alliance Open", "Arjun Atwal"], [2000, "19-Nov", "Johnnie Walker Classic", "Tiger Woods"], [2000, "3-Dec", "Thailand Open", "Des Terblanche"], [2000, "10-Dec", "Singapore Open", "Jyoti Randhawa"], [2000, "17-Dec", "Omega Hong Kong Open", "Simon Dyson"], [2001, "4-Feb", "Thailand Masters", "Kang Wook-soon"], [2001, "11-Feb", "London Myanmar Open", "Anthony Kang"], [2001, "18-Feb", "Carlsberg Malaysian Open", "Vijay Singh"], [2001, "25-Feb", "Caltex Singapore Masters", "Vijay Singh"], [2001, "18-Mar", "Wills Indian Open", "Thongchai Jaidee"], [2001, "29-Apr", "Maekyung LG Fashion Open", "Choi Gwang-Soo"], [2001, "6-May", "Macau Open", "Zhang Lianwei"], [2001, "20-May", "SK Telecom Open", "Charlie Wi"], [2001, "24 Jun", "Alcatel Singapore Open", "Thaworn Wiratchant"], [2001, "12-Aug", "Volvo Masters of Malaysia", "Thaworn Wiratchant"], [2001, "2-Sep", "Acer Taiwan Open", "Andrew Pitts"], [2001, "9-Sep", "Mercuries Taiwan Masters", "Daniel Chopra"], [2001, "16-Sep", "Kolon Cup Korea Open", "Kim Dae-sub"], [2001, "23-Sep", "Shinhan Donghae Open", "Charlie Wi"], [2001, "21-Oct", "Volvo China Open", "Charlie Wi"], [2001, "25-Nov", "BMW Asian Open", "Jarmo Sandelin"], [2001, "2-Dec", "Omega Hong Kong Open", "Jose Maria Olazabal"], [2002, "27-Jan", "Johnnie Walker Classic", "Retief Goosen"], [2002, "10-Feb", "London Myanmar Open", "Thongchai Jaidee"], [2002, "17-Feb", "Hero Honda Masters", "Harmeet Kahlon"], [2002, "24-Feb", "Caltex Singapore Masters", "Arjun Atwal"], [2002, "3-Mar", "Carlsberg Malaysian Open", "Alastair Forsyth"], [2002, "10-Mar", "Casino Filipino Philippine Open", "Rick Gibson"], [2002, "17-Mar", "Royal Challenge Indian Open", "Vijay Kumar"], [2002, "28-Apr", "SK Telecom Open", "Charlie Wi"], [2002, "4-May", "Maekyung LG Fashion Open", "Eddie Lee"], [2002, "25-Aug", "Mercuries Taiwan Masters", "Tsai Chi-huang"], [2002, "1-Sep", "Shinhan Donghae Open", "Hur Suk-ho"], [2002, "8-Sep", "Kolon Cup Korea Open", "Sergio Garcia"], [2002, "15-Sep", "Volvo China Open", "David Gleeson"], [2002, "22-Sep", "Acer Taiwan Open", "Danny Chia"], [2002, "20-Oct", "Macau Open", "Zhang Lianwei"], [2002, "17-Nov", "TCL Classic", "Colin Montgomerie"], [2002, "24-Nov", "BMW Asian Open", "Padraig Harrington"], [2002, "1-Dec", "Omega Hong Kong Open", "Freddie Jacobson"], [2002, "8-Dec", "Volvo Masters Of Asia", "Kevin Na"], [2003, "22 Dec 2002", "Asia Japan Okinawa Open", "Hiroyuki Fujita"], [2003, "26-Jan", "Caltex Masters", "Zhang Lianwei"], [2003, "16-Feb", "Johnnie Walker Classic", "Ernie Els"], [2003, "23-Feb", "Carlsberg Malaysian Open", "Arjun Atwal"], [2003, "2-Mar", "Myanmar Open", "Lin Keng-chi"], [2003, "30-Mar", "Royal Challenge Indian Open", "Mike Cunning"], [2003, "6-Apr", "Thailand Open", "Edward Loar"], [2003, "4-May", "Maekyung Open", "Chung Joon"], [2003, "29-Jun", "SK Telecom Open", "K.J. Choi"], [2003, "14-Sep", "Mercuries Taiwan Masters", "Lin Wen-ko"], [2003, "12-Oct", "Kolon Korea Open", "John Daly"], [2003, "19-Oct", "Macau Open", "Colin Montgomerie"], [2003, "26-Oct", "Sanya Open", "Marcus Both"], [2003, "9-Nov", "Hero Honda Masters", "Arjun Atwal"], [2003, "16-Nov", "Volvo China Open", "Zhang Lianwei"], [2003, "23-Nov", "Acer Taiwan Open", "Jason Dawes"], [2003, "7-Dec", "Omega Hong Kong Open", "Padraig Harrington"], [2003, "14-Dec", "Volvo Masters of Asia", "Thongchai Jaidee"], [2004, "21 Dec 2003", "Asia Japan Okinawa Open", "Hideto Tanihara"], [2004, "25-Jan", "Thailand Open", "Boonchu Ruangkit"], [2004, "1-Feb", "Johnnie Walker Classic", "Miguel Angel Jimenez"], [2004, "15-Feb", "London Myanmar Open", "Thongchai Jaidee"], [2004, "22-Feb", "Carlsberg Malaysian Open", "Thongchai Jaidee"], [2004, "29-Feb", "DHL Philippine Open", "Edward Michaels"], [2004, "21-Mar", "Caltex Masters", "Colin Montgomerie"], [2004, "28-Mar", "Royal Challenge Indian Open", "Mardan Mamat"], [2004, "2-May", "Volkswagen Masters-China", "Rahil Gangjee"], [2004, "9-May", "Macau Open", "Jason Knutzon"], [2004, "16-May", "BMW Asian Open", "Miguel Angel Jimenez"], [2004, "23-May", "SK Telecom Open", "Simon Yates"], [2004, "22-Aug", "Tianjin TEDA Open", "Thammanoon Sriroj"], [2004, "12-Sep", "Kolon Korea Open", "Edward Loar"], [2004, "19-Sep", "Mercuries Taiwan Masters", "Thaworn Wiratchant"], [2004, "26-Sep", "Taiwan Open", "Charlie Wi"], [2004, "24-Oct", "Crowne Plaza Open", "Terry Pilkadaris"], [2004, "31-Oct", "Sanya Open", "Terry Pilkadaris"], [2004, "7-Nov", "Carlsberg Masters Vietnam", "Angelo Que"], [2004, "28-Nov", "Volvo China Open", "Stephen Dodd"], [2004, "5-Dec", "Omega Hong Kong Open", "Miguel Angel Jimenez"], [2004, "12-Dec", "Volvo Masters of Asia", "Jyoti Randhawa"], [2005, "19 Dec 2004", "Asia Japan Okinawa Open", "Kiyoshi Miyazato"], [2005, "30-Jan", "Caltex Masters", "Nick Dougherty"], [2005, "20-Feb", "Carlsberg Malaysian Open", "Thongchai Jaidee"], [2005, "27-Feb", "Myanmar Open", "Scott Strange"], [2005, "6-Mar", "Thai Airways International Thailand Open", "Richard Lee"], [2005, "13-Mar", "Qatar masters", "Ernie Els"], [2005, "20-Mar", "TCL Classic", "Paul Casey"], [2005, "27-Mar", "Enjoy Jakarta Standard Chartered Indonesia Open", "Thaworn Wiratchant"], [2005, "24-Apr", "Johnnie Walker Classic", "Adam Scott"], [2005, "1-May", "BMW Asian Open", "Ernie Els"], [2005, "8-May", "SK Telecom Open", "K.J. Choi"], [2005, "15-May", "Macau Open", "Wang Ter-chang"], [2005, "22-May", "Philippine Open", "Adam Le Vesconte"], [2005, "29-May", "KT&G Maekyung Open", "Choi Sang-ho"], [2005, "26-Jun", "Brunei Open", "Terry Pilkadaris"], [2005, "4-Sep", "Volkswagen Masters-China", "Retief Goosen"], [2005, "11-Sep", "Singapore Open", "Adam Scott"], [2005, "18-Sep", "Taiwan Open", "Thaworn Wiratchant"], [2005, "25-Sep", "Mercuries Taiwan Masters", "Lu Wei-chih"], [2005, "2-Oct", "Crowne Plaza Open", "Prayad Marksaeng"], [2005, "16-Oct", "Bangkok Airways Open", "Lu Wen-teh"], [2005, "30-Oct", "Hero Honda Indian Open", "Thaworn Wiratchant"], [2005, "6-Nov", "Double A International Open", "Chinnarat Phadungsil"], [2005, "20-Nov", "Carlsberg Masters Vietnam", "Thaworn Wiratchant"], [2005, "27-Nov", "Volvo China Open", "Paul Casey"], [2005, "4-Dec", "UBS Hong Kong Open", "Colin Montgomerie"], [2005, "11-Dec", "Volvo Masters of Asia", "Shiv Kapur"], [2006, "18 Dec 2005", "Asia Japan Okinawa Open", "Tadahiro Takayama"], [2006, "22-Jan", "Pakistan Open", "Chris Rodgers"], [2006, "29-Jan", "Commercialbank Qatar Masters", "Henrik Stenson"], [2006, "12-Feb", "Johnnie Walker Classic", "Kevin Stadler"], [2006, "19-Feb", "Maybank Malaysian Open", "Charlie Wi"], [2006, "5-Mar", "Enjoy Jakarta HSBC Indonesia Open", "Simon Dyson"], [2006, "12-Mar", "OSIM Singapore Masters", "Mardan Mamat"], [2006, "19-Mar", "TCL Classic", "Johan Edfors"], [2006, "16-Apr", "Volvo China Open", "Jeev Milkha Singh"], [2006, "23-Apr", "BMW Asian Open", "Gonzalo Fernandez-Castano"], [2006, "30-Apr", "GS Caltex Maekyung Open", "Suk Jong-yul"], [2006, "7-May", "SK Telecom Open", "Prom Meesawat"], [2006, "14-May", "Aamby Valley Asian Masters", "Hendrik Buhrmann"], [2006, "21-May", "Macau Open", "Kane Webber"], [2006, "28-May", "Philippine Open", "Scott Strange"], [2006, "4-Jun", "Bangkok Airways Open", "Chawalit Plaphol"], [2006, "20-Aug", "Crowne Plaza Open", "Chinnarat Phadungsil"], [2006, "27-Aug", "Brunei Open", "Wang Ter-chang"], [2006, "3-Sep", "Pulai Springs Malaysian Masters", "Anton Haig"], [2006, "10-Sep", "Barclays Singapore Open", "Adam Scott"], [2006, "24-Sep", "Kolon-Hana Bank Korea Open", "Yang Yong-eun"], [2006, "1-Oct", "Mercuries Taiwan Masters", "Gaurav Ghei"], [2006, "8-Oct", "Taiwan Open", "Lin Wen-tang"], [2006, "15-Oct", "Volkswagen Masters-China", "Retief Goosen"], [2006, "22-Oct", "Hero Honda Indian Open", "Jyoti Randhawa"], [2006, "19-Nov", "UBS Hong Kong Open", "Jose Manuel Lara"], [2006, "10-Dec", "Volvo Masters of Asia", "Thongchai Jaidee"], [2007, "21-Jan", "Pakistan Open", "Airil Rizman"], [2007, "28-Jan", "Commercialbank Qatar Masters", "Retief Goosen"], [2007, "4-Feb", "Philippine Open", "Frankie Minoza"], [2007, "11-Feb", "Maybank Malaysian Open", "Peter Hedblom"], [2007, "18-Feb", "Enjoy Jakarta Astro Indonesia Open", "Mikko llonen"], [2007, "4-Mar", "Johnnie Walker Classic", "Anton Haig"], [2007, "11-Mar", "Clariden Leu Singapore Masters", "Liang Wenchong"], [2007, "18-Mar", "TCL Classic", "Chapchai Nirat"], [2007, "25-Mar", "Motorola International Bintan", "Jason Knutzon"], [2007, "15-Apr", "Volvo China Open", "Markus Brier"], [2007, "19-Apr", "Pine Valley Beijing Open", "Gaurav Ghei"], [2007, "22-Apr", "BMW Asian Open", "Raphael Jacquelin"], [2007, "6-May", "GS Caltex Maekyung Open", "Kim Kyung-tae"], [2007, "20-May", "Macau Open", "Lu Wen-teh"], [2007, "27-May", "SK Telecom Open", "Bae Sang-moon"], [2007, "10-Jun", "Bangkok Airways Open", "Lee Sung"], [2007, "26-Aug", "Iskandar Johor Open", "Artemio Murakami"], [2007, "2-Sep", "Brunei Open", "Lin Wen-tang"], [2007, "16-Sep", "Midea China Classic", "Thaworn Wiratchant"], [2007, "23-Sep", "Mercuries Taiwan Masters", "Lu Wen-teh"], [2007, "7-Oct", "Kolon-Hana Bank Korea Open", "Vijay Singh"], [2007, "14-Oct", "Hero Honda Indian Open", "Jyoti Randhawa"], [2007, "28-Oct", "Pertamina Indonesia President Invitational", "Juvic Pagunsan"], [2007, "4-Nov", "Barclays Singapore Open", "Angel Cabrera"], [2007, "18-Nov", "UBS Hong Kong Open", "Miguel Angel Jimenez"], [2007, "25-Nov", "Hana Bank Vietnam Masters", "Chapchai Nirat"], [2007, "2-Dec", "Johnnie Walker Cambodian Open", "Bryan Saltus"], [2007, "9-Dec", "Volvo Masters of Asia", "Prayad Marksaeng"], [2008, "2008-02-10", "EMAAR-MGF INDIAN MASTERS 2008", "S.S.P. Chowrasia"], [2008, "2008-02-17", "ASTRO INDONESIA OPEN", "Felipe Aguilar"], [2008, "2008-02-23", "SAIL OPEN GOLF CHAMPIONSHIP", "Mark Brown"], [2008, "2008-03-02", "JOHNNIE WALKER CLASSIC 2008", "Mark Brown"], [2008, "2008-03-09", "MAYBANK MALAYSIAN OPEN 2008", "Arjun Atwal"], [2008, "2008-03-16", "BALLANTINE'S CHAMPIONSHIP 2008", "Graeme McDowell"], [2008, "2008-03-23", "ASIAN TOUR INTERNATIONAL", "Lin Wen-tang"], [2008, "2008-04-06", "PHILIPPINE OPEN 2008", "Angelo Que"], [2008, "2008-04-20", "VOLVO CHINA OPEN 2008", "Damien McGrane"], [2008, "2008-04-27", "BMW ASIAN OPEN 2008", "Darren Clarke"], [2008, "2008-05-04", "27th GS CALTEX MAEKYUNG OPEN", "Hwang Inn-Choon"], [2008, "2008-05-11", "PINE VALLEY BEIJING OPEN 2008", "Hiroyuki Fujita"], [2008, "2008-06-08", "BANGKOK AIRWAYS OPEN", "Thaworn Wiratchant"], [2008, "2008-06-29", "SINGHA THAILAND PGA C'SHIP 08", "Mo Joong Kyung"], [2008, "2008-07-20", "137th OPEN CHAMPIONSHIP", "Padraig Harrington"], [2008, "2008-08-09", "WORLDWIDE SELANGOR MASTERS 08", "Ben Leong"], [2008, "2008-08-24", "BRUNEI OPEN 08", "Rick Kulacz"], [2008, "2008-08-31", "PERTAMINA INDONESIA PRESIDENT", "Scott Hend"], [2008, "2008-09-21", "MERCURIES TAIWAN MASTERS", "Lu Wen Teh"], [2008, "2008-09-28", "ASIA-PACIFIC PANASONIC OPEN", "Hideto Tanihara"], [2008, "2008-10-05", "KOLON-HANA BANK 51st KOREA OPN", "Bae Sang-Moon"], [2008, "2008-10-12", "HERO HONDA INDIAN OPEN", "Liang Wen-chong"], [2008, "2008-10-19", "MIDEA CHINA CLASSIC 2008", "Noh Seung-yul"], [2008, "2008-10-26", "MACAU OPEN 2008", "David Gleeson"], [2008, "2008-11-02", "ISKANDAR JOHOR OPEN", "Retief Goosen"], [2008, "2008-11-16", "2008 BARCLAYS SINGAPORE OPEN", "Jeev Milkha Singh"], [2008, "2008-11-23", "UBS HONG KONG OPEN 2008", "Lin Wen-tang"], [2008, "2008-12-07", "HANA BANK VIETNAM MASTERS 2008", "Thongchai Jaidee"], [2008, "2008-12-14", "JOHNNIE WALKER CAMBODIAN OPEN", "Thongchai Jaidee"], [2008, "2008-12-21", "VOLVO MASTERS ASIA", "Lam Chih-Bing"], [2009, "2009-02-15", "Maybank Malaysian Open", "Anthony Kang"], [2009, "2009-02-22", "2009 JOHNNIE WALKER CLASSIC", "Danny Lee"], [2009, "2009-03-01", "ENJOY JAKARTA INDONESIA OPEN", "Thongchai Jaidee"], [2009, "2009-03-08", "2009 SINGHA THAILAND OPEN", "Jyoti Randhawa"], [2009, "2009-03-21", "2009 SAIL OPEN", "Chapchai Nirat"], [2009, "2009-03-29", "BLACK MOUNTAIN MASTERS 2009", "Johan Edfors"], [2009, "2009-04-26", "BALLANTINE'S CHAMPIONSHIP 2009", "Thongchai Jaidee"], [2009, "2009-05-17", "28th GS CALTEX MAEKYUNG OPEN", "Bae Sang-Moon"], [2009, "2009-06-29", "US OPEN CHAMPIONSHIP 2009", "Lucas Glover"], [2009, "2009-07-26", "INDONESIA PRESIDENT INVITATION", "Gaganjeet Bhullar"], [2009, "2009-07-27", "138th OPEN CHAMPIONSHIP 2009", "Stewart Cink"], [2009, "2009-08-02", "BRUNEI OPEN 2009", "Darren Beck"], [2009, "2009-08-08", "Worldwide Holdings Selangor Masters", "Rick Kulacz"], [2009, "2009-08-16", "QUEEN'S CUP 2009", "Chinnarat Phadungsil"], [2009, "2009-09-06", "OMEGA EUROPEAN MASTERS 2009", "Alexander Noren"], [2009, "2009-09-13", "MACAU OPEN 2009", "Thaworn Wiratchant"], [2009, "2009-09-27", "ASIA-PACIFIC PANASONIC OPEN 09", "Daisuke Maruyama"], [2009, "2009-10-04", "MERCURIES TAIWAN MASTERS 2009", "Lin Wen-tang"], [2009, "2009-10-11", "HERO HONDA INDIAN OPEN 2009", "C. Muniyappa"], [2009, "2009-10-25", "ISKANDAR JOHOR OPEN 2009", "K.J. Choi"], [2009, "2009-11-01", "BARCLAYS SINGAPORE OPEN 2009", "Ian Poulter"], [2009, "2009-11-15", "UBS HONG KONG OPEN 2009", "Gregory Bourdy"], [2009, "2009-11-22", "JOHNNIE WALKER CAMBODIAN OPEN", "Marcus Both"], [2009, "2009-12-06", "KING'S CUP 2009", "Chan Yih-shin"], [2010, "2010-02-07", "ASIAN TOUR INTERNATIONAL 2010", "Gaganjeet Bhullar"], [2010, "2010-02-14", "AVANTHA MASTERS 2010", "Andrew Dodt"], [2010, "2010-03-10", "MAYBANK MALAYSIAN OPEN 2010", "Noh Seung-yul"], [2010, "2010-04-02", "SAIL OPEN 2010", "Rikard Karlberg"], [2010, "2010-04-11", "AIR BAGAN MYANMAR OPEN 2010", "Tetsuji Hiratsuka"], [2010, "2010-04-25", "BALLANTINE'S CHAMPIONSHIP", "Marcus Fraser"], [2010, "2010-07-17", "US OPEN CHAMPIONSHIP 2010", "Graeme McDowell"], [2010, "2010-07-18", "THE OPEN CHAMPIONSHIP 2010", "Louis Oosthuizen"], [2010, "2010-08-01", "BRUNEI OPEN 2010", "Siddikur Rahman"], [2010, "2010-08-07", "WORLDWIDE HOLDINGS S'GOR MSTRS", "Angelo Que"], [2010, "2010-09-05", "OMEGA EUROPEAN MASTERS 2010", "Miguel Angel Jimenez"], [2010, "2010-09-12", "HANDA SINGAPORE CLASSIC 2010", "Peter Karmis"], [2010, "2010-09-19", "YEANDGER TPC 2010", "Thaworn Wiratchant"], [2010, "2010-09-26", "2010 ASIA-PACIFIC PANASONIC", "Brendan Jones"], [2010, "2010-10-03", "MERCURIES TAIWAN MASTERS 2010", "Pariya Junhasavasdikul"], [2010, "2010-10-11", "2010 ISKANDAR JOHOR OPEN", "Padraig Harrington"], [2010, "2010-11-14", "2010 BARCLAYS SINGAPORE OPEN", "Adam Scott"], [2010, "2010-11-21", "2010 UBS HONG KONG OPEN", "Ian Poulter"], [2010, "2010-11-28", "2010 KING'S CUP", "Udorn Duangdecha"], [2010, "2010-12-05", "2010 HERO HONDA INDIAN OPEN", "Rikard Karlberg"], [2010, "2010-12-12", "2010 JW CAMBODIAN OPEN", "Thongchai Jaidee"], [2010, "2010-12-19", "2010 BLACK MOUNTAIN MASTERS", "Tetsuji Hiratsuka"], [2011, "2011-02-20", "AVANTHA MASTERS", "S.S.P. Chowrasia"], [2011, "2011-03-25", "SAIL OPEN", "Kiradech Aphibarnrat"], [2011, "2011-04-09", "PANASONIC OPEN (INDIA)", "Anirban Lahiri"], [2011, "2011-04-17", "MAYBANK MALAYSIAN OPEN", "Matteo Manassero"], [2011, "2011-04-24", "INDONESIAN MASTERS", "Lee Westwood"], [2011, "2011-05-01", "BALLANTINE'S CHAMPIONSHIP", "Lee Westwood"], [2011, "2011-05-15", "ICTSI PHILIPPINE OPEN", "Berry Henson"], [2011, "2011-06-19", "QUEEN'S CUP", "Chawalit Plaphol"], [2011, "2011-06-19", "2011 U.S. Open Championship", "Rory McIlroy"], [2011, "2011-07-17", "2011 The Open Championship", "Darren Clarke"], [2011, "2011-07-23", "WORLDWIDE SELANGOR MSTRS 2011", "Joonas Granberg"], [2011, "2011-09-04", "OMEGA EUROPEAN MASTERS", "Thomas Bjorn"], [2011, "2011-09-11", "ISPS HANDA SINGAPORE CLASSIC", "Himmat Rai"], [2011, "2011-09-18", "MACAU OPEN", "Chan Yih-shin"], [2011, "2011-09-25", "ASIA PACIFIC PANASONIC OPEN", "Tetsuji Hiratsuka"], [2011, "2011-10-09", "YEANGDER TPC", "Lu Wei-Chih"], [2011, "2011-10-16", "HERO INDIAN OPEN", "David Gleeson"], [2011, "2011-10-23", "CJ INVITATIONAL", "K.J. Choi"], [2011, "2011-10-30", "CIMB ASIA PACIFIC CLASSIC", "Bo Van Pelt"], [2011, "2011-11-06", "MERCURIES TAIWAN MASTERS", "Lu Wei-Chih"], [2011, "2011-11-13", "BARCLAYS SINGAPORE OPEN", "Gonzalo Fdez-Castano"], [2011, "2011-11-20", "ISKANDAR JOHOR OPEN", "Joost Luiten"], [2011, "2011-11-27", "WORLD CUP", "Matt Kuchar & Gary Woodland"], [2011, "2011-12-04", "UBS HONG KONG OPEN", "Rory McIlroy"], [2011, "2011-12-18", "THAILAND GOLF CHAMPIONSHIP", "Lee Westwood"], [2012, "2012-02-05", "Zaykabar Myanmar Open Presented by Air Bagan", "Kieran Pratt"], [2012, "2012-02-12", "ICTSI PHILIPPINE OPEN 2012", "Mardan Mamat"], [2012, "2012-02-25", "Sail-SBI Open", "Anirban Lahiri"], [2012, "2012-03-17", "HANDA FALDO CAMBODIAN CLASSIC", "David Lipsky"], [2012, "2012-04-01", "Panasonic Open India", "Digvijay Singh"], [2012, "2012-04-08", "ISPS Handa Singapore Classic", "Scott Hend"], [2012, "2012-04-15", "Maybank Malaysian Open", "Louis Oosthuizen"], [2012, "2012-04-22", "Indonesian Masters Presented by PNTS", "Lee Westwood"], [2012, "2012-06-17", "Queen's Cup", "Thaworn Wiratchant"], [2012, "2012-06-24", "Volvik Hildesheim Open", "Lee In-woo"], [2012, "2012-07-22", "The Open Championship", "Ernie Els"], [2012, "2012-09-08", "Worldwide Holdings Selangor Masters", "Thaworn Wiratchant"], [2012, "2012-09-15", "Yeangder Tournament Players Championship", "Gaganjeet Bhullar"], [2012, "2012-09-23", "Asia-Pacific Panasonic Open", "Masanori Kobayashi"], [2012, "2012-09-30", "Mercuries Taiwan Masters", "Tsai Chi-huang"], [2012, "2012-10-07", "CJ Invitational Hosted by K.J. Choi", "K.J. Choi"], [2012, "2012-10-14", "Venetian Macau Open 2012", "Gaganjeet Bhullar"], [2012, "2012-10-21", "Hero Indian Open 2012", "Thaworn Wiratchant"], [2012, "2012-11-11", "Barclays Singapore Open", "Matteo Manassero"], [2012, "2012-11-18", "UBS Hong Kong Open", "Miguel Angel Jimenez"], [2012, "2012-12-02", "King's Cup", "Arnond Vongvanij"], [2012, "2012-12-09", "Thailand Golf Championship", "Charl Schwartzel"], [2012, "2012-12-16", "Iskandar Johor Open", "Sergio Garcia"], [2013, "2013-02-24", "Zaykabar Myanmar Open presented by Alpine", "Chawalit Plaphol"], [2013, "2013-03-09", "SAIL-SBI Open Presented by Incredible India", "Anirban Lahiri"], [2013, "2013-03-17", "Avantha Masters", "Thomas Aiken"], [2013, "2013-03-24", "MAYBANK MALAYSIAN OPEN", "Kiradech Aphibarnrat"], [2013, "2013-03-31", "Chiangmai Golf Classic presented by PTT", "Scott Hend"], [2013, "2013-04-07", "PANASONIC OPEN INDIA", "Wade Ormsby"], [2013, "2013-04-14", "Solaire Open", "Lin Wen-tang"], [2013, "2013-04-28", "BALLANTINE'S CHAMPIONSHIP", "Brett Rumford"], [2013, "2013-05-05", "CIMB Niaga Indonesian Masters", "Bernd Wiesberger"], [2013, "2013-06-16", "Queen's Cup", "Prayad Marksaeng"], [2013, "2013-06-16", "U.S. Open Championship", "Justin Rose"], [2013, "2013-06-23", "Worldwide Holdings Selangor Masters", "Pariya Junhasavasdikul"], [2013, "2013-07-21", "The Open Championship", "Phil Mickelson"], [2013, "2013-09-08", "Omega European Masters", "Thomas Bjorn"], [2013, "2013-09-15", "Yeangder Tournament Players Championship", "Thaworn Wiratchant"], [2013, "2013-09-29", "Asia-Pacific Panasonic Open", "Masahiro Kawamura"], [2013, "2013-10-06", "Mercuries Taiwan Masters", "Scott Hend"], [2013, "2013-10-13", "CJ Invitational Hosted by K.J. Choi", "Kang Sung-hoon"], [2013, "2013-10-20", "Venetian Macau Open", "Scott Hend"], [2013, "2013-10-27", "CIMB Classic", "Ryan Moore"], [2013, "2013-11-10", "Hero Indian Open", "Siddikur Rahman"], [2013, "2013-11-17", "Resorts World Manila Masters", "Liang Wen-chong"], [2013, "2013-11-24", "World Cup of Golf", "Jason Day"], [2013, "2013-12-01", "Indonesia Open", "Gaganjeet Bhullar"], [2013, "2013-12-08", "Hong Kong Open", "Miguel Angel Jimenez"], [2013, "2013-12-15", "Thailand Golf Championship", "Sergio Garcia"], [2013, "2014-01-19", "King's Cup Golf Hua Hin", "Prayad Marksaeng"], [2014, "2014-03-01", "SAIL-SBI Open", "Rashid Khan"], [2014, "2014-03-16", "Solaire Open", "Richard T. Lee"], [2014, "2014-04-20", "Maybank Malaysian Open", "Lee Westwood"], [2014, "2014-04-27", "CIMB Niaga Indonesian Masters", "Anirban Lahiri"], [2014, "2014-05-04", "The Championship", "Felipe Aguilar"], [2014, "2014-05-18", "ICTSI Philippine Open 2014", "Marcus Both"], [2014, "2014-06-08", "Queen's Cup", "Thaworn Wiratchant"], [2014, "2014-06-15", "U.S. Open", "Martin Kaymer"], [2014, "2014-07-20", "The Open Championship", "Rory McIlroy"], [2014, "2014-09-07", "Omega European Masters", "David Lipsky"], [2014, "2014-09-14", "Yeangder Tournament Players Championship", "Prom Meesawat"], [2014, "2014-09-21", "Worldwide Holdings Selangor Masters", "Chapchai Nirat"], [2014, "2014-10-05", "Mercuries Taiwan Masters", "Steve Lewton"], [2014, "2014-10-19", "Hong Kong Open", "Scott Hend"], [2014, "2014-10-26", "Venetian Macau Open", "Anirban Lahiri"], [2014, "2014-11-02", "CIMB Classic", "Ryan Moore"], [2014, "2014-11-09", "Panasonic Open India", "S.S.P Chowrasia"], [2014, "2014-11-16", "Chiangmai Golf Classic presented by PTT", "Rashid Khan"], [2014, "2014-11-23", "Resorts World Manila Masters", "Mardan Mamat"], [2014, "2014-11-30", "King's Cup", "Thaworn Wiratchant"], [2014, "2014-12-07", "Bank BRI Indonesia Open", "Padraig Harrington"], [2014, "2014-12-14", "Thailand Golf Championship", "Lee Westwood"], [2014, "2014-12-21", "Dubai Open", "Arjun Atwal"], [2015, "2015-02-08", "Maybank Malaysian Open", "Anirban Lahiri"], [2015, "2015-02-15", "Thailand Classic", "Andrew Dodt"], [2015, "2015-02-22", "Hero Indian Open", "Anirban Lahiri"], [2015, "2015-04-26", "CIMB Niaga Indonesian Masters", "Lee Westwood"], [2015, "2015-05-10", "AfrAsia Bank Mauritius Open", "George Coetzee"], [2015, "2015-05-30", "Bashundhara Bangladesh Open", "Mardan Mamat"], [2015, "2015-06-21", "U.S. Open", "Jordan Spieth"], [2015, "2015-06-21", "Queen's Cup", "Prayad Marksaeng"], [2015, "2015-07-19", "The Open", "Zach Johnson"], [2015, "2015-07-26", "Omega European Masters", "Danny Willett"], [2015, "2015-09-27", "Asia Pacific Open Mitsubishi Diamond Cup", "K. T. Kim"], [2015, "2015-10-04", "Mercuries Taiwan Masters", "Danny Chia"], [2015, "2015-10-11", "Yeangder Tournament Players Championship", "Shaun Norris"], [2015, "2015-10-18", "Venetian Macau Open", "Scott Hend"], [2015, "2015-10-25", "Hong Kong Open", "Justin Rose"], [2015, "2015-11-01", "CIMB Classic", "Justin Thomas"], [2015, "2015-11-08", "Panasonic Open India", "Chiragh Kumar"], [2015, "2015-11-15", "The World Classic Championship at Laguna National", "Danthai Boonma"], [2015, "2015-11-22", "Resorts World Manila Masters", "Natipong Srithong"], [2015, "2015-12-06", "Ho Tram Open", "Sergio Garcia"], [2015, "2015-12-13", "Thailand Golf Championship", "Jamie Donaldson"], [2015, "2015-12-20", "Philippine Open presented by ICTSI", "Miguel Tabuena"], [2016, "2016-01-31", "SMBC Singapore Open", "Younghan Song"], [2016, "2016-02-07", "Leopalace21 Myanmar Open", "Shaun Norris"], [2016, "2016-02-13", "Bashundhara Bangladesh Open", "Thitiphun Chuayprakong"], [2016, "2016-02-21", "Maybank Championship Malaysia", "Marcus Fraser"], [2016, "2016-02-28", "Perth International", "Louis Oosthuizen"], [2016, "2016-03-13", "True Thailand Classic presented by Chang", "Scott Hend"], [2016, "2016-03-20", "Hero Indian Open", "S.S.P Chawrasia"], [2016, "2016-04-24", "Panasonic Open Golf Championship", "Yuta Ikeda"], [2016, "2016-05-15", "AfrAsia Bank Mauritius Open", "Jeunghun Wang"], [2016, "2016-06-19", "U.S. Open", "Dustin Johnson"], [2016, "2016-06-19", "Queen's Cup", "Scott Hend"], [2016, "2016-07-03", "Yeangder TPC", "Carlos Pigem"], [2016, "2016-07-17", "The Open", "Henrik Stenson"], [2016, "2016-07-31", "King's Cup", "Chan Shih-chang"], [2016, "2016-09-04", "Omega European Masters", "Alex Noren"], [2016, "2016-09-25", "Asia-Pacific Diamond Cup", "Chan Shih-chang"], [2016, "2016-10-02", "Mercuries Taiwan Masters", "Lu Wei-chih"], [2016, "2016-10-02", "Shinhan Donghae Open", "Gaganjeet Bhullar"], [2016, "2016-10-09", "BNI Indonesian Masters", "Poom Saksansin"], [2016, "2016-10-16", "Venetian Macao Open", "Pavit Tangkamolprasert"], [2016, "2016-10-23", "CIMB Classic", "Justin Thomas"], [2016, "2016-11-13", "Resorts World Manila Masters", "S.S.P Chawrasia"], [2016, "2016-11-20", "BANK BRI-JCB Indonesia Open", "Gaganjeet Bhullar"], [2016, "2016-12-04", "Panasonic Open India", "Mukesh Kumar"], [2016, "2016-12-11", "UBS Hong Kong Open", "Sam Brazel"], [2017, "2017-01-22", "SMBC Singapore Open", "Prayad Marksaeng"], [2017, "2017-01-29", "Leopalace21 Myanmar Open", "Todd Sinnott"], [2017, "2017-02-04", "Bashundhara Bangladesh Open", "Jazz Janewattananond"], [2017, "2017-02-12", "Maybank Championship", "Fabrizio Zanotti"], [2017, "2017-02-19", "ISPS HANDA World Super 6 Perth", "Brett Rumford"], [2017, "2017-03-12", "Hero Indian Open", "S.S.P Chawrasia"], [2017, "2017-04-23", "Panasonic Open Golf Championship", "Kenichi Kuboya"], [2017, "2017-04-30", "Yeangder Heritage", "Shiv Kapur"], [2017, "2017-05-21", "Thailand Open", "Rattanon Wannasrichan"], [2017, "2017-06-18", "U.S. Open", "Brooks Koepka"], [2017, "2017-06-18", "Queen's Cup", "Nicholas Fung"], [2017, "2017-07-23", "The Open", "Jordan Spieth"], [2017, "2017-08-06", "TAKE Solutions Masters", "Poom Saksansin"], [2017, "2017-08-20", "Fiji International", "Jason Norris"], [2017, "2017-09-10", "Omega European Masters", "Matthew Fitzpatrick"], [2017, "2017-09-17", "The 33rd Shinhan Donghae Open", "Richard T. Lee"], [2017, "2017-09-24", "Asia-Pacific Open Diamond Cup", "Daisuke Kataoka"], [2017, "2017-10-01", "Mercuries Taiwan Masters", "Gavin Green"], [2017, "2017-10-08", "Yeangder TPC", "Ajeetesh Sandhu"], [2017, "2017-10-15", "CIMB Classic", "Pat Perez"], [2017, "2017-10-22", "Macao Open", "Gaganjeet Bhullar"], [2017, "2017-10-29", "Indonesia Open", "Panuphol Pittayarat"], [2017, "2017-11-05", "Panasonic Open India", "Shiv Kapur"], [2017, "2017-11-12", "Resorts World Manila Masters", "Micah Lauren Shin"], [2017, "2017-11-26", "UBS Hong Kong Open", "Wade Ormsby"], [2017, "2017-12-03", "AfrAsia Bank Mauritius Open", "Dylan Frittelli"], [2017, "2017-12-03", "Asian Golf Championship", "Bowen Xiao"], [2017, "2017-12-10", "Joburg Open", "Shubhankar Sharma"], [2017, "2017-12-17", "Indonesian Masters", "Justin Rose"], [2017, "2017-12-31", "Royal Cup", "Shiv Kapur"], [2018, "2018-01-21", "SMBC Singapore Open", "Sergio Garcia"], [2018, "2018-01-28", "Leopalace21 Myanmar Open", "Paul Peterson"], [2018, "2018-02-04", "Maybank Championship", "Shubhankar Sharma"], [2018, "2018-02-11", "ISPS HANDA World Super 6 Perth", "Kiradech Aphibarnrat"], [2018, "2018-03-04", "ISPS HANDA New Zealand Open", "Daniel Nisbet"], [2018, "2018-03-11", "Hero Indian Open", "Matt Wallace"], [2018, "2018-04-22", "Panasonic Open Golf Championship", "Rahil Gangjee"], [2018, "2018-04-29", "Volvo China Open", "Alexander Bjork"], [2018, "2018-05-06", "GS Caltex Maekyung Open", "Sanghyun Park"], [2018, "2018-05-12", "AB Bank Bangladesh Open", "Malcolm Kokocinski"], [2018, "2018-05-20", "Asia-Pacific Classic", "John Catlin"], [2018, "2018-06-10", "Thailand Open", "Panuphol Pittayarat"], [2018, "2018-06-17", "U.S. Open", "Brooks Koepka"], [2018, "2018-06-24", "Kolon Korea Open Golf Championship", "Minchel Choi"], [2018, "2018-07-01", "Queen's Cup", "Jazz Janewattananond"], [2018, "2018-07-07", "Sarawak Championship", "John Catlin"], [2018, "2018-07-15", "Bank BRI Indonesia Open", "Justin Harding"], [2018, "2018-07-22", "The 147th Open Championship", "Francesco Molinari"], [2018, "2018-07-29", "Royal Cup", "Justin Harding"], [2018, "2018-08-05", "Fiji International", "Gaganjeet Bhullar"], [2018, "2018-08-12", "TAKE Solutions Masters", "Viraj Madappa"], [2018, "2018-09-16", "The 34th Shinhan Donghae Open", "Sanghyun Park"], [2018, "2018-09-23", "Asia-Pacific Open Golf Championship Diamond Cup", "Yuta Ikeda"], [2018, "2018-09-30", "Mercuries Taiwan Masters", "Adilson Da Silva"], [2018, "2018-10-07", "Yeangder TPC", "John Catlin"], [2018, "2018-10-14", "CIMB Classic", "Marc Leishman"], [2018, "2018-10-14", "UMA CNS Open Golf Championship", "Tirawat Kaewsiribandit"], [2018, "2018-10-28", "Panasonic Open India", "Khalin Joshi"], [2018, "2018-11-25", "Honma Hong Kong Open", "Aaron Rai"], [2018, "2018-12-02", "AfrAsia Bank Mauritius Open", "Kurt Kitayama"], [2018, "2018-12-02", "Queen's Cup 2018 Hosted by Jaidee Foundation", "Miguel Tabuena"], [2018, "2018-12-09", "South African Open hosted by the City of Johannesburg", "Louis Oosthuizen"], [2018, "2018-12-16", "BNI Indonesian Masters", "Poom Saksansin"], [2019, "2019-01-20", "SMBC Singapore Open", "Jazz Janewattananond"], [2019, "2019-02-17", "ISPS HANDA World Super 6 Perth (Match Play)", "Ryan Fox"], [2019, "2019-03-03", "New Zealand Open", "Zach Murray"], [2019, "2019-03-24", "Maybank Championship", "Scott Hend"], [2019, "2019-03-31", "Hero Indian Open", "Stephen Gallacher"], [2019, "2019-04-06", "Bangabandhu Cup Golf Open 2019", "Sadom Kaewkanjana"], [2019, "2019-05-05", "The 38th GS Caltex Maekyung Open Golf Championship", "Taehee Lee"], [2019, "2019-05-05", "Volvo China Open", "Mikko Korhonen"], [2019, "2019-05-12", "Asia-Pacific Open Golf Championship Diamond Cup Golf", "Yosuke Asaji"], [2019, "2019-06-16", "U.S. Open", "Gary Woodland"], [2019, "2019-06-23", "Kolon The 62nd KOREA Open Golf Championship", "Jazz Janewattananond"], [2019, "2019-07-21", "The 148th Open", "Shane Lowry"], [2019, "2019-08-18", "Sarawak Championship", "Andrew Dodt"], [2019, "2019-09-01", "Bank BRI Indonesia Open", "Miguel Carballo"], [2019, "2019-09-08", "Yeangder Tournament Players Championship", "Yikeun Chang"], [2019, "2019-09-15", "Classic Golf and Country Club International Championship", "Rory Hie"], [2019, "2019-09-22", "Shinhan Donghae Open", "Jbe Kruger"], [2019, "2019-09-29", "Panasonic Open Golf Championship", "Toshinori Muto"], [2019, "2019-10-06", "Mercuries Taiwan Masters", "Suradit Yongcharoenchai"], [2019, "2019-11-10", "Thailand Open", "John Catlin"], [2019, "2019-11-17", "Panasonic Open India", "Tom Kim"], [2019, "2019-11-24", "Sabah Masters", "Pavit Tangkamolprasert"], [2019, "2019-12-08", "AfrAsia Bank Mauritius Open", "Rasmus Hojgaard"], [2019, "2019-12-15", "BNI Indonesian Masters", "Jazz Janewattananond"], [2019, "2019-12-22", "Thailand Masters", "Jazz Janewattananond"], ["2020-21-22", "2020-01-12", "Hong Kong Open", "Wade Ormsby"], ["2020-21-22", "2020-01-19", "SMBC Singapore Open", "Matt Kuchar"], ["2020-21-22", "2020-03-01", "New Zealand Open presented by Sky Sport", "Brad Kennedy"], ["2020-21-22", "2020-03-07", "Bandar Malaysia Open", "Trevor Simsby"], ["2020-21-22", "2021-11-28", "Blue Canyon Phuket Championship 2021", "Chan Shih-chang"], ["2020-21-22", "2021-12-05", "Laguna Phuket Championship 2021", "Phachara Khongwatmai"], ["2020-21-22", "2022-01-16", "The Singapore International", "Tom Kim"], ["2020-21-22", "2022-01-23", "SMBC Singapore Open", "Sadom Kaewkanjana"], [2022, "2022-02-06", "PIF Saudi International powered by SoftBank Investment Advisers", "Harold Varner III"], [2022, "2022-02-27", "Royal's Cup 2022", "Chan Shih-chang"], [2022, "2022-03-06", "International Series Thailand", "Sihwan Kim"], [2022, "2022-03-27", "The DGC Open presented by Mastercard", "Nitithorn Thippong"], [2022, "2022-04-10", "Trust Golf Asian Mixed Cup", "Ratchanon Chantananuwat"], [2022, "2022-04-16", "Trust Golf Asian Mixed Stableford Challenge", "Sihwan Kim"], [2022, "2022-05-08", "The 41st GS Caltex Maekyung Open", "Bio Kim"], [2022, "2022-05-15", "Asia Pacific Open Golf Championship Diamond Cup", "Shugo Imahira"], [2022, "2022-06-05", "International Series England", "Scott Vincent"], [2022, "2022-06-19", "122nd United States Open Championship", "Matthew Fitzpatrick"], [2022, "2022-06-26", "Kolon The 64th Korea Open Golf Championship", "Minkyu Kim"], [2022, "2022-07-17", "The 150th Open", "Cameron Smith"], [2022, "2022-08-07", "Mandiri Indonesia Open 2022", "Gaganjeet Bhullar"], [2022, "2022-08-14", "International Series Singapore", "Nitithorn Thippong"], [2022, "2022-08-21", "International Series Korea", "Taehoon Ok"], [2022, "2022-09-11", "The 38th Shinhan Donghae Open", "Kazuki Higa"], [2022, "2022-09-25", "Yeangder TPC", "Travis Smyth"], [2022, "2022-10-02", "Mercuries Taiwan Masters", "Chan Shih-chang"], [2022, "2022-11-06", "International Series Morocco", "Jazz Janewattananond"], [2022, "2022-11-13", "International Series Egypt", "Andy Ogletree"], [2022, "2022-11-27", "Bangabandhu Cup Golf Bangladesh Open", "Danthai Boonma"], [2022, "2022-12-04", "BNI Indonesian Masters presented by Tunas Niaga Energi", "Sarit Suwannarut"], [2023, "2023-02-05", "PIF Saudi International powered by Softbank Investment Advisers", "Abraham Ancer"], [2023, "2023-02-12", "International Series Oman", "Takumi Kanaya"], [2023, "2023-02-19", "International Series Qatar", "Andy Ogletree"], [2023, "2023-03-05", "New Zealand Open presented by SKY SPORT", "Brendan Jones"], [2023, "2023-03-12", "International Series Thailand", "Wade Ormsby"], [2023, "2023-03-19", "The DGC Open presented by Mastercard", "Miguel Tabuena"], [2023, "2023-03-26", "World City Championship presented by Hong Kong Golf Club", "Taichi Kho"], [2023, "2023-04-16", "International Series Vietnam", "Kieran Vincent"], [2023, "2023-05-07", "The 42nd GS Caltex Maekyung Open Golf Championship", "Chanmin Jung"], [2023, "2023-06-18", "123rd U.S. Open Championship", "Wyndham Clark"], [2023, "2023-06-25", "Kolon The 65th Korea Open Golf Championship", "Seungsu Han"], [2023, "2023-07-23", "The 151st Open", "Brian Harman"], [2023, "2023-08-06", "Mandiri Indonesia Open", "Nitithorn Thippong"], [2023, "2023-08-20", "International Series England", "Andy Ogletree"], [2023, "2023-08-27", "St Andrews Bay Championship", "Eugenio Chacarra"], [2023, "2023-09-10", "Shinhan Donghae Open", "Guntaek Koh"], [2023, "2023-09-24", "Yeangder TPC", "Poom Saksansin"], [2023, "2023-10-01", "Mercuries Taiwan Masters", "Jaco Ahlers"], [2023, "2023-10-08", "International Series Singapore", "David Puig"], [2023, "2023-10-15", "SJM Macao Open", "Min Woo Lee"], [2023, "2023-11-05", "Volvo China Open", "Sarit Suwannarut"], [2023, "2023-11-12", "Hong Kong Open", "Ben Campbell"], [2023, "2023-11-19", "BNI Indonesian Masters presented by Tunas Niaga Energi", "Gaganjeet Bhullar"], [2023, "2023-12-03", "Taiwan Glass Taifong Open", "Suteepat Prateeptienchai"], [2023, "2023-12-17", "Saudi Open presented by Public Investment Fund", "Denwit Booribonsub"], [2024, "2024-02-18", "IRS Prima Malaysian Open", "David Puig"], [2024, "2024-02-25", "International Series Oman", "Carlos Ortiz"], [2024, "2024-03-03", "103rd New Zealand Open presented by Sky Sport", "Takahiro Hataji"], [2024, "2024-03-17", "International Series Macau presented by Wynn", "John Catlin"], [2024, "2024-04-20", "Saudi Open presented by PIF", "John Catlin"], [2024, "2024-05-05", "GS Caltex Maekyung Open Golf Championship", "Hongtaek Kim"], [2024, "2024-06-16", "124th U.S Open Championship", "Bryson DeChambeau"], [2024, "2024-06-23", "Kolon Korea Open presented by ELORD", "Minkyu Kim"], [2024, "2024-07-07", "International Series Morocco", "Ben Campbell"], [2024, "2024-07-21", "The 152nd Open", "Xander Schauffele"], [2024, "2024-08-11", "International Series England", "Peter Uihlein"], [2024, "2024-09-01", "Mandiri Indonesia Open", "Steve Lewton"], [2024, "2024-09-08", "40th Shinhan Donghae Open", "Kensei Hirata"], [2024, "2024-09-29", "Yeangder TPC", "Suteepat Prateeptienchai"], [2024, "2024-10-06", "Mercuries Taiwan Masters", "Jbe Kruger"], [2024, "2024-10-13", "SJM Macao Open", "Rattanon Wannasrichan"], [2024, "2024-10-20", "Black Mountain Championship", "M.J. Maguire"], [2024, "2024-10-27", "International Series Thailand", "Lee, Chieh-po"], [2024, "2024-11-03", "BNI Indonesian Masters", "Richard T. Lee"], [2024, "2024-11-17", "Taiwan Glass Taifong Open", "Suteepat Prateeptienchai"], [2024, "2024-11-24", "Link Hong Kong Open", "Patrick Reed"], [2024, "2024-11-30", "International Series Qatar", "Peter Uihlein"], [2024, "2024-12-07", "PIF Saudi International powered by SoftBank Investment Advisers", "Joaquin Niemann"], [2025, "2025-01-26", "Smart Infinity Philippine Open", "Julien Sale"], [2025, "2025-02-02", "International Series India presented by DLF", "Ollie Schniederjans"], [2025, "2025-03-02", "104th New Zealand Open presented by Sky Sport", "Ryan Peake"], [2025, "2025-03-23", "International Series Macau presented by Wynn", "Carlos Ortiz"], [2025, "2025-05-04", "The 44th GS Caltex Maekyung Open Golf Championship", "Doyeob Mun"], [2025, "2025-05-11", "International Series Japan presented by Moutai", "Lucas Herbert"], [2025, "2025-05-25", "Kolon The 67th KOREA Open Golf Championship", "Sadom Kaewkanjana"], [2025, "2025-06-15", "125th U.S Open", "J.J. Spaun"], [2025, "2025-07-06", "International Series Morocco", "Scott Vincent"], [2025, "2025-07-20", "The 153rd Open", "Scottie Scheffler"], [2025, "2025-08-31", "Mandiri Indonesia Open", "Suteepat Prateeptienchai"], [2025, "2025-09-14", "The 41st Shinhan Donghae Open", "Kazuki Higa"], [2025, "2025-09-21", "Yeangder Tournament Players Championship", "Kazuki Higa"], [2025, "2025-09-28", "Mercuries Taiwan Masters", "Rattanon Wannasrichan"], [2025, "2025-10-05", "Jakarta International Championship", "Wade Ormsby"], [2025, "2025-10-19", "SJM Macao Open", "Dominic Foos"], [2025, "2025-10-26", "International Series Philippines", "Miguel Tabuena"], [2025, "2025-11-02", "Link Hong Kong Open", "Tom McKibbin"], [2025, "2025-11-09", "Moutai Singapore Open", "Yosuke Asaji"], [2025, "2025-11-16", "Taiwan Glass Taifong Open", "Ekpharit Wu"], [2025, "2025-11-22", "PIF Saudi International powered by Softbank Investment Advisers", "Josele Ballester"], [2025, "2025-11-30", "Bharath Classic 2025 Gujarat", "Poosit Supupramai"], [2025, "2025-12-13", "Saudi Open presented by PIF", "Bjorn Hellgren"], [2026, "2026-02-08", "Philippine Golf Championship presented by Philippine Sports Commission", "Wooyoung Cho"], [2026, "2026-03-01", "105th New Zealand Open presented by Millbrook Resort", "Daniel Hillier"], [2026, "2026-04-05", "International Series Japan", "Travis Smyth"], [2026, "2026-04-26", "Singapore Open presented by The Business Times", "Jeongwoo Ham"], [2026, "2026-05-03", "The 45th GS Caltex Maekyung Open Golf Championship", "Minhyuk Song"]];
-let oomData = [[1995, "Lin Keng-chi"], [1996, "Kang Wook-soon"], [1997, "Mike Cunning"], [1998, "Kang Wook-soon"], [1999, "Kyi Hla Han"], [2000, "Simon Dyson"], [2001, "Thongchai Jaidee"], [2002, "Jyoti Randhawa"], [2003, "Arjun Atwal"], [2004, "Thongchai Jaidee"], [2005, "Thaworn Wiratchant"], [2006, "Jeev Milkha Singh"], [2007, "Liang Wenchong"], [2008, "Jeev Milkha Singh"], [2009, "Thongchai Jaidee"], [2010, "Noh Seung-yul"], [2011, "Juvic Pagunsan"], [2012, "Thaworn Wiratchant"], [2013, "Kiradech Aphibarnrat"], [2014, "David Lipsky"], [2015, "Anirban Lahiri"], [2016, "Scott Hend"], [2017, "Gavin Green"], [2018, "Shubhankar Sharma"], [2019, "Jazz Janewattananond"], ["2020-21-22", "Tom Kim"], [2022, "Sihwan Kim"], [2023, "Andy Ogletree"], [2024, "John Catlin"], [2025, "Kazuki Higa"]];
-const OOM_LOOKUP = {"Lin Keng-chi": ["1995"], "Kang Wook-soon": ["1996", "1998"], "Mike Cunning": ["1997"], "Kyi Hla Han": ["1999"], "Simon Dyson": ["2000"], "Thongchai Jaidee": ["2001", "2004", "2009"], "Jyoti Randhawa": ["2002"], "Arjun Atwal": ["2003"], "Thaworn Wiratchant": ["2005", "2012"], "Jeev Milkha Singh": ["2006", "2008"], "Liang Wenchong": ["2007"], "Noh Seung-yul": ["2010"], "Juvic Pagunsan": ["2011"], "Kiradech Aphibarnrat": ["2013"], "David Lipsky": ["2014"], "Anirban Lahiri": ["2015"], "Scott Hend": ["2016"], "Gavin Green": ["2017"], "Shubhankar Sharma": ["2018"], "Jazz Janewattananond": ["2019"], "Tom Kim": ["2020-21-22"], "Sihwan Kim": ["2022"], "Andy Ogletree": ["2023"], "John Catlin": ["2024"], "Kazuki Higa": ["2025"]};
+let data = DATA;
+let oomData = OOM;
 let players = {};
-
-
-
-// Live Statistics Fetching
-let statsCache = {};
-let lastFetchTime = {};
-
-async function loadLiveStats() {
-    const season = document.getElementById('statsSeason').value;
-    const category = document.getElementById('statsCategory').value;
-    const cacheKey = `${season}_${category}`;
-    
-    // Check cache (5 minutes)
-    const now = Date.now();
-    if (statsCache[cacheKey] && lastFetchTime[cacheKey] && (now - lastFetchTime[cacheKey]) < 300000) {
-        renderStats(statsCache[cacheKey]);
-        return;
-    }
-    
-    // Show loading
-    document.getElementById('statsLoading').style.display = 'block';
-    document.getElementById('statsContent').style.display = 'none';
-    document.getElementById('statsError').style.display = 'none';
-    
-    try {
-        // Fetch from Asian Tour website
-        const url = `https://www.asiantour.com/stats?id=${season}&category=${category}`;
-        
-        // Use a CORS proxy for client-side fetching
-        const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
-        
-        const response = await fetch(proxyUrl);
-        
-        if (!response.ok) {
-            throw new Error('Failed to fetch');
-        }
-        
-        const html = await response.text();
-        
-        // Parse the HTML to extract stats
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        
-        // Extract stats data (this will need to be customized based on actual HTML structure)
-        const statsData = parseStatsFromHTML(doc, category);
-        
-        // Cache the results
-        statsCache[cacheKey] = statsData;
-        lastFetchTime[cacheKey] = now;
-        
-        renderStats(statsData);
-        
-    } catch (error) {
-        console.error('Error fetching stats:', error);
-        
-        // Try to show cached data if available
-        if (statsCache[cacheKey]) {
-            renderStats(statsCache[cacheKey]);
-            showNotification('⚠️ Showing cached data (couldn\'t refresh)');
-        } else {
-            // Show error message
-            document.getElementById('statsLoading').style.display = 'none';
-            document.getElementById('statsError').style.display = 'block';
-        }
-    }
-}
-
-function parseStatsFromHTML(doc, category) {
-    // This is a placeholder - actual parsing depends on Asian Tour website structure
-    // For now, return sample data structure
-    
-    // In a real implementation, you would:
-    // 1. Find the stats table in the document
-    // 2. Extract player names, rankings, and values
-    // 3. Return formatted data
-    
-    const sampleData = {
-        title: getCategoryTitle(category),
-        players: [
-            { rank: 1, name: 'Player 1', value: 'Value 1' },
-            { rank: 2, name: 'Player 2', value: 'Value 2' },
-            // ... more players
-        ]
-    };
-    
-    return sampleData;
-}
-
-function getCategoryTitle(category) {
-    const titles = {
-        'oom': 'Order of Merit',
-        'scoring': 'Scoring Average',
-        'driving': 'Driving Distance',
-        'gir': 'Greens in Regulation',
-        'putting': 'Putting Average',
-        'sand': 'Sand Saves'
-    };
-    return titles[category] || 'Statistics';
-}
-
-function renderStats(data) {
-    document.getElementById('statsLoading').style.display = 'none';
-    document.getElementById('statsError').style.display = 'none';
-    document.getElementById('statsContent').style.display = 'block';
-    
-    const container = document.getElementById('statsContent');
-    
-    let html = `
-        <h3 style="color:#1e3c72;margin-bottom:15px">${data.title}</h3>
-        <table style="background:#f8f9fa">
-            <thead>
-                <tr>
-                    <th style="width:80px">Rank</th>
-                    <th>Player</th>
-                    <th style="width:200px">Value</th>
-                </tr>
-            </thead>
-            <tbody>
-    `;
-    
-    if (data.players && data.players.length > 0) {
-        data.players.forEach(player => {
-            html += `
-                <tr>
-                    <td style="text-align:center;font-weight:700;color:#667eea">#${player.rank}</td>
-                    <td><span class="player-name" onclick="showPlayer('${player.name}')">${player.name}</span></td>
-                    <td style="text-align:center;font-weight:600">${player.value}</td>
-                </tr>
-            `;
-        });
-    } else {
-        html += `
-            <tr>
-                <td colspan="3" style="text-align:center;padding:30px;color:#999">
-                    No data available for this season/category
-                </td>
-            </tr>
-        `;
-    }
-    
-    html += `
-            </tbody>
-        </table>
-        <p style="margin-top:15px;color:#666;font-size:14px">
-            📡 Data from <a href="https://www.asiantour.com/stats" target="_blank">AsianTour.com</a> 
-            | Last updated: ${new Date().toLocaleString()}
-        </p>
-    `;
-    
-    container.innerHTML = html;
-}
-
-// Auto-load stats when Statistics tab is opened
-const originalShowTab = showTab;
-showTab = function(tabName) {
-    originalShowTab(tabName);
-    if (tabName === 'statistics') {
-        // Only auto-load if not already loaded
-        const content = document.getElementById('statsContent');
-        if (!content.innerHTML || content.innerHTML.trim() === '') {
-            loadLiveStats();
-        }
-    }
-};
-
-
-
+let seasonStats = JSON.parse(localStorage.getItem('asianTourStats')) || {};
 
 function init() {
-    // Populate year dropdown
-    const yearSelect = document.getElementById('addYear');
-    for (let y = 2050; y >= 1995; y--) {
-        const opt = document.createElement('option');
-        opt.value = y;
-        opt.textContent = y;
-        yearSelect.appendChild(opt);
-    }
-    yearSelect.value = new Date().getFullYear();
-    
     calcPlayers();
     render();
 }
 
 function calcPlayers() {
     players = {};
-    tournaments.forEach(t => {
+    data.forEach(t => {
         if (t[3]) {
             if (!players[t[3]]) players[t[3]] = [];
             players[t[3]].push([t[0], t[1], t[2]]);
@@ -470,39 +488,27 @@ function calcPlayers() {
 }
 
 function render() {
-    renderTournaments();
-    renderPlayers();
-    renderOOM();
-}
-
-function renderTournaments() {
     const tbody = document.getElementById('tbody');
     tbody.innerHTML = '';
-    tournaments.forEach((t, i) => {
+    data.forEach(t => {
         const row = tbody.insertRow();
-        const actions = isAdmin ? `<td><button class="btn edit-btn" onclick="editTournament(${i})">✏️</button><button class="btn delete-btn" onclick="deleteTournament(${i})">🗑️</button></td>` : '';
-        row.innerHTML = `<td>${t[0]}</td><td>${t[1]}</td><td>${t[2]}</td><td><span class="player-name" onclick="showPlayer('${t[3]}')">${t[3]}</span></td>${actions}`;
+        row.innerHTML = `<td>${t[0]}</td><td>${t[1]}</td><td>${t[2]}</td><td><span class="player-name" onclick="showPlayer('${t[3]}')">${t[3]}</span></td>`;
     });
-    document.getElementById('count').textContent = tournaments.length;
-}
-
-function renderPlayers() {
-    const tbody = document.getElementById('playersBody');
-    tbody.innerHTML = '';
-    const sorted = Object.entries(players).sort((a, b) => b[1].length - a[1].length);
-    sorted.forEach(([p, w], i) => {
-        const row = tbody.insertRow();
-        row.innerHTML = `<td style="text-align:center;font-size:1.2em">#${i + 1}</td><td><span class="player-name" onclick="showPlayer('${p}')">${p}</span></td><td style="text-align:center;font-weight:700;color:#667eea">${w.length}</td>`;
+    document.getElementById('count').textContent = data.length;
+    
+    const pb = document.getElementById('playersBody');
+    pb.innerHTML = '';
+    const sorted = Object.entries(players).sort((a,b) => b[1].length - a[1].length);
+    sorted.forEach(([p,w],i) => {
+        const row = pb.insertRow();
+        row.innerHTML = `<td style="text-align:center;font-size:1.2em">#${i+1}</td><td><span class="player-name" onclick="showPlayer('${p}')">${p}</span></td><td style="text-align:center;font-weight:700;color:#667eea">${w.length}</td>`;
     });
-}
-
-function renderOOM() {
-    const tbody = document.getElementById('oomBody');
-    tbody.innerHTML = '';
-    oomData.forEach((o, i) => {
-        const row = tbody.insertRow();
-        const actions = isAdmin ? `<td><button class="btn edit-btn" onclick="editOOM(${i})">✏️</button><button class="btn delete-btn" onclick="deleteOOM(${i})">🗑️</button></td>` : '';
-        row.innerHTML = `<td><strong>${o[0]}</strong></td><td><span class="player-name" onclick="showPlayer('${o[1]}')">${o[1]}</span></td>${actions}`;
+    
+    const ob = document.getElementById('oomBody');
+    ob.innerHTML = '';
+    oomData.forEach(([y,w]) => {
+        const row = ob.insertRow();
+        row.innerHTML = `<td><strong>${y}</strong></td><td><span class="player-name" onclick="showPlayer('${w}')">${w}</span></td>`;
     });
 }
 
@@ -511,6 +517,7 @@ function showTab(tab) {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     document.getElementById(tab).classList.add('active');
     event.target.classList.add('active');
+    if (tab === 'statistics') loadSeasonStats();
 }
 
 function searchTournaments() {
@@ -582,10 +589,8 @@ function login() {
     if (pwd === ADMIN_PASSWORD) {
         isAdmin = true;
         document.querySelectorAll('.admin-only').forEach(el => el.style.display = 'block');
-        document.getElementById('adminBtn').style.display = 'none';
         document.getElementById('logoutBtn').style.display = 'block';
         closeLogin();
-        render();
         showNotification('✅ Admin mode activated');
     } else {
         document.getElementById('loginError').style.display = 'block';
@@ -595,138 +600,9 @@ function login() {
 function logout() {
     isAdmin = false;
     document.querySelectorAll('.admin-only').forEach(el => el.style.display = 'none');
-    document.getElementById('adminBtn').style.display = 'block';
     document.getElementById('logoutBtn').style.display = 'none';
     showTab('all');
-    render();
     showNotification('Logged out');
-}
-
-function addTournament() {
-    const year = parseInt(document.getElementById('addYear').value);
-    const date = document.getElementById('addDate').value.trim();
-    const tournament = document.getElementById('addTournament').value.trim();
-    const winner = document.getElementById('addWinner').value.trim();
-    
-    if (!date || !tournament || !winner) {
-        alert('Please fill in all fields');
-        return;
-    }
-    
-    tournaments.push([year, date, tournament, winner]);
-    tournaments.sort((a, b) => {
-        // Sort by year first
-        if (a[0] !== b[0]) return a[0] - b[0];
-        // Then sort by date (convert to comparable format)
-        const dateA = new Date(a[1]);
-        const dateB = new Date(b[1]);
-        return dateA - dateB;
-    });
-    
-    document.getElementById('addDate').value = '';
-    document.getElementById('addTournament').value = '';
-    document.getElementById('addWinner').value = '';
-    
-    calcPlayers();
-    render();
-    showNotification('✅ Tournament added');
-}
-
-function editTournament(i) {
-    document.getElementById('editIndex').value = i;
-    document.getElementById('editYear').value = tournaments[i][0];
-    document.getElementById('editDate').value = tournaments[i][1];
-    document.getElementById('editTournament').value = tournaments[i][2];
-    document.getElementById('editWinner').value = tournaments[i][3];
-    document.getElementById('editModal').classList.add('active');
-}
-
-function saveEdit() {
-    const i = parseInt(document.getElementById('editIndex').value);
-    tournaments[i] = [
-        parseInt(document.getElementById('editYear').value),
-        document.getElementById('editDate').value.trim(),
-        document.getElementById('editTournament').value.trim(),
-        document.getElementById('editWinner').value.trim()
-    ];
-    closeEditModal();
-    calcPlayers();
-    render();
-    showNotification('✅ Tournament updated');
-}
-
-function closeEditModal() {
-    document.getElementById('editModal').classList.remove('active');
-}
-
-function deleteTournament(i) {
-    if (confirm('Delete this tournament?')) {
-        tournaments.splice(i, 1);
-        calcPlayers();
-        render();
-        showNotification('✅ Tournament deleted');
-    }
-}
-
-function showAddOOMModal() {
-    document.getElementById('addOOMModal').classList.add('active');
-}
-
-function closeAddOOMModal() {
-    document.getElementById('addOOMModal').classList.remove('active');
-}
-
-function saveNewOOM() {
-    const year = document.getElementById('newOOMYear').value.trim();
-    const winner = document.getElementById('newOOMWinner').value.trim();
-    
-    if (!year || !winner) {
-        alert('Please fill in both fields');
-        return;
-    }
-    
-    oomData.push([year, winner]);
-    oomData.sort((a, b) => {
-        const yearA = typeof a[0] === 'string' ? parseInt(a[0].split('-')[0]) : a[0];
-        const yearB = typeof b[0] === 'string' ? parseInt(b[0].split('-')[0]) : b[0];
-        return yearA - yearB;
-    });
-    
-    document.getElementById('newOOMYear').value = '';
-    document.getElementById('newOOMWinner').value = '';
-    closeAddOOMModal();
-    render();
-    showNotification('✅ OOM winner added');
-}
-
-function editOOM(i) {
-    document.getElementById('editOOMIndex').value = i;
-    document.getElementById('editOOMYear').value = oomData[i][0];
-    document.getElementById('editOOMWinner').value = oomData[i][1];
-    document.getElementById('editOOMModal').classList.add('active');
-}
-
-function saveOOMEdit() {
-    const i = parseInt(document.getElementById('editOOMIndex').value);
-    oomData[i] = [
-        document.getElementById('editOOMYear').value.trim(),
-        document.getElementById('editOOMWinner').value.trim()
-    ];
-    closeEditOOMModal();
-    render();
-    showNotification('✅ OOM winner updated');
-}
-
-function closeEditOOMModal() {
-    document.getElementById('editOOMModal').classList.remove('active');
-}
-
-function deleteOOM(i) {
-    if (confirm('Delete this OOM winner?')) {
-        oomData.splice(i, 1);
-        render();
-        showNotification('✅ OOM winner deleted');
-    }
 }
 
 function showNotification(msg) {
@@ -737,6 +613,8 @@ function showNotification(msg) {
         n.style.display = 'none';
     }, 3000);
 }
+
+
 
 init();
 </script>
