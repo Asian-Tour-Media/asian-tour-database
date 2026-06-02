@@ -73,7 +73,12 @@ tr:hover {background:#f8f9ff}
 
 <div id="all" class="tab-content active">
 <input type="text" id="searchAll" class="search-box" placeholder="🔍 Search tournaments..." onkeyup="searchTournaments()">
-<button class="btn add-btn admin-only" onclick="showAddTournamentModal()" style="margin-bottom:15px">➕ Add Tournament</button>
+<div style="margin-bottom:15px">
+<button class="btn add-btn admin-only" onclick="showAddTournamentModal()">➕ Add Tournament</button>
+<button class="btn admin-only" style="background:#17a2b8;color:white" onclick="exportData()">💾 Export Data</button>
+<button class="btn admin-only" style="background:#17a2b8;color:white" onclick="document.getElementById('importFile').click()">📥 Import Data</button>
+<input type="file" id="importFile" accept=".json" style="display:none" onchange="importData(event)">
+</div>
 <table><thead><tr><th>Year</th><th>Date</th><th>Tournament</th><th>Winner</th></tr></thead>
 <tbody id="tbody"></tbody></table>
 </div>
@@ -600,9 +605,20 @@ function saveTournament() {
     data.push([year, date, tournament, winner]);
     data.sort((a,b) => {
         if (a[0] !== b[0]) return a[0] - b[0];
+        
+        // Try to parse ISO format dates (YYYY-MM-DD)
+        const aDate = a[1].match(/\d{4}-\d{2}-\d{2}/) ? new Date(a[1]) : null;
+        const bDate = b[1].match(/\d{4}-\d{2}-\d{2}/) ? new Date(b[1]) : null;
+        
+        if (aDate && bDate) {
+            return aDate - bDate;
+        }
+        
+        // Fallback to string comparison for non-ISO dates
         return a[1].localeCompare(b[1]);
     });
     
+    saveData();
     calcPlayers();
     render();
     closeAddTournamentModal();
@@ -631,6 +647,7 @@ function saveEditTournament() {
         document.getElementById('editTournamentName').value.trim(),
         document.getElementById('editWinner').value.trim()
     ];
+    saveData();
     calcPlayers();
     render();
     closeEditTournamentModal();
@@ -641,6 +658,7 @@ function saveEditTournament() {
 function deleteTournament(i) {
     if (confirm('Delete this tournament?')) {
         data.splice(i, 1);
+        saveData();
         calcPlayers();
         render();
         showNotification('✅ Tournament deleted');
@@ -672,6 +690,7 @@ function saveOOM() {
         return yearA - yearB;
     });
     
+    saveData();
     render();
     closeAddOOMModal();
     showNotification('✅ OOM winner added');
@@ -695,6 +714,7 @@ function saveEditOOM() {
         document.getElementById('editOOMYear').value.trim(),
         document.getElementById('editOOMWinner').value.trim()
     ];
+    saveData();
     render();
     closeEditOOMModal();
     showNotification('✅ OOM winner updated');
@@ -704,13 +724,86 @@ function saveEditOOM() {
 function deleteOOM(i) {
     if (confirm('Delete this OOM winner?')) {
         oomData.splice(i, 1);
+        saveData();
         render();
         showNotification('✅ OOM winner deleted');
     }
 }
 
 
+// ===== LOCALSTORAGE PERSISTENCE =====
+function saveData() {
+    try {
+        localStorage.setItem('asianTourData', JSON.stringify(data));
+        localStorage.setItem('asianTourOOM', JSON.stringify(oomData));
+    } catch(e) {
+        console.error('Error saving data:', e);
+    }
+}
+
+function loadData() {
+    try {
+        const savedData = localStorage.getItem('asianTourData');
+        if (savedData) {
+            const parsed = JSON.parse(savedData);
+            if (Array.isArray(parsed) && parsed.length > 0) {
+                data = parsed;
+            }
+        }
+    } catch(e) {
+        console.error('Error loading tournaments:', e);
+    }
+    
+    try {
+        const savedOOM = localStorage.getItem('asianTourOOM');
+        if (savedOOM) {
+            const parsed = JSON.parse(savedOOM);
+            if (Array.isArray(parsed) && parsed.length > 0) {
+                oomData = parsed;
+            }
+        }
+    } catch(e) {
+        console.error('Error loading OOM:', e);
+    }
+}
+
+function exportData() {
+    const blob = new Blob([JSON.stringify({tournaments: data, oom: oomData}, null, 2)], {type: 'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'asian-tour-backup-' + new Date().toISOString().split('T')[0] + '.json';
+    a.click();
+    showNotification('✅ Data exported');
+}
+
+function importData(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const imported = JSON.parse(e.target.result);
+            if (imported.tournaments && imported.oom) {
+                data = imported.tournaments;
+                oomData = imported.oom;
+                saveData();
+                calcPlayers();
+                render();
+                showNotification('✅ Data imported successfully');
+            } else {
+                showNotification('❌ Invalid file format');
+            }
+        } catch(err) {
+            showNotification('❌ Error importing file: ' + err.message);
+        }
+    };
+    reader.readAsText(file);
+}
+
 function init() {
+    loadData();
     calcPlayers();
     render();
 }
@@ -728,9 +821,13 @@ function calcPlayers() {
 function render() {
     const tbody = document.getElementById('tbody');
     tbody.innerHTML = '';
-    data.forEach(t => {
+    data.forEach((t, i) => {
         const row = tbody.insertRow();
-        row.innerHTML = `<td>${t[0]}</td><td>${t[1]}</td><td>${t[2]}</td><td><span class="player-name" onclick="showPlayer('${t[3]}')">${t[3]}</span></td>`;
+        let html = `<td>${t[0]}</td><td>${t[1]}</td><td>${t[2]}</td><td><span class="player-name" onclick="showPlayer('${t[3]}')">${t[3]}</span></td>`;
+        if (isAdmin) {
+            html += `<td style="text-align:center"><button class="btn edit-btn" onclick="editTournament(${i})" style="padding:5px 10px;font-size:0.9em">✏️ Edit</button> <button class="btn delete-btn" onclick="deleteTournament(${i})" style="padding:5px 10px;font-size:0.9em">🗑️ Delete</button></td>`;
+        }
+        row.innerHTML = html;
     });
     document.getElementById('count').textContent = data.length;
     
@@ -744,9 +841,13 @@ function render() {
     
     const ob = document.getElementById('oomBody');
     ob.innerHTML = '';
-    oomData.forEach(([y,w]) => {
+    oomData.forEach(([y,w], i) => {
         const row = ob.insertRow();
-        row.innerHTML = `<td><strong>${y}</strong></td><td><span class="player-name" onclick="showPlayer('${w}')">${w}</span></td>`;
+        let html = `<td><strong>${y}</strong></td><td><span class="player-name" onclick="showPlayer('${w}')">${w}</span></td>`;
+        if (isAdmin) {
+            html += `<td style="text-align:center"><button class="btn edit-btn" onclick="editOOM(${i})" style="padding:5px 10px;font-size:0.9em">✏️ Edit</button> <button class="btn delete-btn" onclick="deleteOOM(${i})" style="padding:5px 10px;font-size:0.9em">🗑️ Delete</button></td>`;
+        }
+        row.innerHTML = html;
     });
 }
 
@@ -828,6 +929,7 @@ function login() {
         isAdmin = true;
         document.querySelectorAll('.admin-only').forEach(el => el.style.display = 'block');
         document.getElementById('logoutBtn').style.display = 'block';
+        render();
         closeLogin();
         showNotification('✅ Admin mode activated');
     } else {
@@ -839,6 +941,7 @@ function logout() {
     isAdmin = false;
     document.querySelectorAll('.admin-only').forEach(el => el.style.display = 'none');
     document.getElementById('logoutBtn').style.display = 'none';
+    render();
     showTab('all');
     showNotification('Logged out');
 }
