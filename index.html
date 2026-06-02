@@ -731,39 +731,70 @@ function deleteOOM(i) {
 }
 
 
-// ===== LOCALSTORAGE PERSISTENCE =====
+// ===== LOCALSTORAGE PERSISTENCE WITH FALLBACK =====
+let useLocalStorage = true;
+let sessionBackup = {}; // Fallback storage
+
+function testLocalStorage() {
+    try {
+        const test = '__test__';
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+
+if (!testLocalStorage()) {
+    useLocalStorage = false;
+    console.warn('⚠️ LocalStorage not available. Using session storage (data will be lost on page refresh)');
+}
+
 function saveData() {
     try {
-        localStorage.setItem('asianTourData', JSON.stringify(data));
-        localStorage.setItem('asianTourOOM', JSON.stringify(oomData));
+        const dataToSave = {tournaments: data, oom: oomData};
+        
+        if (useLocalStorage) {
+            localStorage.setItem('asianTourData', JSON.stringify(data));
+            localStorage.setItem('asianTourOOM', JSON.stringify(oomData));
+        }
+        
+        // Always keep a backup in memory
+        sessionBackup = dataToSave;
+        
+        console.log('✅ Data saved');
     } catch(e) {
         console.error('Error saving data:', e);
+        showNotification('⚠️ Could not save (using session backup)');
     }
 }
 
 function loadData() {
     try {
-        const savedData = localStorage.getItem('asianTourData');
-        if (savedData) {
-            const parsed = JSON.parse(savedData);
-            if (Array.isArray(parsed) && parsed.length > 0) {
-                data = parsed;
+        if (useLocalStorage) {
+            const savedData = localStorage.getItem('asianTourData');
+            if (savedData) {
+                const parsed = JSON.parse(savedData);
+                if (Array.isArray(parsed) && parsed.length > 0) {
+                    data = parsed;
+                    console.log('✅ Loaded tournaments from storage:', data.length);
+                }
             }
+        
+            const savedOOM = localStorage.getItem('asianTourOOM');
+            if (savedOOM) {
+                const parsed = JSON.parse(savedOOM);
+                if (Array.isArray(parsed) && parsed.length > 0) {
+                    oomData = parsed;
+                    console.log('✅ Loaded OOM winners from storage:', oomData.length);
+                }
+            }
+        } else {
+            console.warn('⚠️ LocalStorage disabled - data will not persist after refresh');
         }
     } catch(e) {
-        console.error('Error loading tournaments:', e);
-    }
-    
-    try {
-        const savedOOM = localStorage.getItem('asianTourOOM');
-        if (savedOOM) {
-            const parsed = JSON.parse(savedOOM);
-            if (Array.isArray(parsed) && parsed.length > 0) {
-                oomData = parsed;
-            }
-        }
-    } catch(e) {
-        console.error('Error loading OOM:', e);
+        console.error('Error loading data:', e);
     }
 }
 
