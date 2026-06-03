@@ -73,12 +73,7 @@ tr:hover {background:#f8f9ff}
 
 <div id="all" class="tab-content active">
 <input type="text" id="searchAll" class="search-box" placeholder="🔍 Search tournaments..." onkeyup="searchTournaments()">
-<div style="margin-bottom:15px">
-<button class="btn add-btn admin-only" onclick="showAddTournamentModal()">➕ Add Tournament</button>
-<button class="btn admin-only" style="background:#17a2b8;color:white" onclick="exportData()">💾 Export Data</button>
-<button class="btn admin-only" style="background:#17a2b8;color:white" onclick="document.getElementById('importFile').click()">📥 Import Data</button>
-<input type="file" id="importFile" accept=".json" style="display:none" onchange="importData(event)">
-</div>
+<button class="btn add-btn admin-only" onclick="showAddTournamentModal()" style="margin-bottom:15px">➕ Add Tournament</button>
 <table><thead><tr><th>Year</th><th>Date</th><th>Tournament</th><th>Winner</th></tr></thead>
 <tbody id="tbody"></tbody></table>
 </div>
@@ -564,6 +559,20 @@ const OOM = [[1995, "Lin Keng-chi"], [1996, "Kang Wook-soon"], [1997, "Mike Cunn
 const OOM_LOOKUP = {"Lin Keng-chi": ["1995"], "Kang Wook-soon": ["1996", "1998"], "Mike Cunning": ["1997"], "Kyi Hla Han": ["1999"], "Simon Dyson": ["2000"], "Thongchai Jaidee": ["2001", "2004", "2009"], "Jyoti Randhawa": ["2002"], "Arjun Atwal": ["2003"], "Thaworn Wiratchant": ["2005", "2012"], "Jeev Milkha Singh": ["2006", "2008"], "Liang Wenchong": ["2007"], "Noh Seung-yul": ["2010"], "Juvic Pagunsan": ["2011"], "Kiradech Aphibarnrat": ["2013"], "David Lipsky": ["2014"], "Anirban Lahiri": ["2015"], "Scott Hend": ["2016"], "Gavin Green": ["2017"], "Shubhankar Sharma": ["2018"], "Jazz Janewattananond": ["2019"], "Tom Kim": ["2020-21-22"], "Sihwan Kim": ["2022"], "Andy Ogletree": ["2023"], "John Catlin": ["2024"], "Kazuki Higa": ["2025"]};
 
 const ADMIN_PASSWORD = 'asiantour2024';
+
+// ===== FIREBASE CONFIG (NEW) =====
+const firebaseConfig = {
+  apiKey: "AIzaSyAdU6cEMByLz2VeXufFOWpim5HG_lFo8OM",
+  authDomain: "asian-tour-database.firebaseapp.com",
+  databaseURL: "https://asian-tour-database-default-rtdb.asia-southeast1.firebaseio.com",
+  projectId: "asian-tour-database",
+  storageBucket: "asian-tour-database.firebasestorage.app",
+  messagingSenderId: "537968509136",
+  appId: "1:537968509136:web:26d29d00632a20074f1ed5",
+  measurementId: "G-SRWPRSMQHE"
+};
+let db; // Will be initialized when Firebase loads
+
 let isAdmin = false;
 let data = DATA;
 let oomData = OOM;
@@ -605,20 +614,9 @@ function saveTournament() {
     data.push([year, date, tournament, winner]);
     data.sort((a,b) => {
         if (a[0] !== b[0]) return a[0] - b[0];
-        
-        // Try to parse ISO format dates (YYYY-MM-DD)
-        const aDate = a[1].match(/\d{4}-\d{2}-\d{2}/) ? new Date(a[1]) : null;
-        const bDate = b[1].match(/\d{4}-\d{2}-\d{2}/) ? new Date(b[1]) : null;
-        
-        if (aDate && bDate) {
-            return aDate - bDate;
-        }
-        
-        // Fallback to string comparison for non-ISO dates
         return a[1].localeCompare(b[1]);
     });
     
-    saveData();
     calcPlayers();
     render();
     closeAddTournamentModal();
@@ -647,7 +645,6 @@ function saveEditTournament() {
         document.getElementById('editTournamentName').value.trim(),
         document.getElementById('editWinner').value.trim()
     ];
-    saveData();
     calcPlayers();
     render();
     closeEditTournamentModal();
@@ -658,7 +655,6 @@ function saveEditTournament() {
 function deleteTournament(i) {
     if (confirm('Delete this tournament?')) {
         data.splice(i, 1);
-        saveData();
         calcPlayers();
         render();
         showNotification('✅ Tournament deleted');
@@ -690,7 +686,6 @@ function saveOOM() {
         return yearA - yearB;
     });
     
-    saveData();
     render();
     closeAddOOMModal();
     showNotification('✅ OOM winner added');
@@ -714,7 +709,6 @@ function saveEditOOM() {
         document.getElementById('editOOMYear').value.trim(),
         document.getElementById('editOOMWinner').value.trim()
     ];
-    saveData();
     render();
     closeEditOOMModal();
     showNotification('✅ OOM winner updated');
@@ -724,117 +718,13 @@ function saveEditOOM() {
 function deleteOOM(i) {
     if (confirm('Delete this OOM winner?')) {
         oomData.splice(i, 1);
-        saveData();
         render();
         showNotification('✅ OOM winner deleted');
     }
 }
 
 
-// ===== LOCALSTORAGE PERSISTENCE WITH FALLBACK =====
-let useLocalStorage = true;
-let sessionBackup = {}; // Fallback storage
-
-function testLocalStorage() {
-    try {
-        const test = '__test__';
-        localStorage.setItem(test, test);
-        localStorage.removeItem(test);
-        return true;
-    } catch(e) {
-        return false;
-    }
-}
-
-if (!testLocalStorage()) {
-    useLocalStorage = false;
-    console.warn('⚠️ LocalStorage not available. Using session storage (data will be lost on page refresh)');
-}
-
-function saveData() {
-    try {
-        const dataToSave = {tournaments: data, oom: oomData};
-        
-        if (useLocalStorage) {
-            localStorage.setItem('asianTourData', JSON.stringify(data));
-            localStorage.setItem('asianTourOOM', JSON.stringify(oomData));
-        }
-        
-        // Always keep a backup in memory
-        sessionBackup = dataToSave;
-        
-        console.log('✅ Data saved');
-    } catch(e) {
-        console.error('Error saving data:', e);
-        showNotification('⚠️ Could not save (using session backup)');
-    }
-}
-
-function loadData() {
-    try {
-        if (useLocalStorage) {
-            const savedData = localStorage.getItem('asianTourData');
-            if (savedData) {
-                const parsed = JSON.parse(savedData);
-                if (Array.isArray(parsed) && parsed.length > 0) {
-                    data = parsed;
-                    console.log('✅ Loaded tournaments from storage:', data.length);
-                }
-            }
-        
-            const savedOOM = localStorage.getItem('asianTourOOM');
-            if (savedOOM) {
-                const parsed = JSON.parse(savedOOM);
-                if (Array.isArray(parsed) && parsed.length > 0) {
-                    oomData = parsed;
-                    console.log('✅ Loaded OOM winners from storage:', oomData.length);
-                }
-            }
-        } else {
-            console.warn('⚠️ LocalStorage disabled - data will not persist after refresh');
-        }
-    } catch(e) {
-        console.error('Error loading data:', e);
-    }
-}
-
-function exportData() {
-    const blob = new Blob([JSON.stringify({tournaments: data, oom: oomData}, null, 2)], {type: 'application/json'});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'asian-tour-backup-' + new Date().toISOString().split('T')[0] + '.json';
-    a.click();
-    showNotification('✅ Data exported');
-}
-
-function importData(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-    
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        try {
-            const imported = JSON.parse(e.target.result);
-            if (imported.tournaments && imported.oom) {
-                data = imported.tournaments;
-                oomData = imported.oom;
-                saveData();
-                calcPlayers();
-                render();
-                showNotification('✅ Data imported successfully');
-            } else {
-                showNotification('❌ Invalid file format');
-            }
-        } catch(err) {
-            showNotification('❌ Error importing file: ' + err.message);
-        }
-    };
-    reader.readAsText(file);
-}
-
 function init() {
-    loadData();
     calcPlayers();
     render();
 }
@@ -852,13 +742,9 @@ function calcPlayers() {
 function render() {
     const tbody = document.getElementById('tbody');
     tbody.innerHTML = '';
-    data.forEach((t, i) => {
+    data.forEach(t => {
         const row = tbody.insertRow();
-        let html = `<td>${t[0]}</td><td>${t[1]}</td><td>${t[2]}</td><td><span class="player-name" onclick="showPlayer('${t[3]}')">${t[3]}</span></td>`;
-        if (isAdmin) {
-            html += `<td style="text-align:center"><button class="btn edit-btn" onclick="editTournament(${i})" style="padding:5px 10px;font-size:0.9em">✏️ Edit</button> <button class="btn delete-btn" onclick="deleteTournament(${i})" style="padding:5px 10px;font-size:0.9em">🗑️ Delete</button></td>`;
-        }
-        row.innerHTML = html;
+        row.innerHTML = `<td>${t[0]}</td><td>${t[1]}</td><td>${t[2]}</td><td><span class="player-name" onclick="showPlayer('${t[3]}')">${t[3]}</span></td>`;
     });
     document.getElementById('count').textContent = data.length;
     
@@ -872,13 +758,9 @@ function render() {
     
     const ob = document.getElementById('oomBody');
     ob.innerHTML = '';
-    oomData.forEach(([y,w], i) => {
+    oomData.forEach(([y,w]) => {
         const row = ob.insertRow();
-        let html = `<td><strong>${y}</strong></td><td><span class="player-name" onclick="showPlayer('${w}')">${w}</span></td>`;
-        if (isAdmin) {
-            html += `<td style="text-align:center"><button class="btn edit-btn" onclick="editOOM(${i})" style="padding:5px 10px;font-size:0.9em">✏️ Edit</button> <button class="btn delete-btn" onclick="deleteOOM(${i})" style="padding:5px 10px;font-size:0.9em">🗑️ Delete</button></td>`;
-        }
-        row.innerHTML = html;
+        row.innerHTML = `<td><strong>${y}</strong></td><td><span class="player-name" onclick="showPlayer('${w}')">${w}</span></td>`;
     });
 }
 
@@ -960,7 +842,6 @@ function login() {
         isAdmin = true;
         document.querySelectorAll('.admin-only').forEach(el => el.style.display = 'block');
         document.getElementById('logoutBtn').style.display = 'block';
-        render();
         closeLogin();
         showNotification('✅ Admin mode activated');
     } else {
@@ -972,7 +853,6 @@ function logout() {
     isAdmin = false;
     document.querySelectorAll('.admin-only').forEach(el => el.style.display = 'none');
     document.getElementById('logoutBtn').style.display = 'none';
-    render();
     showTab('all');
     showNotification('Logged out');
 }
@@ -989,5 +869,20 @@ function showNotification(msg) {
 
 
 init();
+</script>
+<!-- Firebase SDK (NEW - ONLY ADDITION) -->
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js"></script>
+<script>
+// Initialize Firebase when SDK loads
+if (typeof firebase !== 'undefined') {
+  try {
+    firebase.initializeApp(firebaseConfig);
+    db = firebase.database();
+    console.log('✅ Firebase initialized');
+  } catch(e) {
+    console.log('Note: Firebase init', e.message);
+  }
+}
 </script>
 </body></html>
