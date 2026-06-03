@@ -560,7 +560,7 @@ const OOM_LOOKUP = {"Lin Keng-chi": ["1995"], "Kang Wook-soon": ["1996", "1998"]
 
 const ADMIN_PASSWORD = 'asiantour2024';
 
-// ===== FIREBASE CONFIG (NEW) =====
+// ===== FIREBASE CONFIG =====
 const firebaseConfig = {
   apiKey: "AIzaSyAdU6cEMByLz2VeXufFOWpim5HG_lFo8OM",
   authDomain: "asian-tour-database.firebaseapp.com",
@@ -571,7 +571,8 @@ const firebaseConfig = {
   appId: "1:537968509136:web:26d29d00632a20074f1ed5",
   measurementId: "G-SRWPRSMQHE"
 };
-let db; // Will be initialized when Firebase loads
+let db;
+let useFirebase = false;
 
 let isAdmin = false;
 let data = DATA;
@@ -619,6 +620,7 @@ function saveTournament() {
     
     calcPlayers();
     render();
+    if (useFirebase) saveToFirebase();
     closeAddTournamentModal();
     showNotification('✅ Tournament added');
 }
@@ -647,6 +649,7 @@ function saveEditTournament() {
     ];
     calcPlayers();
     render();
+    if (useFirebase) saveToFirebase();
     closeEditTournamentModal();
     showNotification('✅ Tournament updated');
 }
@@ -657,6 +660,7 @@ function deleteTournament(i) {
         data.splice(i, 1);
         calcPlayers();
         render();
+        if (useFirebase) saveToFirebase();
         showNotification('✅ Tournament deleted');
     }
 }
@@ -687,6 +691,7 @@ function saveOOM() {
     });
     
     render();
+    if (useFirebase) saveToFirebase();
     closeAddOOMModal();
     showNotification('✅ OOM winner added');
 }
@@ -710,6 +715,7 @@ function saveEditOOM() {
         document.getElementById('editOOMWinner').value.trim()
     ];
     render();
+    if (useFirebase) saveToFirebase();
     closeEditOOMModal();
     showNotification('✅ OOM winner updated');
 }
@@ -719,6 +725,7 @@ function deleteOOM(i) {
     if (confirm('Delete this OOM winner?')) {
         oomData.splice(i, 1);
         render();
+        if (useFirebase) saveToFirebase();
         showNotification('✅ OOM winner deleted');
     }
 }
@@ -870,19 +877,37 @@ function showNotification(msg) {
 
 init();
 </script>
-<!-- Firebase SDK (NEW - ONLY ADDITION) -->
-<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js"></script>
+<!-- Firebase Compat SDK (Works with plain HTML) -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 <script>
-// Initialize Firebase when SDK loads
+// Initialize Firebase with compat SDK
 if (typeof firebase !== 'undefined') {
-  try {
-    firebase.initializeApp(firebaseConfig);
-    db = firebase.database();
-    console.log('✅ Firebase initialized');
-  } catch(e) {
-    console.log('Note: Firebase init', e.message);
-  }
+  firebase.initializeApp(firebaseConfig);
+  db = firebase.database();
+  useFirebase = true;
+  console.log('✅ Firebase Ready - Data will sync across devices!');
+  
+  // Load data from Firebase on page start
+  db.ref('asianTour').once('value', (snapshot) => {
+    if (snapshot.exists()) {
+      const fbData = snapshot.val();
+      data = fbData.tournaments || DATA;
+      oomData = fbData.oom || OOM;
+      calcPlayers();
+      render();
+      console.log('✅ Loaded data from Firebase');
+    }
+  });
+  
+  // Save to Firebase whenever data changes
+  window.saveToFirebase = function() {
+    db.ref('asianTour').set({
+      tournaments: data,
+      oom: oomData,
+      lastUpdated: new Date().toISOString()
+    }).catch(err => console.log('Firebase save note:', err.message));
+  };
 }
 </script>
 </body></html>
