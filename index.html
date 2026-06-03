@@ -675,6 +675,7 @@ function saveOOM() {
         return yearA - yearB;
     });
     
+    calcPlayers();
     render();
     closeAddOOMModal();
     showNotification('✅ OOM winner added');
@@ -698,6 +699,7 @@ function saveEditOOM() {
         document.getElementById('editOOMYear').value.trim(),
         document.getElementById('editOOMWinner').value.trim()
     ];
+    calcPlayers();
     render();
     closeEditOOMModal();
     showNotification('✅ OOM winner updated');
@@ -707,6 +709,7 @@ function saveEditOOM() {
 function deleteOOM(i) {
     if (confirm('Delete this OOM winner?')) {
         oomData.splice(i, 1);
+        calcPlayers();
         render();
         showNotification('✅ OOM winner deleted');
     }
