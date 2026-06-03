@@ -2,81 +2,9 @@
   "tournaments": [
     [
       1995,
-      "25 Jun",
-      "Asian PGA International",
-      "Park Nam-sin"
-    ],
-    [
-      1995,
-      "2 Jul",
-      "Canlubang Classic",
-      "Carlos Espinosa"
-    ],
-    [
-      1995,
-      "30 Jul",
-      "Tournament Players Championship",
-      "Lin Keng-chi"
-    ],
-    [
-      1995,
-      "13 Aug",
-      "Volvo Masters of Thailand",
-      "Zhang Lianwei"
-    ],
-    [
-      1995,
-      "27 Aug",
-      "Yokohama Singapore PGA Championship",
-      "Lin Keng-chi"
-    ],
-    [
-      1995,
-      "3 Sep",
-      "Passport Open",
-      "Vijay Singh"
-    ],
-    [
-      1995,
       "1 Oct",
       "Langkawi Open",
       "Boonchu Ruangkit"
-    ],
-    [
-      1995,
-      "8 Oct",
-      "Gadgil Western Dubai Creek Open",
-      "Robert Willis"
-    ],
-    [
-      1995,
-      "15 Oct",
-      "Merlion Masters",
-      "Nico van Rensburg"
-    ],
-    [
-      1995,
-      "22 Oct",
-      "Samsung Masters",
-      "Lin Keng-chi"
-    ],
-    [
-      1995,
-      "29 Oct",
-      "Royal Perak Classic",
-      "Gerry Norquist"
-    ],
-    [
-      1995,
-      "20 Nov",
-      "Kenmore Pakistan Masters",
-      "Kwon Young-suk"
-    ],
-    [
-      1995,
-      "27 Nov",
-      "Gadgil Western Masters",
-      "Gaurav Ghei"
     ],
     [
       1995,
@@ -86,15 +14,9 @@
     ],
     [
       1995,
-      "17 Dec",
-      "Philippine Classic",
-      "Jeev Milkha Singh"
-    ],
-    [
-      1995,
-      "7 Jan 1996",
-      "Myanmar Open",
-      "Boonchu Ruangkit"
+      "13 Aug",
+      "Volvo Masters of Thailand",
+      "Zhang Lianwei"
     ],
     [
       1995,
@@ -104,15 +26,87 @@
     ],
     [
       1995,
+      "15 Oct",
+      "Merlion Masters",
+      "Nico van Rensburg"
+    ],
+    [
+      1995,
+      "17 Dec",
+      "Philippine Classic",
+      "Jeev Milkha Singh"
+    ],
+    [
+      1995,
+      "2 Jul",
+      "Canlubang Classic",
+      "Carlos Espinosa"
+    ],
+    [
+      1995,
+      "20 Nov",
+      "Kenmore Pakistan Masters",
+      "Kwon Young-suk"
+    ],
+    [
+      1995,
       "21 Jan 1996",
       "Asian Matchplay Championship",
       "Jeev Milkha Singh"
     ],
     [
-      1996,
-      "17-Mar",
-      "Sabah Masters",
-      "Thaworn Wiratchant"
+      1995,
+      "22 Oct",
+      "Samsung Masters",
+      "Lin Keng-chi"
+    ],
+    [
+      1995,
+      "25 Jun",
+      "Asian PGA International",
+      "Park Nam-sin"
+    ],
+    [
+      1995,
+      "27 Aug",
+      "Yokohama Singapore PGA Championship",
+      "Lin Keng-chi"
+    ],
+    [
+      1995,
+      "27 Nov",
+      "Gadgil Western Masters",
+      "Gaurav Ghei"
+    ],
+    [
+      1995,
+      "29 Oct",
+      "Royal Perak Classic",
+      "Gerry Norquist"
+    ],
+    [
+      1995,
+      "3 Sep",
+      "Passport Open",
+      "Vijay Singh"
+    ],
+    [
+      1995,
+      "30 Jul",
+      "Tournament Players Championship",
+      "Lin Keng-chi"
+    ],
+    [
+      1995,
+      "7 Jan 1996",
+      "Myanmar Open",
+      "Boonchu Ruangkit"
+    ],
+    [
+      1995,
+      "8 Oct",
+      "Gadgil Western Dubai Creek Open",
+      "Robert Willis"
     ],
     [
       1996,
@@ -122,51 +116,9 @@
     ],
     [
       1996,
-      "21-Apr",
-      "Canlubang Classic",
-      "Craig Kamps"
-    ],
-    [
-      1996,
-      "28-Apr",
-      "Tournament Players Championship",
-      "Kang Wook-soon"
-    ],
-    [
-      1996,
-      "5-May",
-      "Honda Invitational",
-      "Steve Elkington"
-    ],
-    [
-      1996,
-      "12-May",
-      "Guam Open",
-      "Mo Joong-kyung"
-    ],
-    [
-      1996,
-      "2-Jun",
-      "Volvo China Open",
-      "Prayad Marksaeng"
-    ],
-    [
-      1996,
-      "11-Aug",
-      "Canon Singapore Open",
-      "John Kernohan"
-    ],
-    [
-      1996,
-      "18-Aug",
-      "Kuala Lumpur Open",
-      "Kang Wook-soon"
-    ],
-    [
-      1996,
-      "25-Aug",
-      "Fila Open",
-      "Kwon Oh-chul"
+      "1-Dec",
+      "Tug Pratama Indonesian PGA Championship",
+      "Thammanoon Sriroj"
     ],
     [
       1996,
@@ -176,57 +128,21 @@
     ],
     [
       1996,
-      "29-Sep",
-      "Lexus International",
-      "Boonchu Ruangkit"
-    ],
-    [
-      1996,
-      "6-Oct",
-      "Yokohama Singapore PGA Championship",
-      "Yeh Chang-ting"
-    ],
-    [
-      1996,
-      "18-Oct",
-      "Dubai Creek Open",
-      "Paul Friedlander"
-    ],
-    [
-      1996,
-      "27-Oct",
-      "Australian Players Championship",
-      "Bradley Hughes"
-    ],
-    [
-      1996,
-      "3-Nov",
-      "Alfred Dunhill Masters",
-      "Bernhard Langer"
-    ],
-    [
-      1996,
       "10-Nov",
       "Merlion Masters",
       "Peter Teravainen"
     ],
     [
       1996,
-      "17-Nov",
-      "Pakistan Steel Masters",
-      "Eric Rustand"
+      "11-Aug",
+      "Canon Singapore Open",
+      "John Kernohan"
     ],
     [
       1996,
-      "1-Dec",
-      "Tug Pratama Indonesian PGA Championship",
-      "Thammanoon Sriroj"
-    ],
-    [
-      1996,
-      "8-Dec",
-      "Royal Thai Classic",
-      "Richard Kaplan"
+      "12-May",
+      "Guam Open",
+      "Mo Joong-kyung"
     ],
     [
       1996,
@@ -236,63 +152,99 @@
     ],
     [
       1996,
+      "17-Mar",
+      "Sabah Masters",
+      "Thaworn Wiratchant"
+    ],
+    [
+      1996,
+      "17-Nov",
+      "Pakistan Steel Masters",
+      "Eric Rustand"
+    ],
+    [
+      1996,
+      "18-Aug",
+      "Kuala Lumpur Open",
+      "Kang Wook-soon"
+    ],
+    [
+      1996,
+      "18-Oct",
+      "Dubai Creek Open",
+      "Paul Friedlander"
+    ],
+    [
+      1996,
+      "2-Jun",
+      "Volvo China Open",
+      "Prayad Marksaeng"
+    ],
+    [
+      1996,
+      "21-Apr",
+      "Canlubang Classic",
+      "Craig Kamps"
+    ],
+    [
+      1996,
       "22-Dec",
       "Asian Matchplay Championship",
       "Zhang Lianwei"
     ],
     [
-      1997,
-      "9-Feb",
-      "Asian Honda Classic",
-      "Tiger Woods"
+      1996,
+      "25-Aug",
+      "Fila Open",
+      "Kwon Oh-chul"
     ],
     [
-      1997,
-      "30-Mar",
-      "Vietnam Open",
-      "Andrew Bonhomme"
+      1996,
+      "27-Oct",
+      "Australian Players Championship",
+      "Bradley Hughes"
     ],
     [
-      1997,
-      "13-Apr",
-      "London Myanmar Open",
+      1996,
+      "28-Apr",
+      "Tournament Players Championship",
+      "Kang Wook-soon"
+    ],
+    [
+      1996,
+      "29-Sep",
+      "Lexus International",
       "Boonchu Ruangkit"
     ],
     [
-      1997,
-      "20-Apr",
-      "DFS Galleria Guam Open",
-      "Gerry Norquist"
+      1996,
+      "3-Nov",
+      "Alfred Dunhill Masters",
+      "Bernhard Langer"
+    ],
+    [
+      1996,
+      "5-May",
+      "Honda Invitational",
+      "Steve Elkington"
+    ],
+    [
+      1996,
+      "6-Oct",
+      "Yokohama Singapore PGA Championship",
+      "Yeh Chang-ting"
+    ],
+    [
+      1996,
+      "8-Dec",
+      "Royal Thai Classic",
+      "Richard Kaplan"
     ],
     [
       1997,
-      "27-Apr",
-      "Satelindo Indonesia Open",
-      "Craig Parry"
-    ],
-    [
-      1997,
-      "18-May",
-      "Volvo China Open",
-      "Cheng Jun"
-    ],
-    [
-      1997,
-      "7-Sep",
-      "Philip Morris Asian Cup",
-      "Park No-seok"
-    ],
-    [
-      1997,
-      "14-Sep",
-      "Ericsson Asia-Pacific Masters",
-      "Darren Cole"
-    ],
-    [
-      1997,
-      "21-Sep",
-      "Mild Seven Kuala Lumpur Open",
-      "Charlie Wi"
+      "10-AUG",
+      "Sabah Masters",
+      "Des Terblanche"
     ],
     [
       1997,
@@ -302,27 +254,21 @@
     ],
     [
       1997,
-      "19-Oct",
-      "ABN-AMRO Pakistan Masters",
-      "Thammanoon Sriroj"
+      "13-Apr",
+      "London Myanmar Open",
+      "Boonchu Ruangkit"
     ],
     [
       1997,
-      "26-Oct",
-      "Dubai Creek Open",
-      "Adrian Percey"
+      "14-Dec",
+      "Omega PGA Championship",
+      "Rodrigo Cuello"
     ],
     [
       1997,
-      "2-Nov",
-      "Hero Honda Masters",
-      "Ted Purdy"
-    ],
-    [
-      1997,
-      "9-Nov",
-      "Ta-Shee Open",
-      "Wang Ter-chang"
+      "14-Sep",
+      "Ericsson Asia-Pacific Masters",
+      "Darren Cole"
     ],
     [
       1997,
@@ -332,9 +278,69 @@
     ],
     [
       1997,
+      "17-AUG",
+      "SingTel Ericsson Singapore Open",
+      "Zaw Moe"
+    ],
+    [
+      1997,
+      "18-May",
+      "Volvo China Open",
+      "Cheng Jun"
+    ],
+    [
+      1997,
+      "19-Oct",
+      "ABN-AMRO Pakistan Masters",
+      "Thammanoon Sriroj"
+    ],
+    [
+      1997,
+      "2-Nov",
+      "Hero Honda Masters",
+      "Ted Purdy"
+    ],
+    [
+      1997,
+      "20-Apr",
+      "DFS Galleria Guam Open",
+      "Gerry Norquist"
+    ],
+    [
+      1997,
+      "20-Dec",
+      "Volvo Asian Matchplay",
+      "Des Terblanche"
+    ],
+    [
+      1997,
+      "21-Sep",
+      "Mild Seven Kuala Lumpur Open",
+      "Charlie Wi"
+    ],
+    [
+      1997,
       "23-Nov",
       "Lexus Thai International",
       "Prayad Marksaeng"
+    ],
+    [
+      1997,
+      "26-Oct",
+      "Dubai Creek Open",
+      "Adrian Percey"
+    ],
+    [
+      1997,
+      "27-Apr",
+      "Satelindo Indonesia Open",
+      "Craig Parry"
+    ],
+    [
+      1997,
+      "30-Mar",
+      "Vietnam Open",
+      "Andrew Bonhomme"
     ],
     [
       1997,
@@ -350,105 +356,21 @@
     ],
     [
       1997,
-      "14-Dec",
-      "Omega PGA Championship",
-      "Rodrigo Cuello"
+      "7-Sep",
+      "Philip Morris Asian Cup",
+      "Park No-seok"
     ],
     [
       1997,
-      "20-Dec",
-      "Volvo Asian Matchplay",
-      "Des Terblanche"
+      "9-Feb",
+      "Asian Honda Classic",
+      "Tiger Woods"
     ],
     [
       1997,
-      "10-AUG",
-      "Sabah Masters",
-      "Des Terblanche"
-    ],
-    [
-      1997,
-      "17-AUG",
-      "SingTel Ericsson Singapore Open",
-      "Zaw Moe"
-    ],
-    [
-      1998,
-      "8-Mar",
-      "London Myanmar Open",
-      "Taimur Hussain"
-    ],
-    [
-      1998,
-      "15-Mar",
-      "Classic Indian Open",
-      "Firoz Ali"
-    ],
-    [
-      1998,
-      "5-Apr",
-      "China Orient Masters",
-      "Chawalit Plaphol"
-    ],
-    [
-      1998,
-      "19-Apr",
-      "Volvo China open",
-      "Ed Fryatt"
-    ],
-    [
-      1998,
-      "3-May",
-      "Macau Open",
-      "Satoshi Oide"
-    ],
-    [
-      1998,
-      "17-May",
-      "Guam open",
-      "Jerry Smith"
-    ],
-    [
-      1998,
-      "24-May",
-      "Fila Open",
-      "Robert Huxtable"
-    ],
-    [
-      1998,
-      "9-AUG",
-      "Sabah Masters",
-      "Simon Yates"
-    ],
-    [
-      1998,
-      "16-AUG",
-      "Volvo Masters of Malaysia",
-      "Chris Williams"
-    ],
-    [
-      1998,
-      "23-Aug",
-      "Ericsson Singapore Obon",
-      "Shaun Micheel"
-    ],
-    [
-      1998,
-      "20-Sep",
-      "Kolon Sports Korea Open",
-      "Kim Dae-sub"
-    ],
-    [
-      1998,
-      "18-Oct",
-      "Kuala Lumpur Open",
-      "Nico van Rensburg"
-    ],
-    [
-      1998,
-      "25-Oct",
-      "FedEX PGA Championship",
-      "Chris Willams"
+      "9-Nov",
+      "Ta-Shee Open",
+      "Wang Ter-chang"
     ],
     [
       1998,
@@ -458,9 +380,9 @@
     ],
     [
       1998,
-      "8-Nov",
-      "Hero Honda Masters",
-      "Jyoti Randhawa"
+      "13-Dec",
+      "Volvo Asian Matchplay",
+      "Gerry Norquist"
     ],
     [
       1998,
@@ -470,9 +392,75 @@
     ],
     [
       1998,
+      "15-Mar",
+      "Classic Indian Open",
+      "Firoz Ali"
+    ],
+    [
+      1998,
+      "16-AUG",
+      "Volvo Masters of Malaysia",
+      "Chris Williams"
+    ],
+    [
+      1998,
+      "17-May",
+      "Guam open",
+      "Jerry Smith"
+    ],
+    [
+      1998,
+      "18-Oct",
+      "Kuala Lumpur Open",
+      "Nico van Rensburg"
+    ],
+    [
+      1998,
+      "19-Apr",
+      "Volvo China open",
+      "Ed Fryatt"
+    ],
+    [
+      1998,
+      "20-Sep",
+      "Kolon Sports Korea Open",
+      "Kim Dae-sub"
+    ],
+    [
+      1998,
+      "23-Aug",
+      "Ericsson Singapore Obon",
+      "Shaun Micheel"
+    ],
+    [
+      1998,
+      "24-May",
+      "Fila Open",
+      "Robert Huxtable"
+    ],
+    [
+      1998,
+      "25-Oct",
+      "FedEX PGA Championship",
+      "Chris Willams"
+    ],
+    [
+      1998,
       "29-Nov",
       "Perrier Hong Kong Open",
       "Kang Wook-soon"
+    ],
+    [
+      1998,
+      "3-May",
+      "Macau Open",
+      "Satoshi Oide"
+    ],
+    [
+      1998,
+      "5-Apr",
+      "China Orient Masters",
+      "Chawalit Plaphol"
     ],
     [
       1998,
@@ -482,21 +470,27 @@
     ],
     [
       1998,
-      "13-Dec",
-      "Volvo Asian Matchplay",
-      "Gerry Norquist"
-    ],
-    [
-      1999,
-      "31-Jan",
+      "8-Mar",
       "London Myanmar Open",
-      "Wang Ter-chang"
+      "Taimur Hussain"
+    ],
+    [
+      1998,
+      "8-Nov",
+      "Hero Honda Masters",
+      "Jyoti Randhawa"
+    ],
+    [
+      1998,
+      "9-AUG",
+      "Sabah Masters",
+      "Simon Yates"
     ],
     [
       1999,
-      "7-Feb",
-      "Benson & Hedges Malaysian Open",
-      "Gerry Norquist"
+      "12-Dec",
+      "Omega PGA Championship",
+      "Fran Quinn"
     ],
     [
       1999,
@@ -506,51 +500,9 @@
     ],
     [
       1999,
-      "18-Apr",
-      "Macau Open",
-      "Lee Westwood"
-    ],
-    [
-      1999,
-      "2-May",
-      "Maekyung Daks Open",
-      "James Kingston"
-    ],
-    [
-      1999,
-      "23-May",
-      "Volvo China Open",
-      "Kyi Hla Han"
-    ],
-    [
-      1999,
-      "30-May",
-      "Casino Filipino Philippine Open",
-      "Anthony Kang"
-    ],
-    [
-      1999,
-      "22-Aug",
-      "Tianjin TEDA Open",
-      "Thammanoon Sriroj"
-    ],
-    [
-      1999,
-      "29-Aug",
-      "Volvo Masters of Malaysia",
-      "Nico van Rensburg"
-    ],
-    [
-      1999,
-      "5-Sep",
-      "ERA Taiwan Open",
-      "Kang Wook-soon"
-    ],
-    [
-      1999,
-      "19-Sep",
-      "Kolon Korea Open",
-      "K.J. Choi"
+      "14-Nov",
+      "Johnnie Walker Classic",
+      "Michael Campbell"
     ],
     [
       1999,
@@ -560,27 +512,39 @@
     ],
     [
       1999,
+      "18-Apr",
+      "Macau Open",
+      "Lee Westwood"
+    ],
+    [
+      1999,
+      "19-Sep",
+      "Kolon Korea Open",
+      "K.J. Choi"
+    ],
+    [
+      1999,
+      "2-May",
+      "Maekyung Daks Open",
+      "James Kingston"
+    ],
+    [
+      1999,
+      "22-Aug",
+      "Tianjin TEDA Open",
+      "Thammanoon Sriroj"
+    ],
+    [
+      1999,
+      "23-May",
+      "Volvo China Open",
+      "Kyi Hla Han"
+    ],
+    [
+      1999,
       "24-Oct",
       "Nokia Singapore Open",
       "Kenny Druce"
-    ],
-    [
-      1999,
-      "31-Oct",
-      "Hero Honda Masters",
-      "Jyoti Randhawa"
-    ],
-    [
-      1999,
-      "7-Nov",
-      "Sabah Masters",
-      "Robert Huxtable"
-    ],
-    [
-      1999,
-      "14-Nov",
-      "Johnnie Walker Classic",
-      "Michael Campbell"
     ],
     [
       1999,
@@ -590,129 +554,51 @@
     ],
     [
       1999,
+      "29-Aug",
+      "Volvo Masters of Malaysia",
+      "Nico van Rensburg"
+    ],
+    [
+      1999,
+      "30-May",
+      "Casino Filipino Philippine Open",
+      "Anthony Kang"
+    ],
+    [
+      1999,
+      "31-Jan",
+      "London Myanmar Open",
+      "Wang Ter-chang"
+    ],
+    [
+      1999,
+      "31-Oct",
+      "Hero Honda Masters",
+      "Jyoti Randhawa"
+    ],
+    [
+      1999,
       "4-Dec",
       "Mittweida Thailand Open",
       "Fran Quinn"
     ],
     [
       1999,
-      "12-Dec",
-      "Omega PGA Championship",
-      "Fran Quinn"
-    ],
-    [
-      2000,
-      "13-Feb",
-      "Benson & Hedges Malaysian Open",
-      "Yeh Wei-tze"
-    ],
-    [
-      2000,
-      "20-Feb",
-      "Casino Filipino Open",
-      "Prayad Marksaeng"
-    ],
-    [
-      2000,
-      "27-Feb",
-      "London Myanmar Open",
-      "James Kingston"
-    ],
-    [
-      2000,
-      "19-Mar",
-      "Wills Indian Open",
-      "Jyoti Randhawa"
-    ],
-    [
-      2000,
-      "30-Apr",
-      "Maekyung LG Fashion Open",
+      "5-Sep",
+      "ERA Taiwan Open",
       "Kang Wook-soon"
     ],
     [
-      2000,
-      "14-May",
-      "Macau Open",
-      "Simon Dyson"
+      1999,
+      "7-Feb",
+      "Benson & Hedges Malaysian Open",
+      "Gerry Norquist"
     ],
     [
-      2000,
-      "21-May",
-      "Volvo China Open",
-      "Simon Dyson"
-    ],
-    [
-      2000,
-      "28-May",
-      "Ericsson Classic",
-      "James Kingston"
-    ],
-    [
-      2000,
-      "4-Jun",
-      "Hyundai Motors Masters",
-      "Choi Gwang-soc"
-    ],
-    [
-      2000,
-      "13-Aug",
-      "Volvo Masters of Malaysia",
-      "Stephen Lindskog"
-    ],
-    [
-      2000,
-      "27-Aug",
-      "ROC PGA Championship",
-      "Daisuke Maruyama"
-    ],
-    [
-      2000,
-      "3-Sep",
-      "Mercuries Taiwan Masters",
-      "Lin Keng-chi"
-    ],
-    [
-      2000,
-      "10-Sep",
-      "Johnnie Walker Taiwan Open",
-      "Vijay Singh"
-    ],
-    [
-      2000,
-      "8-Oct",
-      "Kolon Cup Korea Open",
-      "Thongchai Jaidee"
-    ],
-    [
-      2000,
-      "29-Oct",
-      "Lexus International",
-      "Craig Kamps"
-    ],
-    [
-      2000,
-      "5-Nov",
-      "Hero Honda Masters",
-      "Arjun Atwal"
-    ],
-    [
-      2000,
-      "12-Nov",
-      "Star Alliance Open",
-      "Arjun Atwal"
-    ],
-    [
-      2000,
-      "19-Nov",
-      "Johnnie Walker Classic",
-      "Tiger Woods"
-    ],
-    [
-      2000,
-      "3-Dec",
-      "Thailand Open",
-      "Des Terblanche"
+      1999,
+      "7-Nov",
+      "Sabah Masters",
+      "Robert Huxtable"
     ],
     [
       2000,
@@ -722,15 +608,123 @@
     ],
     [
       2000,
+      "10-Sep",
+      "Johnnie Walker Taiwan Open",
+      "Vijay Singh"
+    ],
+    [
+      2000,
+      "12-Nov",
+      "Star Alliance Open",
+      "Arjun Atwal"
+    ],
+    [
+      2000,
+      "13-Aug",
+      "Volvo Masters of Malaysia",
+      "Stephen Lindskog"
+    ],
+    [
+      2000,
+      "13-Feb",
+      "Benson & Hedges Malaysian Open",
+      "Yeh Wei-tze"
+    ],
+    [
+      2000,
+      "14-May",
+      "Macau Open",
+      "Simon Dyson"
+    ],
+    [
+      2000,
       "17-Dec",
       "Omega Hong Kong Open",
       "Simon Dyson"
     ],
     [
-      2001,
-      "4-Feb",
-      "Thailand Masters",
+      2000,
+      "19-Mar",
+      "Wills Indian Open",
+      "Jyoti Randhawa"
+    ],
+    [
+      2000,
+      "19-Nov",
+      "Johnnie Walker Classic",
+      "Tiger Woods"
+    ],
+    [
+      2000,
+      "20-Feb",
+      "Casino Filipino Open",
+      "Prayad Marksaeng"
+    ],
+    [
+      2000,
+      "21-May",
+      "Volvo China Open",
+      "Simon Dyson"
+    ],
+    [
+      2000,
+      "27-Aug",
+      "ROC PGA Championship",
+      "Daisuke Maruyama"
+    ],
+    [
+      2000,
+      "27-Feb",
+      "London Myanmar Open",
+      "James Kingston"
+    ],
+    [
+      2000,
+      "28-May",
+      "Ericsson Classic",
+      "James Kingston"
+    ],
+    [
+      2000,
+      "29-Oct",
+      "Lexus International",
+      "Craig Kamps"
+    ],
+    [
+      2000,
+      "3-Dec",
+      "Thailand Open",
+      "Des Terblanche"
+    ],
+    [
+      2000,
+      "3-Sep",
+      "Mercuries Taiwan Masters",
+      "Lin Keng-chi"
+    ],
+    [
+      2000,
+      "30-Apr",
+      "Maekyung LG Fashion Open",
       "Kang Wook-soon"
+    ],
+    [
+      2000,
+      "4-Jun",
+      "Hyundai Motors Masters",
+      "Choi Gwang-soc"
+    ],
+    [
+      2000,
+      "5-Nov",
+      "Hero Honda Masters",
+      "Arjun Atwal"
+    ],
+    [
+      2000,
+      "8-Oct",
+      "Kolon Cup Korea Open",
+      "Thongchai Jaidee"
     ],
     [
       2001,
@@ -740,14 +734,20 @@
     ],
     [
       2001,
-      "18-Feb",
-      "Carlsberg Malaysian Open",
-      "Vijay Singh"
+      "12-Aug",
+      "Volvo Masters of Malaysia",
+      "Thaworn Wiratchant"
     ],
     [
       2001,
-      "25-Feb",
-      "Caltex Singapore Masters",
+      "16-Sep",
+      "Kolon Cup Korea Open",
+      "Kim Dae-sub"
+    ],
+    [
+      2001,
+      "18-Feb",
+      "Carlsberg Malaysian Open",
       "Vijay Singh"
     ],
     [
@@ -758,33 +758,9 @@
     ],
     [
       2001,
-      "29-Apr",
-      "Maekyung LG Fashion Open",
-      "Choi Gwang-Soo"
-    ],
-    [
-      2001,
-      "6-May",
-      "Macau Open",
-      "Zhang Lianwei"
-    ],
-    [
-      2001,
-      "20-May",
-      "SK Telecom Open",
-      "Charlie Wi"
-    ],
-    [
-      2001,
-      "24 Jun",
-      "Alcatel Singapore Open",
-      "Thaworn Wiratchant"
-    ],
-    [
-      2001,
-      "12-Aug",
-      "Volvo Masters of Malaysia",
-      "Thaworn Wiratchant"
+      "2-Dec",
+      "Omega Hong Kong Open",
+      "Jose Maria Olazabal"
     ],
     [
       2001,
@@ -794,20 +770,8 @@
     ],
     [
       2001,
-      "9-Sep",
-      "Mercuries Taiwan Masters",
-      "Daniel Chopra"
-    ],
-    [
-      2001,
-      "16-Sep",
-      "Kolon Cup Korea Open",
-      "Kim Dae-sub"
-    ],
-    [
-      2001,
-      "23-Sep",
-      "Shinhan Donghae Open",
+      "20-May",
+      "SK Telecom Open",
       "Charlie Wi"
     ],
     [
@@ -818,117 +782,51 @@
     ],
     [
       2001,
+      "23-Sep",
+      "Shinhan Donghae Open",
+      "Charlie Wi"
+    ],
+    [
+      2001,
+      "24 Jun",
+      "Alcatel Singapore Open",
+      "Thaworn Wiratchant"
+    ],
+    [
+      2001,
+      "25-Feb",
+      "Caltex Singapore Masters",
+      "Vijay Singh"
+    ],
+    [
+      2001,
       "25-Nov",
       "BMW Asian Open",
       "Jarmo Sandelin"
     ],
     [
       2001,
-      "2-Dec",
-      "Omega Hong Kong Open",
-      "Jose Maria Olazabal"
-    ],
-    [
-      2002,
-      "27-Jan",
-      "Johnnie Walker Classic",
-      "Retief Goosen"
-    ],
-    [
-      2002,
-      "10-Feb",
-      "London Myanmar Open",
-      "Thongchai Jaidee"
-    ],
-    [
-      2002,
-      "17-Feb",
-      "Hero Honda Masters",
-      "Harmeet Kahlon"
-    ],
-    [
-      2002,
-      "24-Feb",
-      "Caltex Singapore Masters",
-      "Arjun Atwal"
-    ],
-    [
-      2002,
-      "3-Mar",
-      "Carlsberg Malaysian Open",
-      "Alastair Forsyth"
-    ],
-    [
-      2002,
-      "10-Mar",
-      "Casino Filipino Philippine Open",
-      "Rick Gibson"
-    ],
-    [
-      2002,
-      "17-Mar",
-      "Royal Challenge Indian Open",
-      "Vijay Kumar"
-    ],
-    [
-      2002,
-      "28-Apr",
-      "SK Telecom Open",
-      "Charlie Wi"
-    ],
-    [
-      2002,
-      "4-May",
+      "29-Apr",
       "Maekyung LG Fashion Open",
-      "Eddie Lee"
+      "Choi Gwang-Soo"
     ],
     [
-      2002,
-      "25-Aug",
-      "Mercuries Taiwan Masters",
-      "Tsai Chi-huang"
+      2001,
+      "4-Feb",
+      "Thailand Masters",
+      "Kang Wook-soon"
     ],
     [
-      2002,
-      "1-Sep",
-      "Shinhan Donghae Open",
-      "Hur Suk-ho"
-    ],
-    [
-      2002,
-      "8-Sep",
-      "Kolon Cup Korea Open",
-      "Sergio Garcia"
-    ],
-    [
-      2002,
-      "15-Sep",
-      "Volvo China Open",
-      "David Gleeson"
-    ],
-    [
-      2002,
-      "22-Sep",
-      "Acer Taiwan Open",
-      "Danny Chia"
-    ],
-    [
-      2002,
-      "20-Oct",
+      2001,
+      "6-May",
       "Macau Open",
       "Zhang Lianwei"
     ],
     [
-      2002,
-      "17-Nov",
-      "TCL Classic",
-      "Colin Montgomerie"
-    ],
-    [
-      2002,
-      "24-Nov",
-      "BMW Asian Open",
-      "Padraig Harrington"
+      2001,
+      "9-Sep",
+      "Mercuries Taiwan Masters",
+      "Daniel Chopra"
     ],
     [
       2002,
@@ -938,69 +836,111 @@
     ],
     [
       2002,
+      "1-Sep",
+      "Shinhan Donghae Open",
+      "Hur Suk-ho"
+    ],
+    [
+      2002,
+      "10-Feb",
+      "London Myanmar Open",
+      "Thongchai Jaidee"
+    ],
+    [
+      2002,
+      "10-Mar",
+      "Casino Filipino Philippine Open",
+      "Rick Gibson"
+    ],
+    [
+      2002,
+      "15-Sep",
+      "Volvo China Open",
+      "David Gleeson"
+    ],
+    [
+      2002,
+      "17-Feb",
+      "Hero Honda Masters",
+      "Harmeet Kahlon"
+    ],
+    [
+      2002,
+      "17-Mar",
+      "Royal Challenge Indian Open",
+      "Vijay Kumar"
+    ],
+    [
+      2002,
+      "17-Nov",
+      "TCL Classic",
+      "Colin Montgomerie"
+    ],
+    [
+      2002,
+      "20-Oct",
+      "Macau Open",
+      "Zhang Lianwei"
+    ],
+    [
+      2002,
+      "22-Sep",
+      "Acer Taiwan Open",
+      "Danny Chia"
+    ],
+    [
+      2002,
+      "24-Feb",
+      "Caltex Singapore Masters",
+      "Arjun Atwal"
+    ],
+    [
+      2002,
+      "24-Nov",
+      "BMW Asian Open",
+      "Padraig Harrington"
+    ],
+    [
+      2002,
+      "25-Aug",
+      "Mercuries Taiwan Masters",
+      "Tsai Chi-huang"
+    ],
+    [
+      2002,
+      "27-Jan",
+      "Johnnie Walker Classic",
+      "Retief Goosen"
+    ],
+    [
+      2002,
+      "28-Apr",
+      "SK Telecom Open",
+      "Charlie Wi"
+    ],
+    [
+      2002,
+      "3-Mar",
+      "Carlsberg Malaysian Open",
+      "Alastair Forsyth"
+    ],
+    [
+      2002,
+      "4-May",
+      "Maekyung LG Fashion Open",
+      "Eddie Lee"
+    ],
+    [
+      2002,
       "8-Dec",
       "Volvo Masters Of Asia",
       "Kevin Na"
     ],
     [
-      2003,
-      "22 Dec 2002",
-      "Asia Japan Okinawa Open",
-      "Hiroyuki Fujita"
-    ],
-    [
-      2003,
-      "26-Jan",
-      "Caltex Masters",
-      "Zhang Lianwei"
-    ],
-    [
-      2003,
-      "16-Feb",
-      "Johnnie Walker Classic",
-      "Ernie Els"
-    ],
-    [
-      2003,
-      "23-Feb",
-      "Carlsberg Malaysian Open",
-      "Arjun Atwal"
-    ],
-    [
-      2003,
-      "2-Mar",
-      "Myanmar Open",
-      "Lin Keng-chi"
-    ],
-    [
-      2003,
-      "30-Mar",
-      "Royal Challenge Indian Open",
-      "Mike Cunning"
-    ],
-    [
-      2003,
-      "6-Apr",
-      "Thailand Open",
-      "Edward Loar"
-    ],
-    [
-      2003,
-      "4-May",
-      "Maekyung Open",
-      "Chung Joon"
-    ],
-    [
-      2003,
-      "29-Jun",
-      "SK Telecom Open",
-      "K.J. Choi"
-    ],
-    [
-      2003,
-      "14-Sep",
-      "Mercuries Taiwan Masters",
-      "Lin Wen-ko"
+      2002,
+      "8-Sep",
+      "Kolon Cup Korea Open",
+      "Sergio Garcia"
     ],
     [
       2003,
@@ -1010,21 +950,21 @@
     ],
     [
       2003,
-      "19-Oct",
-      "Macau Open",
-      "Colin Montgomerie"
+      "14-Dec",
+      "Volvo Masters of Asia",
+      "Thongchai Jaidee"
     ],
     [
       2003,
-      "26-Oct",
-      "Sanya Open",
-      "Marcus Both"
+      "14-Sep",
+      "Mercuries Taiwan Masters",
+      "Lin Wen-ko"
     ],
     [
       2003,
-      "9-Nov",
-      "Hero Honda Masters",
-      "Arjun Atwal"
+      "16-Feb",
+      "Johnnie Walker Classic",
+      "Ernie Els"
     ],
     [
       2003,
@@ -1034,9 +974,69 @@
     ],
     [
       2003,
+      "19-Oct",
+      "Macau Open",
+      "Colin Montgomerie"
+    ],
+    [
+      2003,
+      "2-Mar",
+      "Myanmar Open",
+      "Lin Keng-chi"
+    ],
+    [
+      2003,
+      "22 Dec 2002",
+      "Asia Japan Okinawa Open",
+      "Hiroyuki Fujita"
+    ],
+    [
+      2003,
+      "23-Feb",
+      "Carlsberg Malaysian Open",
+      "Arjun Atwal"
+    ],
+    [
+      2003,
       "23-Nov",
       "Acer Taiwan Open",
       "Jason Dawes"
+    ],
+    [
+      2003,
+      "26-Jan",
+      "Caltex Masters",
+      "Zhang Lianwei"
+    ],
+    [
+      2003,
+      "26-Oct",
+      "Sanya Open",
+      "Marcus Both"
+    ],
+    [
+      2003,
+      "29-Jun",
+      "SK Telecom Open",
+      "K.J. Choi"
+    ],
+    [
+      2003,
+      "30-Mar",
+      "Royal Challenge Indian Open",
+      "Mike Cunning"
+    ],
+    [
+      2003,
+      "4-May",
+      "Maekyung Open",
+      "Chung Joon"
+    ],
+    [
+      2003,
+      "6-Apr",
+      "Thailand Open",
+      "Edward Loar"
     ],
     [
       2003,
@@ -1046,21 +1046,9 @@
     ],
     [
       2003,
-      "14-Dec",
-      "Volvo Masters of Asia",
-      "Thongchai Jaidee"
-    ],
-    [
-      2004,
-      "21 Dec 2003",
-      "Asia Japan Okinawa Open",
-      "Hideto Tanihara"
-    ],
-    [
-      2004,
-      "25-Jan",
-      "Thailand Open",
-      "Boonchu Ruangkit"
+      "9-Nov",
+      "Hero Honda Masters",
+      "Arjun Atwal"
     ],
     [
       2004,
@@ -1070,63 +1058,9 @@
     ],
     [
       2004,
-      "15-Feb",
-      "London Myanmar Open",
-      "Thongchai Jaidee"
-    ],
-    [
-      2004,
-      "22-Feb",
-      "Carlsberg Malaysian Open",
-      "Thongchai Jaidee"
-    ],
-    [
-      2004,
-      "29-Feb",
-      "DHL Philippine Open",
-      "Edward Michaels"
-    ],
-    [
-      2004,
-      "21-Mar",
-      "Caltex Masters",
-      "Colin Montgomerie"
-    ],
-    [
-      2004,
-      "28-Mar",
-      "Royal Challenge Indian Open",
-      "Mardan Mamat"
-    ],
-    [
-      2004,
-      "2-May",
-      "Volkswagen Masters-China",
-      "Rahil Gangjee"
-    ],
-    [
-      2004,
-      "9-May",
-      "Macau Open",
-      "Jason Knutzon"
-    ],
-    [
-      2004,
-      "16-May",
-      "BMW Asian Open",
-      "Miguel Angel Jimenez"
-    ],
-    [
-      2004,
-      "23-May",
-      "SK Telecom Open",
-      "Simon Yates"
-    ],
-    [
-      2004,
-      "22-Aug",
-      "Tianjin TEDA Open",
-      "Thammanoon Sriroj"
+      "12-Dec",
+      "Volvo Masters of Asia",
+      "Jyoti Randhawa"
     ],
     [
       2004,
@@ -1136,15 +1070,57 @@
     ],
     [
       2004,
+      "15-Feb",
+      "London Myanmar Open",
+      "Thongchai Jaidee"
+    ],
+    [
+      2004,
+      "16-May",
+      "BMW Asian Open",
+      "Miguel Angel Jimenez"
+    ],
+    [
+      2004,
       "19-Sep",
       "Mercuries Taiwan Masters",
       "Thaworn Wiratchant"
     ],
     [
       2004,
-      "26-Sep",
-      "Taiwan Open",
-      "Charlie Wi"
+      "2-May",
+      "Volkswagen Masters-China",
+      "Rahil Gangjee"
+    ],
+    [
+      2004,
+      "21 Dec 2003",
+      "Asia Japan Okinawa Open",
+      "Hideto Tanihara"
+    ],
+    [
+      2004,
+      "21-Mar",
+      "Caltex Masters",
+      "Colin Montgomerie"
+    ],
+    [
+      2004,
+      "22-Aug",
+      "Tianjin TEDA Open",
+      "Thammanoon Sriroj"
+    ],
+    [
+      2004,
+      "22-Feb",
+      "Carlsberg Malaysian Open",
+      "Thongchai Jaidee"
+    ],
+    [
+      2004,
+      "23-May",
+      "SK Telecom Open",
+      "Simon Yates"
     ],
     [
       2004,
@@ -1154,15 +1130,21 @@
     ],
     [
       2004,
-      "31-Oct",
-      "Sanya Open",
-      "Terry Pilkadaris"
+      "25-Jan",
+      "Thailand Open",
+      "Boonchu Ruangkit"
     ],
     [
       2004,
-      "7-Nov",
-      "Carlsberg Masters Vietnam",
-      "Angelo Que"
+      "26-Sep",
+      "Taiwan Open",
+      "Charlie Wi"
+    ],
+    [
+      2004,
+      "28-Mar",
+      "Royal Challenge Indian Open",
+      "Mardan Mamat"
     ],
     [
       2004,
@@ -1172,69 +1154,33 @@
     ],
     [
       2004,
+      "29-Feb",
+      "DHL Philippine Open",
+      "Edward Michaels"
+    ],
+    [
+      2004,
+      "31-Oct",
+      "Sanya Open",
+      "Terry Pilkadaris"
+    ],
+    [
+      2004,
       "5-Dec",
       "Omega Hong Kong Open",
       "Miguel Angel Jimenez"
     ],
     [
       2004,
-      "12-Dec",
-      "Volvo Masters of Asia",
-      "Jyoti Randhawa"
+      "7-Nov",
+      "Carlsberg Masters Vietnam",
+      "Angelo Que"
     ],
     [
-      2005,
-      "19 Dec 2004",
-      "Asia Japan Okinawa Open",
-      "Kiyoshi Miyazato"
-    ],
-    [
-      2005,
-      "30-Jan",
-      "Caltex Masters",
-      "Nick Dougherty"
-    ],
-    [
-      2005,
-      "20-Feb",
-      "Carlsberg Malaysian Open",
-      "Thongchai Jaidee"
-    ],
-    [
-      2005,
-      "27-Feb",
-      "Myanmar Open",
-      "Scott Strange"
-    ],
-    [
-      2005,
-      "6-Mar",
-      "Thai Airways International Thailand Open",
-      "Richard Lee"
-    ],
-    [
-      2005,
-      "13-Mar",
-      "Qatar masters",
-      "Ernie Els"
-    ],
-    [
-      2005,
-      "20-Mar",
-      "TCL Classic",
-      "Paul Casey"
-    ],
-    [
-      2005,
-      "27-Mar",
-      "Enjoy Jakarta Standard Chartered Indonesia Open",
-      "Thaworn Wiratchant"
-    ],
-    [
-      2005,
-      "24-Apr",
-      "Johnnie Walker Classic",
-      "Adam Scott"
+      2004,
+      "9-May",
+      "Macau Open",
+      "Jason Knutzon"
     ],
     [
       2005,
@@ -1244,39 +1190,9 @@
     ],
     [
       2005,
-      "8-May",
-      "SK Telecom Open",
-      "K.J. Choi"
-    ],
-    [
-      2005,
-      "15-May",
-      "Macau Open",
-      "Wang Ter-chang"
-    ],
-    [
-      2005,
-      "22-May",
-      "Philippine Open",
-      "Adam Le Vesconte"
-    ],
-    [
-      2005,
-      "29-May",
-      "KT&G Maekyung Open",
-      "Choi Sang-ho"
-    ],
-    [
-      2005,
-      "26-Jun",
-      "Brunei Open",
-      "Terry Pilkadaris"
-    ],
-    [
-      2005,
-      "4-Sep",
-      "Volkswagen Masters-China",
-      "Retief Goosen"
+      "11-Dec",
+      "Volvo Masters of Asia",
+      "Shiv Kapur"
     ],
     [
       2005,
@@ -1286,21 +1202,15 @@
     ],
     [
       2005,
-      "18-Sep",
-      "Taiwan Open",
-      "Thaworn Wiratchant"
+      "13-Mar",
+      "Qatar masters",
+      "Ernie Els"
     ],
     [
       2005,
-      "25-Sep",
-      "Mercuries Taiwan Masters",
-      "Lu Wei-chih"
-    ],
-    [
-      2005,
-      "2-Oct",
-      "Crowne Plaza Open",
-      "Prayad Marksaeng"
+      "15-May",
+      "Macau Open",
+      "Wang Ter-chang"
     ],
     [
       2005,
@@ -1310,20 +1220,74 @@
     ],
     [
       2005,
-      "30-Oct",
-      "Hero Honda Indian Open",
+      "18-Sep",
+      "Taiwan Open",
       "Thaworn Wiratchant"
     ],
     [
       2005,
-      "6-Nov",
-      "Double A International Open",
-      "Chinnarat Phadungsil"
+      "19 Dec 2004",
+      "Asia Japan Okinawa Open",
+      "Kiyoshi Miyazato"
+    ],
+    [
+      2005,
+      "2-Oct",
+      "Crowne Plaza Open",
+      "Prayad Marksaeng"
+    ],
+    [
+      2005,
+      "20-Feb",
+      "Carlsberg Malaysian Open",
+      "Thongchai Jaidee"
+    ],
+    [
+      2005,
+      "20-Mar",
+      "TCL Classic",
+      "Paul Casey"
     ],
     [
       2005,
       "20-Nov",
       "Carlsberg Masters Vietnam",
+      "Thaworn Wiratchant"
+    ],
+    [
+      2005,
+      "22-May",
+      "Philippine Open",
+      "Adam Le Vesconte"
+    ],
+    [
+      2005,
+      "24-Apr",
+      "Johnnie Walker Classic",
+      "Adam Scott"
+    ],
+    [
+      2005,
+      "25-Sep",
+      "Mercuries Taiwan Masters",
+      "Lu Wei-chih"
+    ],
+    [
+      2005,
+      "26-Jun",
+      "Brunei Open",
+      "Terry Pilkadaris"
+    ],
+    [
+      2005,
+      "27-Feb",
+      "Myanmar Open",
+      "Scott Strange"
+    ],
+    [
+      2005,
+      "27-Mar",
+      "Enjoy Jakarta Standard Chartered Indonesia Open",
       "Thaworn Wiratchant"
     ],
     [
@@ -1334,141 +1298,51 @@
     ],
     [
       2005,
+      "29-May",
+      "KT&G Maekyung Open",
+      "Choi Sang-ho"
+    ],
+    [
+      2005,
+      "30-Jan",
+      "Caltex Masters",
+      "Nick Dougherty"
+    ],
+    [
+      2005,
+      "30-Oct",
+      "Hero Honda Indian Open",
+      "Thaworn Wiratchant"
+    ],
+    [
+      2005,
       "4-Dec",
       "UBS Hong Kong Open",
       "Colin Montgomerie"
     ],
     [
       2005,
-      "11-Dec",
-      "Volvo Masters of Asia",
-      "Shiv Kapur"
+      "4-Sep",
+      "Volkswagen Masters-China",
+      "Retief Goosen"
     ],
     [
-      2006,
-      "18 Dec 2005",
-      "Asia Japan Okinawa Open",
-      "Tadahiro Takayama"
+      2005,
+      "6-Mar",
+      "Thai Airways International Thailand Open",
+      "Richard Lee"
     ],
     [
-      2006,
-      "22-Jan",
-      "Pakistan Open",
-      "Chris Rodgers"
-    ],
-    [
-      2006,
-      "29-Jan",
-      "Commercialbank Qatar Masters",
-      "Henrik Stenson"
-    ],
-    [
-      2006,
-      "12-Feb",
-      "Johnnie Walker Classic",
-      "Kevin Stadler"
-    ],
-    [
-      2006,
-      "19-Feb",
-      "Maybank Malaysian Open",
-      "Charlie Wi"
-    ],
-    [
-      2006,
-      "5-Mar",
-      "Enjoy Jakarta HSBC Indonesia Open",
-      "Simon Dyson"
-    ],
-    [
-      2006,
-      "12-Mar",
-      "OSIM Singapore Masters",
-      "Mardan Mamat"
-    ],
-    [
-      2006,
-      "19-Mar",
-      "TCL Classic",
-      "Johan Edfors"
-    ],
-    [
-      2006,
-      "16-Apr",
-      "Volvo China Open",
-      "Jeev Milkha Singh"
-    ],
-    [
-      2006,
-      "23-Apr",
-      "BMW Asian Open",
-      "Gonzalo Fernandez-Castano"
-    ],
-    [
-      2006,
-      "30-Apr",
-      "GS Caltex Maekyung Open",
-      "Suk Jong-yul"
-    ],
-    [
-      2006,
-      "7-May",
-      "SK Telecom Open",
-      "Prom Meesawat"
-    ],
-    [
-      2006,
-      "14-May",
-      "Aamby Valley Asian Masters",
-      "Hendrik Buhrmann"
-    ],
-    [
-      2006,
-      "21-May",
-      "Macau Open",
-      "Kane Webber"
-    ],
-    [
-      2006,
-      "28-May",
-      "Philippine Open",
-      "Scott Strange"
-    ],
-    [
-      2006,
-      "4-Jun",
-      "Bangkok Airways Open",
-      "Chawalit Plaphol"
-    ],
-    [
-      2006,
-      "20-Aug",
-      "Crowne Plaza Open",
+      2005,
+      "6-Nov",
+      "Double A International Open",
       "Chinnarat Phadungsil"
     ],
     [
-      2006,
-      "27-Aug",
-      "Brunei Open",
-      "Wang Ter-chang"
-    ],
-    [
-      2006,
-      "3-Sep",
-      "Pulai Springs Malaysian Masters",
-      "Anton Haig"
-    ],
-    [
-      2006,
-      "10-Sep",
-      "Barclays Singapore Open",
-      "Adam Scott"
-    ],
-    [
-      2006,
-      "24-Sep",
-      "Kolon-Hana Bank Korea Open",
-      "Yang Yong-eun"
+      2005,
+      "8-May",
+      "SK Telecom Open",
+      "K.J. Choi"
     ],
     [
       2006,
@@ -1478,9 +1352,33 @@
     ],
     [
       2006,
-      "8-Oct",
-      "Taiwan Open",
-      "Lin Wen-tang"
+      "10-Dec",
+      "Volvo Masters of Asia",
+      "Thongchai Jaidee"
+    ],
+    [
+      2006,
+      "10-Sep",
+      "Barclays Singapore Open",
+      "Adam Scott"
+    ],
+    [
+      2006,
+      "12-Feb",
+      "Johnnie Walker Classic",
+      "Kevin Stadler"
+    ],
+    [
+      2006,
+      "12-Mar",
+      "OSIM Singapore Masters",
+      "Mardan Mamat"
+    ],
+    [
+      2006,
+      "14-May",
+      "Aamby Valley Asian Masters",
+      "Hendrik Buhrmann"
     ],
     [
       2006,
@@ -1490,9 +1388,27 @@
     ],
     [
       2006,
-      "22-Oct",
-      "Hero Honda Indian Open",
-      "Jyoti Randhawa"
+      "16-Apr",
+      "Volvo China Open",
+      "Jeev Milkha Singh"
+    ],
+    [
+      2006,
+      "18 Dec 2005",
+      "Asia Japan Okinawa Open",
+      "Tadahiro Takayama"
+    ],
+    [
+      2006,
+      "19-Feb",
+      "Maybank Malaysian Open",
+      "Charlie Wi"
+    ],
+    [
+      2006,
+      "19-Mar",
+      "TCL Classic",
+      "Johan Edfors"
     ],
     [
       2006,
@@ -1502,99 +1418,93 @@
     ],
     [
       2006,
-      "10-Dec",
-      "Volvo Masters of Asia",
-      "Thongchai Jaidee"
+      "20-Aug",
+      "Crowne Plaza Open",
+      "Chinnarat Phadungsil"
     ],
     [
-      2007,
-      "21-Jan",
+      2006,
+      "21-May",
+      "Macau Open",
+      "Kane Webber"
+    ],
+    [
+      2006,
+      "22-Jan",
       "Pakistan Open",
-      "Airil Rizman"
+      "Chris Rodgers"
     ],
     [
-      2007,
-      "28-Jan",
-      "Commercialbank Qatar Masters",
-      "Retief Goosen"
+      2006,
+      "22-Oct",
+      "Hero Honda Indian Open",
+      "Jyoti Randhawa"
     ],
     [
-      2007,
-      "4-Feb",
+      2006,
+      "23-Apr",
+      "BMW Asian Open",
+      "Gonzalo Fernandez-Castano"
+    ],
+    [
+      2006,
+      "24-Sep",
+      "Kolon-Hana Bank Korea Open",
+      "Yang Yong-eun"
+    ],
+    [
+      2006,
+      "27-Aug",
+      "Brunei Open",
+      "Wang Ter-chang"
+    ],
+    [
+      2006,
+      "28-May",
       "Philippine Open",
-      "Frankie Minoza"
+      "Scott Strange"
     ],
     [
-      2007,
-      "11-Feb",
-      "Maybank Malaysian Open",
-      "Peter Hedblom"
+      2006,
+      "29-Jan",
+      "Commercialbank Qatar Masters",
+      "Henrik Stenson"
     ],
     [
-      2007,
-      "18-Feb",
-      "Enjoy Jakarta Astro Indonesia Open",
-      "Mikko llonen"
-    ],
-    [
-      2007,
-      "4-Mar",
-      "Johnnie Walker Classic",
+      2006,
+      "3-Sep",
+      "Pulai Springs Malaysian Masters",
       "Anton Haig"
     ],
     [
-      2007,
-      "11-Mar",
-      "Clariden Leu Singapore Masters",
-      "Liang Wenchong"
-    ],
-    [
-      2007,
-      "18-Mar",
-      "TCL Classic",
-      "Chapchai Nirat"
-    ],
-    [
-      2007,
-      "25-Mar",
-      "Motorola International Bintan",
-      "Jason Knutzon"
-    ],
-    [
-      2007,
-      "15-Apr",
-      "Volvo China Open",
-      "Markus Brier"
-    ],
-    [
-      2007,
-      "19-Apr",
-      "Pine Valley Beijing Open",
-      "Gaurav Ghei"
-    ],
-    [
-      2007,
-      "22-Apr",
-      "BMW Asian Open",
-      "Raphael Jacquelin"
-    ],
-    [
-      2007,
-      "6-May",
+      2006,
+      "30-Apr",
       "GS Caltex Maekyung Open",
-      "Kim Kyung-tae"
+      "Suk Jong-yul"
     ],
     [
-      2007,
-      "20-May",
-      "Macau Open",
-      "Lu Wen-teh"
+      2006,
+      "4-Jun",
+      "Bangkok Airways Open",
+      "Chawalit Plaphol"
     ],
     [
-      2007,
-      "27-May",
+      2006,
+      "5-Mar",
+      "Enjoy Jakarta HSBC Indonesia Open",
+      "Simon Dyson"
+    ],
+    [
+      2006,
+      "7-May",
       "SK Telecom Open",
-      "Bae Sang-moon"
+      "Prom Meesawat"
+    ],
+    [
+      2006,
+      "8-Oct",
+      "Taiwan Open",
+      "Lin Wen-tang"
     ],
     [
       2007,
@@ -1604,33 +1514,15 @@
     ],
     [
       2007,
-      "26-Aug",
-      "Iskandar Johor Open",
-      "Artemio Murakami"
+      "11-Feb",
+      "Maybank Malaysian Open",
+      "Peter Hedblom"
     ],
     [
       2007,
-      "2-Sep",
-      "Brunei Open",
-      "Lin Wen-tang"
-    ],
-    [
-      2007,
-      "16-Sep",
-      "Midea China Classic",
-      "Thaworn Wiratchant"
-    ],
-    [
-      2007,
-      "23-Sep",
-      "Mercuries Taiwan Masters",
-      "Lu Wen-teh"
-    ],
-    [
-      2007,
-      "7-Oct",
-      "Kolon-Hana Bank Korea Open",
-      "Vijay Singh"
+      "11-Mar",
+      "Clariden Leu Singapore Masters",
+      "Liang Wenchong"
     ],
     [
       2007,
@@ -1640,15 +1532,27 @@
     ],
     [
       2007,
-      "28-Oct",
-      "Pertamina Indonesia President Invitational",
-      "Juvic Pagunsan"
+      "15-Apr",
+      "Volvo China Open",
+      "Markus Brier"
     ],
     [
       2007,
-      "4-Nov",
-      "Barclays Singapore Open",
-      "Angel Cabrera"
+      "16-Sep",
+      "Midea China Classic",
+      "Thaworn Wiratchant"
+    ],
+    [
+      2007,
+      "18-Feb",
+      "Enjoy Jakarta Astro Indonesia Open",
+      "Mikko llonen"
+    ],
+    [
+      2007,
+      "18-Mar",
+      "TCL Classic",
+      "Chapchai Nirat"
     ],
     [
       2007,
@@ -1658,15 +1562,111 @@
     ],
     [
       2007,
-      "25-Nov",
-      "Hana Bank Vietnam Masters",
-      "Chapchai Nirat"
+      "19-Apr",
+      "Pine Valley Beijing Open",
+      "Gaurav Ghei"
     ],
     [
       2007,
       "2-Dec",
       "Johnnie Walker Cambodian Open",
       "Bryan Saltus"
+    ],
+    [
+      2007,
+      "2-Sep",
+      "Brunei Open",
+      "Lin Wen-tang"
+    ],
+    [
+      2007,
+      "20-May",
+      "Macau Open",
+      "Lu Wen-teh"
+    ],
+    [
+      2007,
+      "21-Jan",
+      "Pakistan Open",
+      "Airil Rizman"
+    ],
+    [
+      2007,
+      "22-Apr",
+      "BMW Asian Open",
+      "Raphael Jacquelin"
+    ],
+    [
+      2007,
+      "23-Sep",
+      "Mercuries Taiwan Masters",
+      "Lu Wen-teh"
+    ],
+    [
+      2007,
+      "25-Mar",
+      "Motorola International Bintan",
+      "Jason Knutzon"
+    ],
+    [
+      2007,
+      "25-Nov",
+      "Hana Bank Vietnam Masters",
+      "Chapchai Nirat"
+    ],
+    [
+      2007,
+      "26-Aug",
+      "Iskandar Johor Open",
+      "Artemio Murakami"
+    ],
+    [
+      2007,
+      "27-May",
+      "SK Telecom Open",
+      "Bae Sang-moon"
+    ],
+    [
+      2007,
+      "28-Jan",
+      "Commercialbank Qatar Masters",
+      "Retief Goosen"
+    ],
+    [
+      2007,
+      "28-Oct",
+      "Pertamina Indonesia President Invitational",
+      "Juvic Pagunsan"
+    ],
+    [
+      2007,
+      "4-Feb",
+      "Philippine Open",
+      "Frankie Minoza"
+    ],
+    [
+      2007,
+      "4-Mar",
+      "Johnnie Walker Classic",
+      "Anton Haig"
+    ],
+    [
+      2007,
+      "4-Nov",
+      "Barclays Singapore Open",
+      "Angel Cabrera"
+    ],
+    [
+      2007,
+      "6-May",
+      "GS Caltex Maekyung Open",
+      "Kim Kyung-tae"
+    ],
+    [
+      2007,
+      "7-Oct",
+      "Kolon-Hana Bank Korea Open",
+      "Vijay Singh"
     ],
     [
       2007,
@@ -4163,6 +4163,18 @@
       "2026-05-03",
       "The 45th GS Caltex Maekyung Open Golf Championship",
       "Minhyuk Song"
+    ],
+    [
+      2026,
+      "2026-05-10",
+      "Taiwan Glass Taifong Open",
+      "Ian Snyman"
+    ],
+    [
+      2026,
+      "2026-05-24",
+      "KOLON The 68th KOREA Open Golf Championship",
+      "Jiho Yang"
     ]
   ],
   "oom": [
