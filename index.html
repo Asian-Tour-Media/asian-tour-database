@@ -73,7 +73,10 @@ tr:hover {background:#f8f9ff}
 
 <div id="all" class="tab-content active">
 <input type="text" id="searchAll" class="search-box" placeholder="🔍 Search tournaments..." onkeyup="searchTournaments()">
-<button class="btn add-btn admin-only" onclick="showAddTournamentModal()" style="margin-bottom:15px">➕ Add Tournament</button>
+<div style="margin-bottom:15px">
+<button class="btn add-btn admin-only" onclick="showAddTournamentModal()">➕ Add Tournament</button>
+<button class="btn admin-only" style="background:#17a2b8;color:white;margin-left:5px" onclick="exportData()">💾 Export Data</button>
+</div>
 <table><thead><tr><th>Year</th><th>Date</th><th>Tournament</th><th>Winner</th></tr></thead>
 <tbody id="tbody"></tbody></table>
 </div>
@@ -707,6 +710,23 @@ function deleteOOM(i) {
         render();
         showNotification('✅ OOM winner deleted');
     }
+}
+
+
+// ===== EXPORT DATA FUNCTION =====
+function exportData() {
+    const dataToExport = {
+        tournaments: data,
+        oom: oomData
+    };
+    const blob = new Blob([JSON.stringify(dataToExport, null, 2)], {type: 'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'data.json';
+    a.click();
+    URL.revokeObjectURL(url);
+    showNotification('✅ Data exported as data.json - Upload to GitHub!');
 }
 
 
