@@ -430,7 +430,7 @@ tr:hover {background:#f8f9ff}
 </div>
 
 <p style="text-align:center;color:#666;margin-top:30px">
-📊 All statistics computed from 694 tournaments (1995-2026)<br>
+📊 All statistics computed from <span id="statsCount">0</span> tournaments (1995-2026)<br>
 Last updated: May 2026
 </p>
 
@@ -770,6 +770,7 @@ function render() {
         row.innerHTML = `<td>${t[0]}</td><td>${t[1]}</td><td>${t[2]}</td><td><span class="player-name" onclick="showPlayer('${t[3]}')">${t[3]}</span></td>`;
     });
     document.getElementById('count').textContent = data.length;
+    document.getElementById('statsCount').textContent = data.length;
     
     const pb = document.getElementById('playersBody');
     pb.innerHTML = '';
