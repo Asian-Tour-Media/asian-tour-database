@@ -949,11 +949,22 @@ function exportData() {
 const GITHUB_DATA_URL = 'https://raw.githubusercontent.com/Asian-Tour-Media/asian-tour-database/main/data.json';
 
 function applyLoadedData(d) {
+    // GUARD: only apply a remote data.json if it uses the NEW enriched schema
+    // (must carry country + cosanctioned + intlseries). A legacy file that only
+    // has {tournaments, oom} would overwrite corrected names and break the
+    // country lookups, so it is ignored in favour of the embedded corrected data.
+    var isEnriched = d && (d.country && typeof d.country === 'object')
+        && (d.cosanctioned && typeof d.cosanctioned === 'object')
+        && Array.isArray(d.intlseries);
+    if (!isEnriched) {
+        console.warn('Remote data.json is legacy/incomplete - using embedded corrected data.');
+        return;
+    }
     if (Array.isArray(d.tournaments) && d.tournaments.length) data = d.tournaments;
     if (Array.isArray(d.oom) && d.oom.length) oomData = d.oom;
-    if (d.country && typeof d.country === 'object') CTRY_MAP = d.country;
-    if (d.cosanctioned && typeof d.cosanctioned === 'object') COS_MAP = d.cosanctioned;
-    if (Array.isArray(d.intlseries)) IS_KEYS = new Set(d.intlseries);
+    CTRY_MAP = d.country;
+    COS_MAP = d.cosanctioned;
+    IS_KEYS = new Set(d.intlseries);
 }
 
 async function init() {
