@@ -4199,6 +4199,12 @@
       "2026-09-20",
       "Yeangder Tournament Players Championship",
       "Pavit Tangkamolprasert"
+    ],
+    [
+      2026,
+      "2026-09-27",
+      "Mercuries Taiwan Masters",
+      "Hung, Chien-yao"
     ]
   ],
   "oom": [
@@ -5023,7 +5029,8 @@
     "2023|2023-09-10|Shinhan Donghae Open": "South Korea",
     "2025|2025-09-21|Yeangder Tournament Players Championship": "Taiwan",
     "2026|2026-07-19|The 154th Open": "England",
-    "2026|2026-09-20|Yeangder Tournament Players Championship": "Chinese Taipei"
+    "2026|2026-09-20|Yeangder Tournament Players Championship": "Chinese Taipei",
+    "2026|2026-09-27|Mercuries Taiwan Masters": "Chinese Taipei"
   },
   "cosanctioned": {
     "2026|2026-05-10|Taiwan Glass Taifong Open": "Taiwan PGA Tour",
@@ -5299,7 +5306,8 @@
     "2022|2022-09-11|The 38th Shinhan Donghae Open": "Japan Golf Tour & Korean Tour",
     "2022|2022-10-02|Mercuries Taiwan Masters": "Taiwan PGA Tour",
     "2022|2022-06-26|Kolon The 64th Korea Open Golf Championship": "Japan Golf Tour",
-    "2026|2026-09-20|Yeangder Tournament Players Championship": "Taiwan PGA Tour"
+    "2026|2026-09-20|Yeangder Tournament Players Championship": "Taiwan PGA Tour",
+    "2026|2026-09-27|Mercuries Taiwan Masters": "Taiwan PGA Tour"
   },
   "intlseries": [
     "2022|2022-03-06|International Series Thailand",
