@@ -4111,7 +4111,7 @@
       "Yosuke Asaji"
     ],
     [
-      2025,
+      "2025",
       "2025-11-16",
       "Taiwan Glass Taifong Open",
       "Ekpharit Wu"
@@ -4123,7 +4123,7 @@
       "Josele Ballester"
     ],
     [
-      2025,
+      "2025",
       "2025-11-30",
       "Bharath Classic 2025 Gujarat",
       "Poosit Supupramai"
@@ -4762,9 +4762,7 @@
     "2025|2025-10-26|International Series Philippines": "Philippines",
     "2025|2025-11-02|Link Hong Kong Open": "Hong Kong",
     "2025|2025-11-09|Moutai Singapore Open": "Singapore",
-    "2025|2025-11-16|Taiwan Glass Taifong Open": "Taiwan",
     "2025|2025-11-22|PIF Saudi International powered by Softbank Investment Advisers": "Saudi Arabia",
-    "2025|2025-11-30|Bharath Classic 2025 Gujarat": "India",
     "2025|2025-12-13|Saudi Open presented by PIF": "Saudi Arabia",
     "2026|2026-04-05|International Series Japan": "Japan",
     "2026|2026-05-03|The 45th GS Caltex Maekyung Open Golf Championship": "South Korea",
@@ -5037,7 +5035,9 @@
     "2026|2026-06-21|126th US Open": "United States",
     "2026|2026-07-19|The 154th Open": "United Kingdom",
     "2026|2026-09-20|Yeangder Tournament Players Championship": "Chinese Taipei",
-    "2026|2026-09-27|Mercuries Taiwan Masters": "Chinese Taipei"
+    "2026|2026-09-27|Mercuries Taiwan Masters": "Chinese Taipei",
+    "2025|2025-11-16|Taiwan Glass Taifong Open": "Taiwan",
+    "2025|2025-11-30|Bharath Classic 2025 Gujarat": "India"
   },
   "cosanctioned": {
     "2023|2023-05-07|The 42nd GS Caltex Maekyung Open Golf Championship": "Korean Tour",
@@ -5340,7 +5340,9 @@
     "2022|2022-10-02|Mercuries Taiwan Masters": "Taiwan PGA Tour",
     "2022|2022-06-26|Kolon The 64th Korea Open Golf Championship": "Japan Golf Tour",
     "2026|2026-09-20|Yeangder Tournament Players Championship": "Taiwan PGA Tour",
-    "2026|2026-09-27|Mercuries Taiwan Masters": "Taiwan PGA Tour"
+    "2026|2026-09-27|Mercuries Taiwan Masters": "Taiwan PGA Tour",
+    "2025|2025-11-16|Taiwan Glass Taifong Open": "Taiwan PGA Tour",
+    "2025|2025-11-30|Bharath Classic 2025 Gujarat": "Indian Golf Premier League"
   },
   "intlseries": [
     "2022|2022-03-06|International Series Thailand",
