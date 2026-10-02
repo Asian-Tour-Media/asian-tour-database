@@ -22,6 +22,11 @@ body {font-family:Georgia,'Times New Roman',serif; background:#f4f5fb; min-heigh
 .logout-btn {display:none; color:#f9a8d4}
 .logout-btn:hover {background:rgba(255,255,255,0.07)}
 .admin-only {display:none}
+.admin-col{display:none}
+body.admin-active .admin-col{display:table-cell}
+.row-actions{display:flex; gap:6px; justify-content:center; flex-wrap:wrap}
+.row-actions .btn{margin:0; padding:6px 10px; font-size:0.8em}
+
 .main-wrap {flex:1; display:flex; flex-direction:column; min-width:0}
 .topbar {display:flex; align-items:center; justify-content:space-between; background:#fff; padding:20px 36px; border-bottom:1px solid #e5e7eb; flex-wrap:wrap; gap:12px}
 .topbar-left {font-size:0.98em; color:#4b5563; display:flex; align-items:center; flex-wrap:wrap; font-family:Georgia,'Times New Roman',serif}
@@ -150,7 +155,7 @@ tr:hover {background:#f8f9ff}
 <button class="reset-btn" onclick="resetFilters()">Reset</button>
 <span class="result-count" id="tourResultCount"></span>
 </div>
-<div class="tbl-scroll"><table><thead><tr><th class="sortable" onclick="sortBy(0)">Year <span class="sort-ind" data-col="0"></span></th><th>Date</th><th class="sortable" onclick="sortBy(2)">Tournament <span class="sort-ind" data-col="2"></span></th><th class="sortable" onclick="sortBy(3)">Winner <span class="sort-ind" data-col="3"></span></th><th class="sortable" style="width:120px" onclick="sortBy(4)">Country <span class="sort-ind" data-col="4"></span></th><th class="sortable" style="width:160px" onclick="sortBy(5)">Co-Sanctioned <span class="sort-ind" data-col="5"></span></th><th class="sortable" style="width:110px" onclick="sortBy(6)">Int'l Series <span class="sort-ind" data-col="6"></span></th></tr></thead>
+<div class="tbl-scroll"><table><thead><tr><th class="sortable" onclick="sortBy(0)">Year <span class="sort-ind" data-col="0"></span></th><th>Date</th><th class="sortable" onclick="sortBy(2)">Tournament <span class="sort-ind" data-col="2"></span></th><th class="sortable" onclick="sortBy(3)">Winner <span class="sort-ind" data-col="3"></span></th><th class="sortable" style="width:120px" onclick="sortBy(4)">Country <span class="sort-ind" data-col="4"></span></th><th class="sortable" style="width:160px" onclick="sortBy(5)">Co-Sanctioned <span class="sort-ind" data-col="5"></span></th><th class="sortable" style="width:110px" onclick="sortBy(6)">Int'l Series <span class="sort-ind" data-col="6"></span></th><th class="admin-col" style="width:140px;text-align:center">Actions</th></tr></thead>
 <tbody id="tbody"></tbody></table></div>
 </div>
 
@@ -1106,7 +1111,9 @@ function tourRowHTML(t){
     else if (IS_KEYS.has(_k)) { _is = '<span style="background:#ec1e79;color:#fff;padding:2px 8px;border-radius:10px;font-size:0.8em;font-weight:700">IS</span>'; }
     else { _is = '<span style="color:#bbb">—</span>'; }
     const safe = String(t[3]).replace(/'/g, "\\'");
-    return `<td>${t[0]}</td><td>${t[1]}</td><td>${t[2]}</td><td><span class="player-name" onclick="showPlayer('${safe}')">${t[3]}</span></td><td style="text-align:center">${_ctry}</td><td style="text-align:center">${_cos}</td><td style="text-align:center">${_is}</td>`;
+    const _i = data.indexOf(t);
+    const _actions = `<td class="admin-col" style="text-align:center"><div class="row-actions"><button class="btn edit-btn" onclick="editTournament(${_i})">✏️ Edit</button><button class="btn delete-btn" onclick="deleteTournament(${_i})">🗑️ Delete</button></div></td>`;
+    return `<td>${t[0]}</td><td>${t[1]}</td><td>${t[2]}</td><td><span class="player-name" onclick="showPlayer('${safe}')">${t[3]}</span></td><td style="text-align:center">${_ctry}</td><td style="text-align:center">${_cos}</td><td style="text-align:center">${_is}</td>${_actions}`;
 }
 
 function sortVal(t, col){
@@ -1258,6 +1265,7 @@ function login() {
     const pwd = document.getElementById('password').value;
     if (pwd === ADMIN_PASSWORD) {
         isAdmin = true;
+        document.body.classList.add('admin-active');
         document.querySelectorAll('.admin-only').forEach(el => el.style.display = 'block');
         document.getElementById('logoutBtn').style.display = 'block';
         closeLogin();
@@ -1269,6 +1277,7 @@ function login() {
 
 function logout() {
     isAdmin = false;
+    document.body.classList.remove('admin-active');
     document.querySelectorAll('.admin-only').forEach(el => el.style.display = 'none');
     document.getElementById('logoutBtn').style.display = 'none';
     showTab('all');
