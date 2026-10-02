@@ -3091,7 +3091,7 @@
       "Matthew Fitzpatrick"
     ],
     [
-      2017,
+      "2017",
       "2017-09-17",
       "The 33rd Shinhan Donghae Open",
       "Richard T. Lee"
@@ -3133,7 +3133,7 @@
       "Panuphol Pittayarat"
     ],
     [
-      2017,
+      "2017",
       "2017-11-05",
       "Panasonic Open India",
       "Shiv Kapur"
@@ -3193,7 +3193,7 @@
       "Paul Peterson"
     ],
     [
-      2018,
+      "2018",
       "2018-02-04",
       "Maybank Championship",
       "Shubhankar Sharma"
@@ -3499,7 +3499,7 @@
       "John Catlin"
     ],
     [
-      2019,
+      "2019",
       "2019-11-17",
       "Panasonic Open India",
       "Tom Kim"
@@ -3595,13 +3595,13 @@
       "Sihwan Kim"
     ],
     [
-      2022,
+      "2022",
       "2022-03-27",
       "The DGC Open presented by Mastercard",
       "Nitithorn Thippong"
     ],
     [
-      2022,
+      "2022",
       "2022-04-10",
       "Trust Golf Asian Mixed Cup",
       "Ratchanon Chantananuwat"
@@ -3637,7 +3637,7 @@
       "Matthew Fitzpatrick"
     ],
     [
-      2022,
+      "2022",
       "2022-06-26",
       "Kolon The 64th Korea Open Golf Championship",
       "Minkyu Kim"
@@ -3829,7 +3829,7 @@
       "Min Woo Lee"
     ],
     [
-      2023,
+      "2023",
       "2023-11-05",
       "Volvo China Open",
       "Sarit Suwannarut"
@@ -3847,7 +3847,7 @@
       "Gaganjeet Bhullar"
     ],
     [
-      2023,
+      "2023",
       "2023-12-03",
       "Taiwan Glass Taifong Open",
       "Suteepat Prateeptienchai"
@@ -3973,7 +3973,7 @@
       "Richard T. Lee"
     ],
     [
-      2024,
+      "2024",
       "2024-11-17",
       "Taiwan Glass Taifong Open",
       "Suteepat Prateeptienchai"
@@ -4730,10 +4730,8 @@
     "2023|2023-09-24|Yeangder TPC": "Taiwan",
     "2023|2023-10-01|Mercuries Taiwan Masters": "Taiwan",
     "2023|2023-10-08|International Series Singapore": "Singapore",
-    "2023|2023-11-05|Volvo China Open": "China",
     "2023|2023-11-12|Hong Kong Open": "Hong Kong",
     "2023|2023-11-19|BNI Indonesian Masters presented by Tunas Niaga Energi": "Indonesia",
-    "2023|2023-12-03|Taiwan Glass Taifong Open": "Taiwan",
     "2023|2023-12-17|Saudi Open presented by Public Investment Fund": "Saudi Arabia",
     "2024|2024-02-18|IRS Prima Malaysian Open": "Malaysia",
     "2024|2024-02-25|International Series Oman": "Oman",
@@ -4745,7 +4743,6 @@
     "2024|2024-10-06|Mercuries Taiwan Masters": "Taiwan",
     "2024|2024-10-13|SJM Macao Open": "Macau",
     "2024|2024-10-27|International Series Thailand": "Thailand",
-    "2024|2024-11-17|Taiwan Glass Taifong Open": "Taiwan",
     "2024|2024-11-24|Link Hong Kong Open": "Hong Kong",
     "2024|2024-11-30|International Series Qatar": "England",
     "2024|2024-12-07|PIF Saudi International powered by SoftBank Investment Advisers": "Saudi Arabia",
@@ -4959,7 +4956,6 @@
     "2003|14-Dec|Volvo Masters of Asia": "Malaysia",
     "2020-21-22|2020-03-01|New Zealand Open presented by Sky Sport": "New Zealand",
     "2022|2022-02-27|Royal's Cup 2022": "Thailand",
-    "2022|2022-06-26|Kolon The 64th Korea Open Golf Championship": "Japan",
     "2020-21-22|2022-01-16|The Singapore International": "Singapore",
     "2004|29-Feb|DHL Philippine Open": "Philippines",
     "2005|18-Sep|Taiwan Open": "Taiwan",
@@ -4967,7 +4963,6 @@
     "2007|20-May|Macau Open": "Macau",
     "2013|2013-11-24|World Cup of Golf": "Australia",
     "2017|2017-08-20|Fiji International": "Fiji",
-    "2017|2017-11-05|Panasonic Open India": "India",
     "2018|2018-03-04|ISPS HANDA New Zealand Open": "New Zealand",
     "2018|2018-04-29|Volvo China Open": "China",
     "2018|2018-08-05|Fiji International": "Fiji",
@@ -4975,7 +4970,6 @@
     "2019|2019-03-03|New Zealand Open": "New Zealand",
     "2019|2019-05-05|Volvo China Open": "China",
     "2019|2019-07-21|The 148th Open": "Northern Ireland",
-    "2019|2019-11-17|Panasonic Open India": "India",
     "2019|2019-12-22|Thailand Masters": "Thailand",
     "2022|2022-07-17|The 150th Open": "Scotland",
     "2023|2023-03-05|New Zealand Open presented by SKY SPORT": "New Zealand",
@@ -5005,11 +4999,9 @@
     "2016|2016-06-19|Queen's Cup": "Thailand",
     "2017|2017-02-19|ISPS HANDA World Super 6 Perth": "Australia",
     "2017|2017-12-10|Joburg Open": "South Africa",
-    "2018|2018-02-04|Maybank Championship": "Malaysia",
     "2018|2018-02-11|ISPS HANDA World Super 6 Perth": "Australia",
     "2019|2019-02-17|ISPS HANDA World Super 6 Perth (Match Play)": "Australia",
     "2019|2019-04-06|Bangabandhu Cup Golf Open 2019": "Bangladesh",
-    "2022|2022-04-10|Trust Golf Asian Mixed Cup": "Thailand",
     "2024|2024-09-29|Yeangder TPC": "Taiwan",
     "2005|8-May|SK Telecom Open": "South Korea",
     "2007|18-Mar|TCL Classic": "China",
@@ -5025,11 +5017,9 @@
     "2014|2014-12-21|Dubai Open": "United Arab Emirates",
     "2016|2016-07-31|King's Cup": "Thailand",
     "2017|2017-04-30|Yeangder Heritage": "Taiwan",
-    "2017|2017-09-17|The 33rd Shinhan Donghae Open": "South Korea",
     "2017|2017-12-31|Royal Cup": "Thailand",
     "2018|2018-07-07|Sarawak Championship": "Malaysia",
     "2018|2018-10-07|Yeangder TPC": "Taiwan",
-    "2022|2022-03-27|The DGC Open presented by Mastercard": "India",
     "2023|2023-09-10|Shinhan Donghae Open": "South Korea",
     "2025|2025-09-21|Yeangder Tournament Players Championship": "Taiwan",
     "2026|2026-06-21|126th US Open": "United States",
@@ -5037,7 +5027,17 @@
     "2026|2026-09-20|Yeangder Tournament Players Championship": "Chinese Taipei",
     "2026|2026-09-27|Mercuries Taiwan Masters": "Chinese Taipei",
     "2025|2025-11-16|Taiwan Glass Taifong Open": "Taiwan",
-    "2025|2025-11-30|Bharath Classic 2025 Gujarat": "India"
+    "2025|2025-11-30|Bharath Classic 2025 Gujarat": "India",
+    "2024|2024-11-17|Taiwan Glass Taifong Open": "Taiwan",
+    "2023|2023-12-03|Taiwan Glass Taifong Open": "Taiwan",
+    "2023|2023-11-05|Volvo China Open": "China",
+    "2022|2022-03-27|The DGC Open presented by Mastercard": "India",
+    "2022|2022-04-10|Trust Golf Asian Mixed Cup": "Thailand",
+    "2022|2022-06-26|Kolon The 64th Korea Open Golf Championship": "Japan",
+    "2019|2019-11-17|Panasonic Open India": "India",
+    "2018|2018-02-04|Maybank Championship": "Malaysia",
+    "2017|2017-09-17|The 33rd Shinhan Donghae Open": "South Korea",
+    "2017|2017-11-05|Panasonic Open India": "India"
   },
   "cosanctioned": {
     "2023|2023-05-07|The 42nd GS Caltex Maekyung Open Golf Championship": "Korean Tour",
@@ -5124,7 +5124,6 @@
     "2014|2014-10-19|Hong Kong Open": "European Tour",
     "2022|2022-03-06|International Series Thailand": "LIV Golf",
     "2017|2017-01-29|Leopalace21 Myanmar Open": "Japan Golf Tour",
-    "2023|2023-11-05|Volvo China Open": "LIV Golf",
     "2017|2017-09-10|Omega European Masters": "European Tour",
     "2002|27-Jan|Johnnie Walker Classic": "PGA Tour of Australasia & European Tour",
     "2008|2008-04-27|BMW ASIAN OPEN 2008": "European Tour",
@@ -5338,11 +5337,20 @@
     "2003|7-Dec|Omega Hong Kong Open": "European Tour",
     "2022|2022-09-11|The 38th Shinhan Donghae Open": "Japan Golf Tour & Korean Tour",
     "2022|2022-10-02|Mercuries Taiwan Masters": "Taiwan PGA Tour",
-    "2022|2022-06-26|Kolon The 64th Korea Open Golf Championship": "Japan Golf Tour",
     "2026|2026-09-20|Yeangder Tournament Players Championship": "Taiwan PGA Tour",
     "2026|2026-09-27|Mercuries Taiwan Masters": "Taiwan PGA Tour",
     "2025|2025-11-16|Taiwan Glass Taifong Open": "Taiwan PGA Tour",
-    "2025|2025-11-30|Bharath Classic 2025 Gujarat": "Indian Golf Premier League"
+    "2025|2025-11-30|Bharath Classic 2025 Gujarat": "Indian Golf Premier League",
+    "2024|2024-11-17|Taiwan Glass Taifong Open": "Taiwan PGA Tour",
+    "2023|2023-12-03|Taiwan Glass Taifong Open": "Taiwan PGA Tour",
+    "2023|2023-11-05|Volvo China Open": "LIV Golf & China Tour",
+    "2022|2022-03-27|The DGC Open presented by Mastercard": "PGT of India",
+    "2022|2022-04-10|Trust Golf Asian Mixed Cup": "Ladies European Tour",
+    "2022|2022-06-26|Kolon The 64th Korea Open Golf Championship": "Korean Tour",
+    "2019|2019-11-17|Panasonic Open India": "PGT of India",
+    "2018|2018-02-04|Maybank Championship": "European Tour",
+    "2017|2017-09-17|The 33rd Shinhan Donghae Open": "Korean Tour",
+    "2017|2017-11-05|Panasonic Open India": "PGT of India"
   },
   "intlseries": [
     "2022|2022-03-06|International Series Thailand",
@@ -5359,7 +5367,6 @@
     "2023|2023-08-20|International Series England",
     "2023|2023-08-27|St Andrews Bay Championship",
     "2023|2023-10-08|International Series Singapore",
-    "2023|2023-11-05|Volvo China Open",
     "2023|2023-11-12|Hong Kong Open",
     "2023|2023-11-19|BNI Indonesian Masters presented by Tunas Niaga Energi",
     "2024|2024-02-25|International Series Oman",
@@ -5383,6 +5390,7 @@
     "2025|2025-11-22|PIF Saudi International powered by Softbank Investment Advisers",
     "2026|2026-04-05|International Series Japan",
     "2026|2026-04-26|Singapore Open presented by The Business Times",
-    "2026|2026-06-14|International Series Morocco"
+    "2026|2026-06-14|International Series Morocco",
+    "2023|2023-11-05|Volvo China Open"
   ]
 }
